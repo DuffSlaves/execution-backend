@@ -1,5 +1,5 @@
 # Install git
-apt-get install git
+apt-get install nodejs npm git
 
 # Install java8
 apt-add-repository -y ppa:webupd8team/java
@@ -17,8 +17,8 @@ cabal install happy alex
 cabal install http://ghcjs.luite.com/master.tar.gz
 ghcjs-boot
 
-# Install PHP compilers
-npm install phptoast phptojs phpruntime phpcommon
+# Install Typescript compiler
+npm install -g typescript
 
 # Install emscripten
 wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
