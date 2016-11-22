@@ -20,6 +20,13 @@ ghcjs-boot
 # Install Typescript compiler
 npm install -g typescript
 
+# Install CoffeeScript compiler
+npm install -g coffee-script
+
+# Install python and PyJS
+apt-get install python3
+pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
+
 # Install emscripten
 wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
 tar xzf emsdk-portable.tar.gz

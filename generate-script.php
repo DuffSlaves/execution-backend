@@ -123,39 +123,71 @@ function compileHaskellFile($text) {
 	return new RequestReturn($output, $result);
 }
 
-function compileJavascriptFile($text) {
+function compileTypeScript($text) {
 	$tmpdir = sys_get_temp_dir();
 	$output = "";
 	$result = "";
 	$filename = $tmpdir . generateRandomString();
 
-	if (file_put_contents($filename . ".js"))
+	if (file_put_contents($filename . ".ts"))
 	{
-		$output .= minifyJS($filename . ".js", "WHITESPACE_ONLY");
-
+		$output .= shell_exec("tsc " . $filename . ".ts");
+		
 		$result = file_get_contents($filename . ".js");
+		
+		unlink($filename . ".ts");
+		unlink($filename . ".js");
 	}
 	else {
-		$output .= "An unexpected error occured while compiling the code.";
+		$output .= "An unexpected error occurred while compiling the code.";
 		$result = NULL;
 	}
-
+	
 	return new RequestReturn($output, $result);
 }
 
-function compilePHP($text) {
+function compileCoffeescript($text) {
 	$tmpdir = sys_get_temp_dir();
 	$output = "";
 	$result = "";
 	$filename = $tmpdir . generateRandomString();
-	
-	if (file_put_contents($filename . ".php"))
-	{
-		$output .= shell_exec("phptoast " . $filename . ".php");
-		$output .= shell_exec("phptojs " . $filename . ".ast");
+
+	if (file_put_contents($filename . ".coffee")) {
+		$output .= shell_exec("coffee -o " . $tmpdir . " -c " . $filename);
 		
 		$result = file_get_contents($filename . ".js");
+		
+		unlink($filename . ".coffee");
+		unlink($filename . ".js");
 	}
+	else {
+		$output .= "An unexpected error occurred while compiling the code.";
+		$result = NULL;
+	}
+	
+	return new RequestReturn($output, $result);
+}
+
+function compilePython3($text) {
+	$tmpdir = sys_get_temp_dir();
+	$output = "";
+	$result = "";
+	$filename = $tmpdir . generateRandomString();
+
+	if (file_put_contents($filename . ".py")) {
+		$output .= shell_exec("pyjsbuild " . $filename . ".py -o " . $filename  . ".js");
+		
+		$result = file_get_contents($filename . ".js");
+		
+		unlink($filename . ".py");
+		unlink($filename . ".js");
+	}
+	else {
+		$output .= "An unexpected error occurred while compiling the code.";
+		$result = NULL;
+	}
+	
+	return new RequestReturn($output, $result);
 }
 
 //
@@ -194,8 +226,10 @@ function compileUserFile($reqval)
 			return compileFileWithClang($reqval->text, "", ".m");
 		case "Haskell":
 			return compileHaskellFile($reqval->text);
-		case "Javascript":
-			return compileJavascriptFile($reqval->text);
+		case "CoffeeScript":
+			return compileCoffeeScript($reqval->text);
+		case "TypeScript":
+			return compileTypeScript($reqval->text);
 		default:
 			# An unknown language was passed
 			# this is an error
