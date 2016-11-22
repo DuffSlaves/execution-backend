@@ -29,7 +29,7 @@ function generateRandomString($length = 50) {
     return $randomString;
 }
 
-function minifyJS($jsfile)
+function minifyJS($jsfile, $level = "ADVANCED_OPTIMIZATIONS")
 {
 	# NOTE: If the ADVANCED_OPTIMIZATIONS compilation level causes
 	#       problems then we should change it to SIMPLE_OPTIMIZATIONS
@@ -37,8 +37,8 @@ function minifyJS($jsfile)
 	#       only for code which is compiled down from user generated code
 	#       in other languages. User provided JS should be minified using
 	#       compilation level WHITESPACE_ONLY.
-	return shell_exec("closure-compiler " .
-				"--compilation_level ADVANCED_OPTIMIZATIONS --js " . $jsfile);
+	return shell_exec("closure-compiler --compilation_level "
+						. $level . " --js " . $jsfile);
 }
 
 # Compile a given java file with the file text
@@ -93,6 +93,7 @@ function compileFileWithClang($extargs, $ext = ".cpp") {
 	}
 	else {
 		$output .= "An unexpected error occurred while compiling the code.";
+		$result = NULL;
 	}
 
 	return new RequestReturn($output, $result)
@@ -115,12 +116,32 @@ function compileHaskellFile($text) {
 		unlink($filename . ".js");
 	}
 	else {
-		$output .= "An unexpected error occurrend while compiling the code.";
+		$output .= "An unexpected error occurred while compiling the code.";
+		$result = NULL;
 	}
 
 	return new RequestReturn($output, $result);
 }
 
+function compileJavascriptFile($text) {
+	$tmpdir = sys_get_temp_dir();
+	$output = "";
+	$result = "";
+	$filename = $tmpdir . generateRandomString();
+
+	if (file_put_contents($filename . ".js"))
+	{
+		$output .= minifyJS($filename . ".js", "WHITESPACE_ONLY");
+
+		$result = file_get_contents($filename . ".js");
+	}
+	else {
+		$output .= "An unexpected error occured while compiling the code.";
+		$result = NULL;
+	}
+
+	return new RequestReturn($output, $result);
+}
 //
 function compileUserFile($reqval)
 {
@@ -157,6 +178,8 @@ function compileUserFile($reqval)
 			return compileFileWithClang($reqval->text, "", ".m");
 		case "Haskell":
 			return compileHaskellFile($reqval->text);
+		case "Javascript":
+			return compileJavascriptFile($reqval->text);
 		default:
 			# An unknown language was passed
 			# this is an error
