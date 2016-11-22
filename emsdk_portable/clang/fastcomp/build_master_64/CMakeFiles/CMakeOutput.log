@@ -1,0 +1,2445 @@
+The system is: Linux - 4.2.0-42-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/3.2.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/3.2.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec700914294/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec700914294.dir/build.make CMakeFiles/cmTryCompileExec700914294.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec700914294.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec700914294.dir/testCCompiler.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec700914294
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec700914294.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec700914294.dir/testCCompiler.c.o  -o cmTryCompileExec700914294 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1200208567/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1200208567.dir/build.make CMakeFiles/cmTryCompileExec1200208567.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1200208567.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1200208567.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.2/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec1200208567
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1200208567.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTryCompileExec1200208567.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1200208567 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.2.1-22ubuntu2' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 5.2.1 20151010 (Ubuntu 5.2.1-22ubuntu2) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1200208567' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccB4Mymn.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1200208567 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTryCompileExec1200208567.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTryCompileExec1200208567/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec1200208567.dir/build.make CMakeFiles/cmTryCompileExec1200208567.dir/build]
+  ignore line: [make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec1200208567.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1200208567.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.2/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec1200208567]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1200208567.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTryCompileExec1200208567.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1200208567 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.2.1-22ubuntu2' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.2.1 20151010 (Ubuntu 5.2.1-22ubuntu2) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1200208567' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccB4Mymn.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1200208567 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTryCompileExec1200208567.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccB4Mymn.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec1200208567] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTryCompileExec1200208567.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2093235863/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2093235863.dir/build.make CMakeFiles/cmTryCompileExec2093235863.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2093235863.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTryCompileExec2093235863.dir/feature_tests.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec2093235863
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2093235863.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2093235863.dir/feature_tests.c.o  -o cmTryCompileExec2093235863 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1888613351/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1888613351.dir/build.make CMakeFiles/cmTryCompileExec1888613351.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1888613351.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTryCompileExec1888613351.dir/feature_tests.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec1888613351
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1888613351.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1888613351.dir/feature_tests.c.o  -o cmTryCompileExec1888613351 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1845246028/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1845246028.dir/build.make CMakeFiles/cmTryCompileExec1845246028.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1845246028.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTryCompileExec1845246028.dir/feature_tests.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec1845246028
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1845246028.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1845246028.dir/feature_tests.c.o  -o cmTryCompileExec1845246028 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1938580039/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1938580039.dir/build.make CMakeFiles/cmTryCompileExec1938580039.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1938580039.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1938580039.dir/testCXXCompiler.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec1938580039
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1938580039.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec1938580039.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec1938580039 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3429280717/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3429280717.dir/build.make CMakeFiles/cmTryCompileExec3429280717.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3429280717.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3429280717.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec3429280717
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3429280717.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTryCompileExec3429280717.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3429280717 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.2.1-22ubuntu2' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 5.2.1 20151010 (Ubuntu 5.2.1-22ubuntu2) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3429280717' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYPGMzN.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec3429280717 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTryCompileExec3429280717.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTryCompileExec3429280717/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec3429280717.dir/build.make CMakeFiles/cmTryCompileExec3429280717.dir/build]
+  ignore line: [make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec3429280717.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3429280717.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec3429280717]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3429280717.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTryCompileExec3429280717.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3429280717 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.2.1-22ubuntu2' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.2.1 20151010 (Ubuntu 5.2.1-22ubuntu2) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3429280717' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYPGMzN.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec3429280717 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTryCompileExec3429280717.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccYPGMzN.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec3429280717] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTryCompileExec3429280717.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2424881585/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2424881585.dir/build.make CMakeFiles/cmTryCompileExec2424881585.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2424881585.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTryCompileExec2424881585.dir/feature_tests.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec2424881585
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2424881585.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec2424881585.dir/feature_tests.cxx.o  -o cmTryCompileExec2424881585 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec450714778/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec450714778.dir/build.make CMakeFiles/cmTryCompileExec450714778.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec450714778.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTryCompileExec450714778.dir/feature_tests.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec450714778
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec450714778.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec450714778.dir/feature_tests.cxx.o  -o cmTryCompileExec450714778 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1034328633/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1034328633.dir/build.make CMakeFiles/cmTryCompileExec1034328633.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1034328633.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTryCompileExec1034328633.dir/feature_tests.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec1034328633
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1034328633.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec1034328633.dir/feature_tests.cxx.o  -o cmTryCompileExec1034328633 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file dirent.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3056756472/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3056756472.dir/build.make CMakeFiles/cmTryCompileExec3056756472.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3056756472.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3056756472.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3056756472
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3056756472.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3056756472.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3056756472 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file dlfcn.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4246394908/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4246394908.dir/build.make CMakeFiles/cmTryCompileExec4246394908.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4246394908.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4246394908.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec4246394908
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4246394908.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4246394908.dir/CheckIncludeFile.c.o  -o cmTryCompileExec4246394908 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file errno.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec248556103/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec248556103.dir/build.make CMakeFiles/cmTryCompileExec248556103.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec248556103.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec248556103.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec248556103
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec248556103.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec248556103.dir/CheckIncludeFile.c.o  -o cmTryCompileExec248556103 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file execinfo.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2902338120/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2902338120.dir/build.make CMakeFiles/cmTryCompileExec2902338120.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2902338120.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2902338120.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2902338120
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2902338120.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2902338120.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2902338120 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file fcntl.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec342280040/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec342280040.dir/build.make CMakeFiles/cmTryCompileExec342280040.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec342280040.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec342280040.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec342280040
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec342280040.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec342280040.dir/CheckIncludeFile.c.o  -o cmTryCompileExec342280040 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4090588086/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4090588086.dir/build.make CMakeFiles/cmTryCompileExec4090588086.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4090588086.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4090588086.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec4090588086
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4090588086.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4090588086.dir/CheckIncludeFile.c.o  -o cmTryCompileExec4090588086 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file limits.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2911681958/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2911681958.dir/build.make CMakeFiles/cmTryCompileExec2911681958.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2911681958.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2911681958.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2911681958
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2911681958.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2911681958.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2911681958 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file link.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1287537081/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1287537081.dir/build.make CMakeFiles/cmTryCompileExec1287537081.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1287537081.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1287537081.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1287537081
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1287537081.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1287537081.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1287537081 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file malloc.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1232697603/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1232697603.dir/build.make CMakeFiles/cmTryCompileExec1232697603.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1232697603.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1232697603.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1232697603
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1232697603.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1232697603.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1232697603 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1243231902/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1243231902.dir/build.make CMakeFiles/cmTryCompileExec1243231902.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1243231902.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1243231902.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1243231902
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1243231902.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1243231902.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1243231902 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file signal.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1589183910/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1589183910.dir/build.make CMakeFiles/cmTryCompileExec1589183910.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1589183910.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1589183910.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1589183910
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1589183910.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1589183910.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1589183910 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2737710855/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2737710855.dir/build.make CMakeFiles/cmTryCompileExec2737710855.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2737710855.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2737710855.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2737710855
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2737710855.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2737710855.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2737710855 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/dir.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2497148647/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2497148647.dir/build.make CMakeFiles/cmTryCompileExec2497148647.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2497148647.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2497148647.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec2497148647
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2497148647.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2497148647.dir/CheckIncludeFile.c.o  -o cmTryCompileExec2497148647 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/ioctl.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1559714213/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1559714213.dir/build.make CMakeFiles/cmTryCompileExec1559714213.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1559714213.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1559714213.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1559714213
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1559714213.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1559714213.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1559714213 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/mman.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1463911606/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1463911606.dir/build.make CMakeFiles/cmTryCompileExec1463911606.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1463911606.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1463911606.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1463911606
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1463911606.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1463911606.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1463911606 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/param.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3365660044/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3365660044.dir/build.make CMakeFiles/cmTryCompileExec3365660044.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3365660044.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3365660044.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3365660044
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3365660044.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3365660044.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3365660044 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/resource.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1345002414/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1345002414.dir/build.make CMakeFiles/cmTryCompileExec1345002414.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1345002414.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1345002414.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1345002414
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1345002414.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1345002414.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1345002414 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/stat.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3368201101/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3368201101.dir/build.make CMakeFiles/cmTryCompileExec3368201101.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3368201101.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3368201101.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3368201101
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3368201101.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3368201101.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3368201101 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1336224697/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1336224697.dir/build.make CMakeFiles/cmTryCompileExec1336224697.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1336224697.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1336224697.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1336224697
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1336224697.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1336224697.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1336224697 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/uio.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec678476338/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec678476338.dir/build.make CMakeFiles/cmTryCompileExec678476338.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec678476338.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec678476338.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec678476338
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec678476338.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec678476338.dir/CheckIncludeFile.c.o  -o cmTryCompileExec678476338 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file termios.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec485392129/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec485392129.dir/build.make CMakeFiles/cmTryCompileExec485392129.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec485392129.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec485392129.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec485392129
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec485392129.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec485392129.dir/CheckIncludeFile.c.o  -o cmTryCompileExec485392129 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1078978944/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1078978944.dir/build.make CMakeFiles/cmTryCompileExec1078978944.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1078978944.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1078978944.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec1078978944
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1078978944.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1078978944.dir/CheckIncludeFile.c.o  -o cmTryCompileExec1078978944 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file utime.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec455669144/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec455669144.dir/build.make CMakeFiles/cmTryCompileExec455669144.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec455669144.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec455669144.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec455669144
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec455669144.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec455669144.dir/CheckIncludeFile.c.o  -o cmTryCompileExec455669144 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file zlib.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4257108137/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4257108137.dir/build.make CMakeFiles/cmTryCompileExec4257108137.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4257108137.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4257108137.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec4257108137
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4257108137.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4257108137.dir/CheckIncludeFile.c.o  -o cmTryCompileExec4257108137 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file fenv.h exists passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3218062086/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3218062086.dir/build.make CMakeFiles/cmTryCompileExec3218062086.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3218062086.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3218062086.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3218062086
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3218062086.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3218062086.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3218062086 -rdynamic 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the FE_ALL_EXCEPT exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2742949752/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2742949752.dir/build.make CMakeFiles/cmTryCompileExec2742949752.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2742949752.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2742949752.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2742949752
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2742949752.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2742949752.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2742949752 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <fenv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef FE_ALL_EXCEPT
+  return ((int*)(&FE_ALL_EXCEPT))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the FE_INEXACT exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3414787079/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3414787079.dir/build.make CMakeFiles/cmTryCompileExec3414787079.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3414787079.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3414787079.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3414787079
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3414787079.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3414787079.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3414787079 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <fenv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef FE_INEXACT
+  return ((int*)(&FE_INEXACT))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C++ SOURCE FILE Test HAVE_CXXABI_H succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec388061713/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec388061713.dir/build.make CMakeFiles/cmTryCompileExec388061713.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec388061713.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_CXXABI_H   -o CMakeFiles/cmTryCompileExec388061713.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec388061713
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec388061713.dir/link.txt --verbose=1
+/usr/bin/c++    -DHAVE_CXXABI_H    CMakeFiles/cmTryCompileExec388061713.dir/src.cxx.o  -o cmTryCompileExec388061713 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <stddef.h>
+#include <cxxabi.h>
+int main() { return 0; }
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2698184138/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2698184138.dir/build.make CMakeFiles/cmTryCompileExec2698184138.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2698184138.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2698184138.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2698184138
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2698184138.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2698184138.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2698184138 -rdynamic -lpthread -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_getspecific exists in the pthread passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1244745522/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1244745522.dir/build.make CMakeFiles/cmTryCompileExec1244745522.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1244745522.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_getspecific   -o CMakeFiles/cmTryCompileExec1244745522.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1244745522
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1244745522.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_getspecific    CMakeFiles/cmTryCompileExec1244745522.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1244745522 -rdynamic -lpthread -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_rwlock_init exists in the pthread passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2434807016/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2434807016.dir/build.make CMakeFiles/cmTryCompileExec2434807016.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2434807016.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_rwlock_init   -o CMakeFiles/cmTryCompileExec2434807016.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2434807016
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2434807016.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_rwlock_init    CMakeFiles/cmTryCompileExec2434807016.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2434807016 -rdynamic -lpthread -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_mutex_lock exists in the pthread passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2835690780/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2835690780.dir/build.make CMakeFiles/cmTryCompileExec2835690780.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2835690780.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_mutex_lock   -o CMakeFiles/cmTryCompileExec2835690780.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2835690780
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2835690780.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_mutex_lock    CMakeFiles/cmTryCompileExec2835690780.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2835690780 -rdynamic -lpthread -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the function dlopen exists in the dl passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3622119490/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3622119490.dir/build.make CMakeFiles/cmTryCompileExec3622119490.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3622119490.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=dlopen   -o CMakeFiles/cmTryCompileExec3622119490.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3622119490
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3622119490.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=dlopen    CMakeFiles/cmTryCompileExec3622119490.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3622119490 -rdynamic -ldl -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the function clock_gettime exists in the rt passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3946668384/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3946668384.dir/build.make CMakeFiles/cmTryCompileExec3946668384.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3946668384.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=clock_gettime   -o CMakeFiles/cmTryCompileExec3946668384.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3946668384
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3946668384.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=clock_gettime    CMakeFiles/cmTryCompileExec3946668384.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3946668384 -rdynamic -lrt -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the function compress2 exists in the z passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1332780003/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1332780003.dir/build.make CMakeFiles/cmTryCompileExec1332780003.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1332780003.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=compress2   -o CMakeFiles/cmTryCompileExec1332780003.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1332780003
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1332780003.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=compress2    CMakeFiles/cmTryCompileExec1332780003.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1332780003 -rdynamic -lz -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the function setupterm exists in the tinfo passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3885077200/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3885077200.dir/build.make CMakeFiles/cmTryCompileExec3885077200.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3885077200.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=setupterm   -o CMakeFiles/cmTryCompileExec3885077200.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3885077200
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3885077200.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=setupterm    CMakeFiles/cmTryCompileExec3885077200.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3885077200 -rdynamic -ltinfo -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+
+Determining if the backtrace exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec315791584/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec315791584.dir/build.make CMakeFiles/cmTryCompileExec315791584.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec315791584.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec315791584.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec315791584
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec315791584.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec315791584.dir/CheckSymbolExists.c.o  -o cmTryCompileExec315791584 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <execinfo.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef backtrace
+  return ((int*)(&backtrace))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getpagesize exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1988489436/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1988489436.dir/build.make CMakeFiles/cmTryCompileExec1988489436.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1988489436.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1988489436.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1988489436
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1988489436.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1988489436.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1988489436 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getpagesize
+  return ((int*)(&getpagesize))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getrusage exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1988693924/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1988693924.dir/build.make CMakeFiles/cmTryCompileExec1988693924.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1988693924.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1988693924.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1988693924
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1988693924.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1988693924.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1988693924 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/resource.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getrusage
+  return ((int*)(&getrusage))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the setrlimit exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2497443248/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2497443248.dir/build.make CMakeFiles/cmTryCompileExec2497443248.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2497443248.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2497443248.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2497443248
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2497443248.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2497443248.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2497443248 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/resource.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setrlimit
+  return ((int*)(&setrlimit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the isatty exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4272374409/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4272374409.dir/build.make CMakeFiles/cmTryCompileExec4272374409.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4272374409.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4272374409.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec4272374409
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4272374409.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4272374409.dir/CheckSymbolExists.c.o  -o cmTryCompileExec4272374409 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef isatty
+  return ((int*)(&isatty))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the futimens exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec571769976/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec571769976.dir/build.make CMakeFiles/cmTryCompileExec571769976.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec571769976.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec571769976.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec571769976
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec571769976.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec571769976.dir/CheckSymbolExists.c.o  -o cmTryCompileExec571769976 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/stat.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef futimens
+  return ((int*)(&futimens))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the futimes exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1648904206/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1648904206.dir/build.make CMakeFiles/cmTryCompileExec1648904206.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1648904206.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1648904206.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1648904206
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1648904206.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1648904206.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1648904206 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef futimes
+  return ((int*)(&futimes))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the writev exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2744521765/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2744521765.dir/build.make CMakeFiles/cmTryCompileExec2744521765.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2744521765.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2744521765.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2744521765
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2744521765.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2744521765.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2744521765 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/uio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef writev
+  return ((int*)(&writev))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the mallinfo exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec853415155/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec853415155.dir/build.make CMakeFiles/cmTryCompileExec853415155.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec853415155.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec853415155.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec853415155
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec853415155.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec853415155.dir/CheckSymbolExists.c.o  -o cmTryCompileExec853415155 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef mallinfo
+  return ((int*)(&mallinfo))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the mkdtemp exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3449435906/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3449435906.dir/build.make CMakeFiles/cmTryCompileExec3449435906.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3449435906.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3449435906.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3449435906
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3449435906.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3449435906.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3449435906 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef mkdtemp
+  return ((int*)(&mkdtemp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the mkstemp exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec408218799/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec408218799.dir/build.make CMakeFiles/cmTryCompileExec408218799.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec408218799.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec408218799.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec408218799
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec408218799.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec408218799.dir/CheckSymbolExists.c.o  -o cmTryCompileExec408218799 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef mkstemp
+  return ((int*)(&mkstemp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the mktemp exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec240301437/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec240301437.dir/build.make CMakeFiles/cmTryCompileExec240301437.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec240301437.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec240301437.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec240301437
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec240301437.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec240301437.dir/CheckSymbolExists.c.o  -o cmTryCompileExec240301437 -rdynamic -lm 
+CMakeFiles/cmTryCompileExec240301437.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): warning: the use of `mktemp' is dangerous, better use `mkstemp' or `mkdtemp'
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef mktemp
+  return ((int*)(&mktemp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the closedir exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4268760089/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4268760089.dir/build.make CMakeFiles/cmTryCompileExec4268760089.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4268760089.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4268760089.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec4268760089
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4268760089.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4268760089.dir/CheckSymbolExists.c.o  -o cmTryCompileExec4268760089 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+#include <dirent.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef closedir
+  return ((int*)(&closedir))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the opendir exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1551832254/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1551832254.dir/build.make CMakeFiles/cmTryCompileExec1551832254.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1551832254.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1551832254.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1551832254
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1551832254.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1551832254.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1551832254 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+#include <dirent.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef opendir
+  return ((int*)(&opendir))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the readdir exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec211288665/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec211288665.dir/build.make CMakeFiles/cmTryCompileExec211288665.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec211288665.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec211288665.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec211288665
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec211288665.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec211288665.dir/CheckSymbolExists.c.o  -o cmTryCompileExec211288665 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+#include <dirent.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef readdir
+  return ((int*)(&readdir))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getcwd exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec424224488/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec424224488.dir/build.make CMakeFiles/cmTryCompileExec424224488.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec424224488.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec424224488.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec424224488
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec424224488.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec424224488.dir/CheckSymbolExists.c.o  -o cmTryCompileExec424224488 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getcwd
+  return ((int*)(&getcwd))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the gettimeofday exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3030621085/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3030621085.dir/build.make CMakeFiles/cmTryCompileExec3030621085.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3030621085.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3030621085.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3030621085
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3030621085.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3030621085.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3030621085 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gettimeofday
+  return ((int*)(&gettimeofday))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getrlimit exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3611114822/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3611114822.dir/build.make CMakeFiles/cmTryCompileExec3611114822.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3611114822.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3611114822.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3611114822
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3611114822.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3611114822.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3611114822 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+#include <sys/time.h>
+#include <sys/resource.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getrlimit
+  return ((int*)(&getrlimit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the posix_spawn exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2709067123/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2709067123.dir/build.make CMakeFiles/cmTryCompileExec2709067123.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2709067123.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2709067123.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2709067123
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2709067123.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2709067123.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2709067123 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <spawn.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef posix_spawn
+  return ((int*)(&posix_spawn))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pread exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2836102701/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2836102701.dir/build.make CMakeFiles/cmTryCompileExec2836102701.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2836102701.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2836102701.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2836102701
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2836102701.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2836102701.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2836102701 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pread
+  return ((int*)(&pread))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the realpath exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1433372389/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1433372389.dir/build.make CMakeFiles/cmTryCompileExec1433372389.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1433372389.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1433372389.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1433372389
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1433372389.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1433372389.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1433372389 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef realpath
+  return ((int*)(&realpath))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the sbrk exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec575434786/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec575434786.dir/build.make CMakeFiles/cmTryCompileExec575434786.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec575434786.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec575434786.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec575434786
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec575434786.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec575434786.dir/CheckSymbolExists.c.o  -o cmTryCompileExec575434786 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sbrk
+  return ((int*)(&sbrk))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the srand48 exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3684617636/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3684617636.dir/build.make CMakeFiles/cmTryCompileExec3684617636.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3684617636.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3684617636.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3684617636
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3684617636.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3684617636.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3684617636 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef srand48
+  return ((int*)(&srand48))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the lrand48 exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec271593196/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec271593196.dir/build.make CMakeFiles/cmTryCompileExec271593196.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec271593196.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec271593196.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec271593196
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec271593196.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec271593196.dir/CheckSymbolExists.c.o  -o cmTryCompileExec271593196 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef lrand48
+  return ((int*)(&lrand48))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the drand48 exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec615874845/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec615874845.dir/build.make CMakeFiles/cmTryCompileExec615874845.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec615874845.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec615874845.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec615874845
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec615874845.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec615874845.dir/CheckSymbolExists.c.o  -o cmTryCompileExec615874845 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef drand48
+  return ((int*)(&drand48))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strtoll exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec236082098/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec236082098.dir/build.make CMakeFiles/cmTryCompileExec236082098.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec236082098.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec236082098.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec236082098
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec236082098.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec236082098.dir/CheckSymbolExists.c.o  -o cmTryCompileExec236082098 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtoll
+  return ((int*)(&strtoll))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strtoq exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2333092375/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2333092375.dir/build.make CMakeFiles/cmTryCompileExec2333092375.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2333092375.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2333092375.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2333092375
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2333092375.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2333092375.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2333092375 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtoq
+  return ((int*)(&strtoq))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strerror exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec77294532/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec77294532.dir/build.make CMakeFiles/cmTryCompileExec77294532.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec77294532.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec77294532.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec77294532
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec77294532.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec77294532.dir/CheckSymbolExists.c.o  -o cmTryCompileExec77294532 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strerror
+  return ((int*)(&strerror))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strerror_r exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2123324218/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2123324218.dir/build.make CMakeFiles/cmTryCompileExec2123324218.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2123324218.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2123324218.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2123324218
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2123324218.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2123324218.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2123324218 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strerror_r
+  return ((int*)(&strerror_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the setenv exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec873823877/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec873823877.dir/build.make CMakeFiles/cmTryCompileExec873823877.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec873823877.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec873823877.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec873823877
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec873823877.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec873823877.dir/CheckSymbolExists.c.o  -o cmTryCompileExec873823877 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setenv
+  return ((int*)(&setenv))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the dlerror exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3637894756/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3637894756.dir/build.make CMakeFiles/cmTryCompileExec3637894756.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3637894756.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3637894756.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3637894756
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3637894756.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3637894756.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3637894756 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <dlfcn.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef dlerror
+  return ((int*)(&dlerror))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the dlopen exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec704337904/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec704337904.dir/build.make CMakeFiles/cmTryCompileExec704337904.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec704337904.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec704337904.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec704337904
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec704337904.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec704337904.dir/CheckSymbolExists.c.o  -o cmTryCompileExec704337904 -rdynamic -lm -ldl 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <dlfcn.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef dlopen
+  return ((int*)(&dlopen))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the __GLIBC__ exist passed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2603909/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2603909.dir/build.make CMakeFiles/cmTryCompileExec2603909.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2603909.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2603909.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2603909
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2603909.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2603909.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2603909 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef __GLIBC__
+  return ((int*)(&__GLIBC__))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C++ SOURCE FILE Test HAVE_INT64_T succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1447997706/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1447997706.dir/build.make CMakeFiles/cmTryCompileExec1447997706.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1447997706.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_INT64_T   -o CMakeFiles/cmTryCompileExec1447997706.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1447997706
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1447997706.dir/link.txt --verbose=1
+/usr/bin/c++    -DHAVE_INT64_T    CMakeFiles/cmTryCompileExec1447997706.dir/src.cxx.o  -o cmTryCompileExec1447997706 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+    #include<sys/types.h>
+#include<inttypes.h>
+#include<stdint.h>
+ int64_t typeVar;
+    int main() {
+        return 0;
+    }
+    
+Performing C++ SOURCE FILE Test HAVE_UINT64_T succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1126724216/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1126724216.dir/build.make CMakeFiles/cmTryCompileExec1126724216.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1126724216.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_UINT64_T   -o CMakeFiles/cmTryCompileExec1126724216.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1126724216
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1126724216.dir/link.txt --verbose=1
+/usr/bin/c++    -DHAVE_UINT64_T    CMakeFiles/cmTryCompileExec1126724216.dir/src.cxx.o  -o cmTryCompileExec1126724216 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+    #include<sys/types.h>
+#include<inttypes.h>
+#include<stdint.h>
+ uint64_t typeVar;
+    int main() {
+        return 0;
+    }
+    
+Performing C++ SOURCE FILE Test HAVE_U_INT64_T succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3272826106/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3272826106.dir/build.make CMakeFiles/cmTryCompileExec3272826106.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3272826106.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_U_INT64_T   -o CMakeFiles/cmTryCompileExec3272826106.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec3272826106
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3272826106.dir/link.txt --verbose=1
+/usr/bin/c++    -DHAVE_U_INT64_T    CMakeFiles/cmTryCompileExec3272826106.dir/src.cxx.o  -o cmTryCompileExec3272826106 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+    #include<sys/types.h>
+#include<inttypes.h>
+#include<stdint.h>
+ u_int64_t typeVar;
+    int main() {
+        return 0;
+    }
+    
+Performing C++ SOURCE FILE Test HAVE_CXX_ATOMICS_WITHOUT_LIB succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec462523517/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec462523517.dir/build.make CMakeFiles/cmTryCompileExec462523517.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec462523517.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_CXX_ATOMICS_WITHOUT_LIB -std=c++11   -o CMakeFiles/cmTryCompileExec462523517.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec462523517
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec462523517.dir/link.txt --verbose=1
+/usr/bin/c++    -DHAVE_CXX_ATOMICS_WITHOUT_LIB -std=c++11    CMakeFiles/cmTryCompileExec462523517.dir/src.cxx.o  -o cmTryCompileExec462523517 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <atomic>
+std::atomic<int> x;
+int main() {
+  return x;
+}
+
+Performing C++ SOURCE FILE Test LLVM_HAS_ATOMICS succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1589352516/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1589352516.dir/build.make CMakeFiles/cmTryCompileExec1589352516.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1589352516.dir/src.cxx.o
+/usr/bin/c++    -DLLVM_HAS_ATOMICS   -o CMakeFiles/cmTryCompileExec1589352516.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1589352516
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1589352516.dir/link.txt --verbose=1
+/usr/bin/c++    -DLLVM_HAS_ATOMICS    CMakeFiles/cmTryCompileExec1589352516.dir/src.cxx.o  -o cmTryCompileExec1589352516 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#ifdef _MSC_VER
+#include <Intrin.h> /* Workaround for PR19898. */
+#include <windows.h>
+#endif
+int main() {
+#ifdef _MSC_VER
+        volatile LONG val = 1;
+        MemoryBarrier();
+        InterlockedCompareExchange(&val, 0, 1);
+        InterlockedIncrement(&val);
+        InterlockedDecrement(&val);
+#else
+        volatile unsigned long val = 1;
+        __sync_synchronize();
+        __sync_val_compare_and_swap(&val, 1, 0);
+        __sync_add_and_fetch(&val, 1);
+        __sync_sub_and_fetch(&val, 1);
+#endif
+        return 0;
+      }
+
+Performing C++ SOURCE FILE Test SUPPORTS_NO_VARIADIC_MACROS_FLAG succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1380448869/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1380448869.dir/build.make CMakeFiles/cmTryCompileExec1380448869.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1380448869.dir/src.cxx.o
+/usr/bin/c++    -DSUPPORTS_NO_VARIADIC_MACROS_FLAG   -Wno-variadic-macros -o CMakeFiles/cmTryCompileExec1380448869.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1380448869
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1380448869.dir/link.txt --verbose=1
+/usr/bin/c++    -DSUPPORTS_NO_VARIADIC_MACROS_FLAG    CMakeFiles/cmTryCompileExec1380448869.dir/src.cxx.o  -o cmTryCompileExec1380448869 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAS_MAYBE_UNINITIALIZED succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2863344798/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2863344798.dir/build.make CMakeFiles/cmTryCompileExec2863344798.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2863344798.dir/src.cxx.o
+/usr/bin/c++    -DHAS_MAYBE_UNINITIALIZED   -Wmaybe-uninitialized -o CMakeFiles/cmTryCompileExec2863344798.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec2863344798
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2863344798.dir/link.txt --verbose=1
+/usr/bin/c++    -DHAS_MAYBE_UNINITIALIZED    CMakeFiles/cmTryCompileExec2863344798.dir/src.cxx.o  -o cmTryCompileExec2863344798 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_FPIC succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2917759621/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2917759621.dir/build.make CMakeFiles/cmTryCompileExec2917759621.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2917759621.dir/src.c.o
+/usr/bin/cc   -DC_SUPPORTS_FPIC   -Werror -fPIC -o CMakeFiles/cmTryCompileExec2917759621.dir/src.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec2917759621
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2917759621.dir/link.txt --verbose=1
+/usr/bin/cc   -DC_SUPPORTS_FPIC    CMakeFiles/cmTryCompileExec2917759621.dir/src.c.o  -o cmTryCompileExec2917759621 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_FPIC succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2555656078/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2555656078.dir/build.make CMakeFiles/cmTryCompileExec2555656078.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2555656078.dir/src.cxx.o
+/usr/bin/c++    -DCXX_SUPPORTS_FPIC   -Werror -fPIC -o CMakeFiles/cmTryCompileExec2555656078.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec2555656078
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2555656078.dir/link.txt --verbose=1
+/usr/bin/c++    -DCXX_SUPPORTS_FPIC    CMakeFiles/cmTryCompileExec2555656078.dir/src.cxx.o  -o cmTryCompileExec2555656078 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3149094729/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3149094729.dir/build.make CMakeFiles/cmTryCompileExec3149094729.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3149094729.dir/src.cxx.o
+/usr/bin/c++    -fPIC -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG   -fvisibility-inlines-hidden -o CMakeFiles/cmTryCompileExec3149094729.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec3149094729
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3149094729.dir/link.txt --verbose=1
+/usr/bin/c++    -fPIC -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG    CMakeFiles/cmTryCompileExec3149094729.dir/src.cxx.o  -o cmTryCompileExec3149094729 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2878549125/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2878549125.dir/build.make CMakeFiles/cmTryCompileExec2878549125.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2878549125.dir/src.cxx.o
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -DCXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG   -Wmissing-field-initializers -o CMakeFiles/cmTryCompileExec2878549125.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec2878549125
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2878549125.dir/link.txt --verbose=1
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -DCXX_SUPPORTS_MISSING_FIELD_INITIALIZERS_FLAG    CMakeFiles/cmTryCompileExec2878549125.dir/src.cxx.o  -o cmTryCompileExec2878549125 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_DELETE_NON_VIRTUAL_DTOR_FLAG succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3154642124/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3154642124.dir/build.make CMakeFiles/cmTryCompileExec3154642124.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3154642124.dir/src.cxx.o
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-maybe-uninitialized -DCXX_SUPPORTS_DELETE_NON_VIRTUAL_DTOR_FLAG   -Werror -Wdelete-non-virtual-dtor -o CMakeFiles/cmTryCompileExec3154642124.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec3154642124
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3154642124.dir/link.txt --verbose=1
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-maybe-uninitialized -DCXX_SUPPORTS_DELETE_NON_VIRTUAL_DTOR_FLAG    CMakeFiles/cmTryCompileExec3154642124.dir/src.cxx.o  -o cmTryCompileExec3154642124 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_CXX11 succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1569999722/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1569999722.dir/build.make CMakeFiles/cmTryCompileExec1569999722.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1569999722.dir/src.cxx.o
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-maybe-uninitialized -Wdelete-non-virtual-dtor -Wno-comment -DCXX_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTryCompileExec1569999722.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1569999722
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1569999722.dir/link.txt --verbose=1
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-maybe-uninitialized -Wdelete-non-virtual-dtor -Wno-comment -DCXX_SUPPORTS_CXX11    CMakeFiles/cmTryCompileExec1569999722.dir/src.cxx.o  -o cmTryCompileExec1569999722 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_FNO_FUNCTION_SECTIONS succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2801637673/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2801637673.dir/build.make CMakeFiles/cmTryCompileExec2801637673.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2801637673.dir/src.c.o
+/usr/bin/cc   -fPIC -Wall -W -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-comment -DC_SUPPORTS_FNO_FUNCTION_SECTIONS   -Werror -fno-function-sections -o CMakeFiles/cmTryCompileExec2801637673.dir/src.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec2801637673
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2801637673.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -W -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-comment -DC_SUPPORTS_FNO_FUNCTION_SECTIONS    CMakeFiles/cmTryCompileExec2801637673.dir/src.c.o  -o cmTryCompileExec2801637673 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_FFUNCTION_SECTIONS succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3968567914/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3968567914.dir/build.make CMakeFiles/cmTryCompileExec3968567914.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3968567914.dir/src.c.o
+/usr/bin/cc   -fPIC -Wall -W -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-comment -DC_SUPPORTS_FFUNCTION_SECTIONS   -Werror -ffunction-sections -o CMakeFiles/cmTryCompileExec3968567914.dir/src.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec3968567914
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3968567914.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -W -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-comment -DC_SUPPORTS_FFUNCTION_SECTIONS    CMakeFiles/cmTryCompileExec3968567914.dir/src.c.o  -o cmTryCompileExec3968567914 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_FFUNCTION_SECTIONS succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1474872905/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1474872905.dir/build.make CMakeFiles/cmTryCompileExec1474872905.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1474872905.dir/src.cxx.o
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-maybe-uninitialized -Wdelete-non-virtual-dtor -Wno-comment -std=c++11 -DCXX_SUPPORTS_FFUNCTION_SECTIONS   -Werror -ffunction-sections -o CMakeFiles/cmTryCompileExec1474872905.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1474872905
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1474872905.dir/link.txt --verbose=1
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-maybe-uninitialized -Wdelete-non-virtual-dtor -Wno-comment -std=c++11 -DCXX_SUPPORTS_FFUNCTION_SECTIONS    CMakeFiles/cmTryCompileExec1474872905.dir/src.cxx.o  -o cmTryCompileExec1474872905 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_FDATA_SECTIONS succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec373179287/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec373179287.dir/build.make CMakeFiles/cmTryCompileExec373179287.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec373179287.dir/src.c.o
+/usr/bin/cc   -fPIC -Wall -W -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-comment -ffunction-sections -DC_SUPPORTS_FDATA_SECTIONS   -Werror -fdata-sections -o CMakeFiles/cmTryCompileExec373179287.dir/src.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTryCompileExec373179287
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec373179287.dir/link.txt --verbose=1
+/usr/bin/cc   -fPIC -Wall -W -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-comment -ffunction-sections -DC_SUPPORTS_FDATA_SECTIONS    CMakeFiles/cmTryCompileExec373179287.dir/src.c.o  -o cmTryCompileExec373179287 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_FDATA_SECTIONS succeded with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3484771340/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3484771340.dir/build.make CMakeFiles/cmTryCompileExec3484771340.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3484771340.dir/src.cxx.o
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-maybe-uninitialized -Wdelete-non-virtual-dtor -Wno-comment -std=c++11 -ffunction-sections -DCXX_SUPPORTS_FDATA_SECTIONS   -Werror -fdata-sections -o CMakeFiles/cmTryCompileExec3484771340.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec3484771340
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3484771340.dir/link.txt --verbose=1
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-maybe-uninitialized -Wdelete-non-virtual-dtor -Wno-comment -std=c++11 -ffunction-sections -DCXX_SUPPORTS_FDATA_SECTIONS    CMakeFiles/cmTryCompileExec3484771340.dir/src.cxx.o  -o cmTryCompileExec3484771340 -rdynamic -lm 
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }

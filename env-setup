@@ -7,14 +7,23 @@ apt-get update
 apt-get install -y nodejs npm oracle-java8-set-default oracle-java8-installer
 
 # Install GHC
-apt-get install -y ghc ghc-proff ghc-doc
+apt-get install -y ghc ghc-prof ghc-doc
 
 # Install google-closure-compiler
 npm install --save google-closure-compiler
 
+# Install ghcjs
+cabal install happy alex
+cabal install http://ghcjs.luite.com/master.tar.gz
+ghcjs-boot
+
+# Install PHP compilers
+npm install phptoast phptojs phpruntime phpcommon
+
 # Install emscripten
 wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
 tar xzf emsdk-portable.tar.gz
+rm emsdk-portable.tar.gz
 cd emsdk_portable
 ./emsdk update
 ./emsdk install latest
@@ -22,7 +31,3 @@ cd emsdk_portable
 source ./emsdk_env.sh
 cd ../
 
-# Install ghcjs
-cabal install happy alex
-cabal install http://ghcjs.luite.com/master.tar.gz
-ghcjs-boot

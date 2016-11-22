@@ -1,16 +1,16 @@
 <?php
-// A request to generate a code file
+# A request to generate a code file
 class RequestValue {
-	// The language that the code is in
+	# The language that the code is in
 	var $lang;
-	// The code text
+	# The code text
 	var $text;
 };
 class RequestReturn {
-  // Compiler Output
-  var $output;
-  // Compilation Result
-  var $code;
+	# Compiler Output
+	var $output;
+	# Compilation Result
+	var $code;
 
 	void __construct($output, $code)
 	{
@@ -142,6 +142,22 @@ function compileJavascriptFile($text) {
 
 	return new RequestReturn($output, $result);
 }
+
+function compilePHP($text) {
+	$tmpdir = sys_get_temp_dir();
+	$output = "";
+	$result = "";
+	$filename = $tmpdir . generateRandomString();
+	
+	if (file_put_contents($filename . ".php"))
+	{
+		$output .= shell_exec("phptoast " . $filename . ".php");
+		$output .= shell_exec("phptojs " . $filename . ".ast");
+		
+		$result = file_get_contents($filename . ".js");
+	}
+}
+
 //
 function compileUserFile($reqval)
 {
