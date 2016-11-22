@@ -19,7 +19,7 @@ class RequestReturn {
 	}
 };
 
-function generateRandomString($length = 10) {
+function generateRandomString($length = 50) {
 	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
     $randomString = '';
@@ -29,13 +29,25 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
-// Compile a given java file with the file text
-// and a string indicating which java version to
-// compile it to
-//  text: The actual code text
-//  version_string: A string which is passed as an argument to
-//                  javac and used to indicate which version to
-//                  compile the code as
+function minifyJS($jsfile)
+{
+	# NOTE: If the ADVANCED_OPTIMIZATIONS compilation level causes
+	#       problems then we should change it to SIMPLE_OPTIMIZATIONS
+	# NOTE: This should not be used for user provided JS code. This is
+	#       only for code which is compiled down from user generated code
+	#       in other languages. User provided JS should be minified using
+	#       compilation level WHITESPACE_ONLY.
+	return shell_exec("closure-compiler " .
+				"--compilation_level ADVANCED_OPTIMIZATIONS --js " . $jsfile);
+}
+
+# Compile a given java file with the file text
+# and a string indicating which java version to
+# compile it to
+#  text: The actual code text
+#  version_string: A string which is passed as an argument to
+#                  javac and used to indicate which version to
+#                  compile the code as
 function compileJavaFile($text, $version_string) {
   $tmpdir = sys_get_temp_dir();
   $output = "";
@@ -58,10 +70,10 @@ function compileJavaFile($text, $version_string) {
 	return new RequestReturn($output, $result);
 }
 
-// Compile a given file with the given source
-// code and extra arguments using Clang
-//  text: The C++ or C source code
-//  extargs: Extra args for the compiler
+# Compile a given file with the given source
+# code and extra arguments using Clang
+#  text: The C++ or C source code
+#  extargs: Extra args for the compiler
 function compileFileWithClang($extargs, $ext = ".cpp") {
 	$tmpdir = sys_get_temp_dir();
 	$output = "";
@@ -71,6 +83,7 @@ function compileFileWithClang($extargs, $ext = ".cpp") {
 	if(file_put_contents($filename . $ext)) {
   	$output .= shell_exec("./emcc -03 " . $filename . $ext . " -o " . $filename . ".bc" . $extargs);
   	$output .= shell_exec("./emcc -03 " . $filename . ".bc -o " . $filename . ".js");
+		$output .= minifyJS($filename . ".js");
 
 		$result = file_get_contents($filename . ".js");
 
@@ -82,7 +95,30 @@ function compileFileWithClang($extargs, $ext = ".cpp") {
 		$output .= "An unexpected error occurred while compiling the code.";
 	}
 
-	return new RequestReturn($output, )
+	return new RequestReturn($output, $result)
+}
+
+function compileHaskellFile($text) {
+	$tmpdir = sys_get_temp_dir();
+	$output = "";
+	$result = "";
+	$filename = $tmpdir . generateRandomString();
+
+	if (file_put_contents($filename . ".hs"))
+	{
+		$output .= shell_exec("ghcjs " . $filename . ".hs -o " . $filename . ".js");
+		$output .= minifyJS($filename . ".js");
+
+		$result = file_get_contents($filename . ".js");
+
+		unlink($filename . ".hs");
+		unlink($filename . ".js");
+	}
+	else {
+		$output .= "An unexpected error occurrend while compiling the code.";
+	}
+
+	return new RequestReturn($output, $result);
 }
 
 //
@@ -119,6 +155,8 @@ function compileUserFile($reqval)
 			return compileFileWithClang($reqval->text, "", ".mm");
 		case "Objective-C":
 			return compileFileWithClang($reqval->text, "", ".m");
+		case "Haskell":
+			return compileHaskellFile($reqval->text);
 		default:
 			# An unknown language was passed
 			# this is an error
