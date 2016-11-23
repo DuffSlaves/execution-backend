@@ -1,0 +1,6 @@
+
+#Ignore emscripten install dir
+emsdk_portable/
+
+#Ignore GWT install dir
+gwt/
