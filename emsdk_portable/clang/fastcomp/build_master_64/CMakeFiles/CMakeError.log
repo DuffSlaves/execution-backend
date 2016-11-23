@@ -1,0 +1,356 @@
+Determining if the include file malloc/malloc.h exists failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec177073798/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec177073798.dir/build.make CMakeFiles/cmTryCompileExec177073798.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec177073798.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec177073798.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:27: fatal error: malloc/malloc.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTryCompileExec177073798.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec177073798.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec177073798.dir/CheckIncludeFile.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec177073798/fast' failed
+make: *** [cmTryCompileExec177073798/fast] Error 2
+
+
+Determining if the include file ndir.h exists failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3064213976/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3064213976.dir/build.make CMakeFiles/cmTryCompileExec3064213976.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3064213976.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3064213976.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:18: fatal error: ndir.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTryCompileExec3064213976.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3064213976.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3064213976.dir/CheckIncludeFile.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec3064213976/fast' failed
+make: *** [cmTryCompileExec3064213976/fast] Error 2
+
+
+Determining if the include file sys/ndir.h exists failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1440710722/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1440710722.dir/build.make CMakeFiles/cmTryCompileExec1440710722.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1440710722.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1440710722.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:22: fatal error: sys/ndir.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTryCompileExec1440710722.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1440710722.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1440710722.dir/CheckIncludeFile.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec1440710722/fast' failed
+make: *** [cmTryCompileExec1440710722/fast] Error 2
+
+
+Determining if the include file valgrind/valgrind.h exists failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2852558245/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2852558245.dir/build.make CMakeFiles/cmTryCompileExec2852558245.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2852558245.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2852558245.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:31: fatal error: valgrind/valgrind.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTryCompileExec2852558245.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2852558245.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2852558245.dir/CheckIncludeFile.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec2852558245/fast' failed
+make: *** [cmTryCompileExec2852558245/fast] Error 2
+
+
+Determining if the include file mach/mach.h exists failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3451930442/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3451930442.dir/build.make CMakeFiles/cmTryCompileExec3451930442.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3451930442.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3451930442.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:23: fatal error: mach/mach.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTryCompileExec3451930442.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3451930442.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3451930442.dir/CheckIncludeFile.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec3451930442/fast' failed
+make: *** [cmTryCompileExec3451930442/fast] Error 2
+
+
+Determining if the include file mach-o/dyld.h exists failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3061587819/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3061587819.dir/build.make CMakeFiles/cmTryCompileExec3061587819.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3061587819.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3061587819.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: mach-o/dyld.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTryCompileExec3061587819.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3061587819.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3061587819.dir/CheckIncludeFile.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec3061587819/fast' failed
+make: *** [cmTryCompileExec3061587819/fast] Error 2
+
+
+Determining if the include file histedit.h exists failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec990334233/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec990334233.dir/build.make CMakeFiles/cmTryCompileExec990334233.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec990334233.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec990334233.dir/CheckIncludeFile.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:22: fatal error: histedit.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTryCompileExec990334233.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec990334233.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec990334233.dir/CheckIncludeFile.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec990334233/fast' failed
+make: *** [cmTryCompileExec990334233/fast] Error 2
+
+
+Determining if the arc4random exist failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec643317769/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec643317769.dir/build.make CMakeFiles/cmTryCompileExec643317769.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec643317769.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec643317769.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘arc4random’ undeclared (first use in this function)
+   return ((int*)(&arc4random))[argc];
+                   ^
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTryCompileExec643317769.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec643317769.dir/CheckSymbolExists.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec643317769.dir/CheckSymbolExists.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec643317769/fast' failed
+make: *** [cmTryCompileExec643317769/fast] Error 2
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef arc4random
+  return ((int*)(&arc4random))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the mallctl exist failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3578640870/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3578640870.dir/build.make CMakeFiles/cmTryCompileExec3578640870.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3578640870.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3578640870.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:23: fatal error: malloc_np.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTryCompileExec3578640870.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3578640870.dir/CheckSymbolExists.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3578640870.dir/CheckSymbolExists.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec3578640870/fast' failed
+make: *** [cmTryCompileExec3578640870/fast] Error 2
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc_np.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef mallctl
+  return ((int*)(&mallctl))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the malloc_zone_statistics exist failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec885027081/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec885027081.dir/build.make CMakeFiles/cmTryCompileExec885027081.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec885027081.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec885027081.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:27: fatal error: malloc/malloc.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTryCompileExec885027081.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec885027081.dir/CheckSymbolExists.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec885027081.dir/CheckSymbolExists.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec885027081/fast' failed
+make: *** [cmTryCompileExec885027081/fast] Error 2
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc/malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef malloc_zone_statistics
+  return ((int*)(&malloc_zone_statistics))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strerror_s exist failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1148679386/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1148679386.dir/build.make CMakeFiles/cmTryCompileExec1148679386.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1148679386.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1148679386.dir/CheckSymbolExists.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘strerror_s’ undeclared (first use in this function)
+   return ((int*)(&strerror_s))[argc];
+                   ^
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTryCompileExec1148679386.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1148679386.dir/CheckSymbolExists.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1148679386.dir/CheckSymbolExists.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec1148679386/fast' failed
+make: *** [cmTryCompileExec1148679386/fast] Error 2
+
+File /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strerror_s
+  return ((int*)(&strerror_s))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test C_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2245356147/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2245356147.dir/build.make CMakeFiles/cmTryCompileExec2245356147.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2245356147.dir/src.c.o
+/usr/bin/cc   -fPIC -Wall -W -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -pedantic -Wno-long-long -DC_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG   -Werror -Wcovered-switch-default -o CMakeFiles/cmTryCompileExec2245356147.dir/src.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option '-Wcovered-switch-default'
+CMakeFiles/cmTryCompileExec2245356147.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2245356147.dir/src.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2245356147.dir/src.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec2245356147/fast' failed
+make: *** [cmTryCompileExec2245356147/fast] Error 2
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2821646652/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2821646652.dir/build.make CMakeFiles/cmTryCompileExec2821646652.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2821646652.dir/src.cxx.o
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -DCXX_SUPPORTS_COVERED_SWITCH_DEFAULT_FLAG   -Werror -Wcovered-switch-default -o CMakeFiles/cmTryCompileExec2821646652.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wcovered-switch-default'
+CMakeFiles/cmTryCompileExec2821646652.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2821646652.dir/src.cxx.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2821646652.dir/src.cxx.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec2821646652/fast' failed
+make: *** [cmTryCompileExec2821646652/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test C_SUPPORTS_DELETE_NON_VIRTUAL_DTOR_FLAG failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec950338020/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec950338020.dir/build.make CMakeFiles/cmTryCompileExec950338020.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec950338020.dir/src.c.o
+/usr/bin/cc   -fPIC -Wall -W -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -pedantic -Wno-long-long -DC_SUPPORTS_DELETE_NON_VIRTUAL_DTOR_FLAG   -Werror -Wdelete-non-virtual-dtor -o CMakeFiles/cmTryCompileExec950338020.dir/src.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.c
+cc1: error: command line option '-Wdelete-non-virtual-dtor' is valid for C++/ObjC++ but not for C [-Werror]
+cc1: all warnings being treated as errors
+CMakeFiles/cmTryCompileExec950338020.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec950338020.dir/src.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec950338020.dir/src.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec950338020/fast' failed
+make: *** [cmTryCompileExec950338020/fast] Error 2
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_WCOMMENT_ALLOWS_LINE_WRAP failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4058122107/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4058122107.dir/build.make CMakeFiles/cmTryCompileExec4058122107.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4058122107.dir/src.c.o
+/usr/bin/cc   -fPIC -Wall -W -Wno-unused-parameter -Wwrite-strings -Wno-missing-field-initializers -pedantic -Wno-long-long -DC_WCOMMENT_ALLOWS_LINE_WRAP  -Werror -Wcomment   -o CMakeFiles/cmTryCompileExec4058122107.dir/src.c.o   -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.c
+/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.c:1:1: error: multi-line comment [-Werror=comment]
+ // \
+ ^
+cc1: all warnings being treated as errors
+CMakeFiles/cmTryCompileExec4058122107.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4058122107.dir/src.c.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec4058122107.dir/src.c.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec4058122107/fast' failed
+make: *** [cmTryCompileExec4058122107/fast] Error 2
+
+Source file was:
+// \
+//
+int main() {return 0;}
+Performing C++ SOURCE FILE Test CXX_SUPPORTS_NO_NESTED_ANON_TYPES_FLAG failed with the following output:
+Change Dir: /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec595435654/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec595435654.dir/build.make CMakeFiles/cmTryCompileExec595435654.dir/build
+make[1]: Entering directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec595435654.dir/src.cxx.o
+/usr/bin/c++    -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-maybe-uninitialized -Wdelete-non-virtual-dtor -Wno-comment -std=c++11 -ffunction-sections -fdata-sections -fno-common -Woverloaded-virtual -fno-strict-aliasing -DCXX_SUPPORTS_NO_NESTED_ANON_TYPES_FLAG   -Werror -Wnested-anon-types -o CMakeFiles/cmTryCompileExec595435654.dir/src.cxx.o -c /home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wnested-anon-types'
+CMakeFiles/cmTryCompileExec595435654.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec595435654.dir/src.cxx.o' failed
+make[1]: Leaving directory '/home/slynch/dev/moodle-code-window/emsdk_portable/clang/fastcomp/build_master_64/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec595435654.dir/src.cxx.o] Error 1
+Makefile:117: recipe for target 'cmTryCompileExec595435654/fast' failed
+make: *** [cmTryCompileExec595435654/fast] Error 2
+
+Source file was:
+int main() { return 0; }

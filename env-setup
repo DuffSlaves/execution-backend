@@ -7,14 +7,14 @@ apt-get update
 apt-get install -y nodejs npm oracle-java8-set-default oracle-java8-installer
 
 # Install GHC
-apt-get install -y ghc ghc-prof ghc-doc
+apt-get install -y ghc ghc-prof ghc-doc cabal-install
 
 # Install google-closure-compiler
 npm install --save google-closure-compiler
 
 # Install ghcjs
-cabal install happy alex
-cabal install http://ghcjs.luite.com/master.tar.gz
+cabal update
+cabal install happy alex http://ghcjs.luite.com/master.tar.gz
 ghcjs-boot
 
 # Install Typescript compiler
@@ -24,8 +24,13 @@ npm install -g typescript
 npm install -g coffee-script
 
 # Install python and PyJS
-apt-get install python3
+apt-get install -y python3 python-pip
 pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
+
+# Install GWT 
+wget -o gwt.zip "https://storage.googleapis.com/gwt-releases/gwt-2.8.9.zip"
+tar xzf gwt.zip
+rm gwt.zip
 
 # Install emscripten
 wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
