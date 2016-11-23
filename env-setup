@@ -1,5 +1,5 @@
 # Install git
-apt-get install -y nodejs npm git
+apt-get install -y nodejs npm git p7zip-full
 
 # Install java8
 apt-add-repository -y ppa:webupd8team/java
@@ -29,13 +29,20 @@ apt-get install -y python3 python-pip
 pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
 
 # Install GnuCOBOL
-wget -o gnu-cobol.tar.gz "http://downloads.sourceforge.net/project/open-cobol/gnu-cobol/2.0/gnu-cobol-2.0_rc-2.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fopen-cobol%2Ffiles%2Fgnu-cobol%2F2.0%2F&ts=1479923858&use_mirror=pilotfiber"
-tar xzf gnu-cobol.tar.gz
-
+wget "http://downloads.sourceforge.net/project/open-cobol/gnu-cobol/2.0/gnu-cobol-2.0_rc-2_win.zip"
+apt-get install libdb-dev
+7z x gnu-cobol-2.0_rc-2_win.zip -y
+rm gnu-cobol-2.0_rc-2_win.zip
+cd gnu-cobol-2.0
+./configure
+make
+make install
+cd ../
 
 # Install GWT 
-wget -o gwt.zip "https://storage.googleapis.com/gwt-releases/gwt-2.8.9.zip"
-tar xzf gwt.zip
+wget "https://storage.googleapis.com/gwt-releases/gwt-2.8.9.zip"
+mv gwt-2.8.9.zip gwt.zip
+7z x gwt.zip -y
 rm gwt.zip
 
 # Install emscripten
