@@ -14,6 +14,7 @@ npm install --save google-closure-compiler
 
 # Install ghcjs
 cabal update
+PATH=$PATH:~/.cabal/bin
 cabal install happy alex http://ghcjs.luite.com/master.tar.gz
 ghcjs-boot
 
@@ -26,6 +27,10 @@ npm install -g coffee-script
 # Install python and PyJS
 apt-get install -y python3 python-pip
 pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
+
+# Install GnuCOBOL
+wget -o gnu-cobol.tar.gz "http://downloads.sourceforge.net/project/open-cobol/gnu-cobol/2.0/gnu-cobol-2.0_rc-2.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fopen-cobol%2Ffiles%2Fgnu-cobol%2F2.0%2F&ts=1479923858&use_mirror=pilotfiber"
+tar xzf gnu-cobol.tar.gz
 
 # Install GWT 
 wget -o gwt.zip "https://storage.googleapis.com/gwt-releases/gwt-2.8.9.zip"
