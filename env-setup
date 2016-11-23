@@ -1,13 +1,13 @@
 # Install git
-apt-get install -y nodejs npm git p7zip-full
+apt-get install -y nodejs npm git p7zip-full gcc nodejs-legacy
 
 # Install java8
 apt-add-repository -y ppa:webupd8team/java
 apt-get update
-apt-get install -y nodejs npm oracle-java8-set-default oracle-java8-installer
+apt-get install -y oracle-java8-set-default oracle-java8-installer
 
 # Install GHC
-apt-get install -y ghc ghc-prof ghc-doc cabal-install
+apt-get install -y ghc cabal-install
 
 # Install google-closure-compiler
 npm install --save google-closure-compiler
@@ -15,7 +15,7 @@ npm install --save google-closure-compiler
 # Install ghcjs
 cabal update
 PATH=$PATH:~/.cabal/bin
-cabal install happy alex http://ghcjs.luite.com/master.tar.gz
+cabal install -j happy alex http://ghcjs.luite.com/master.tar.gz
 ghcjs-boot
 
 # Install Typescript compiler
@@ -29,19 +29,12 @@ apt-get install -y python3 python-pip
 pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
 
 # Install GnuCOBOL
-wget "http://downloads.sourceforge.net/project/open-cobol/gnu-cobol/2.0/gnu-cobol-2.0_rc-2_win.zip"
-apt-get install libdb-dev
-7z x gnu-cobol-2.0_rc-2_win.zip -y
-rm gnu-cobol-2.0_rc-2_win.zip
-cd gnu-cobol-2.0
-./configure
-make
-make install
-cd ../
+ldconfig /usr/local/lib
+sudo apt-get install -y open-cobol
 
 # Install GWT 
-wget "https://storage.googleapis.com/gwt-releases/gwt-2.8.9.zip"
-mv gwt-2.8.9.zip gwt.zip
+wget "https://goo.gl/QWOlx0"
+mv QWOlx0 gwt.zip
 7z x gwt.zip -y
 rm gwt.zip
 
@@ -53,6 +46,17 @@ cd emsdk_portable
 ./emsdk update
 ./emsdk install latest
 ./emsdk activate latest
-source ./emsdk_env.sh
+. ./emsdk_env.sh
 cd ../
 
+#Install Dragonegg
+wget "https://launchpad.net/ubuntu/+archive/primary/+files/dragonegg_3.4.orig.tar.bz2"
+mv dragonegg_3.4.orig.tar.bz2 dragonegg.tar.bz2
+7z x dragonegg.tar.bz2
+7z x dragonegg.tar
+rm dragonegg.tar.bz2
+rm dragonegg.tar
+cd dragonegg-3.4
+make
+make install
+cd ../

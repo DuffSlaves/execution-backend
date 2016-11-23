@@ -29,8 +29,7 @@ function generateRandomString($length = 50) {
     return $randomString;
 }
 
-function minifyJS($jsfile, $level = "ADVANCED_OPTIMIZATIONS")
-{
+function minifyJS($jsfile, $level = "ADVANCED_OPTIMIZATIONS") {
 	# NOTE: If the ADVANCED_OPTIMIZATIONS compilation level causes
 	#       problems then we should change it to SIMPLE_OPTIMIZATIONS
 	# NOTE: This should not be used for user provided JS code. This is
@@ -81,8 +80,8 @@ function compileFileWithClang($extargs, $ext = ".cpp") {
 	$filename = $tmpdir . generateRandomString();
 
 	if(file_put_contents($filename . $ext)) {
-  	$output .= shell_exec("./emcc -03 " . $filename . $ext . " -o " . $filename . ".bc" . $extargs);
-  	$output .= shell_exec("./emcc -03 " . $filename . ".bc -o " . $filename . ".js");
+  	$output .= shell_exec("./emcc -O3 -Wall " . $filename . $ext . " -o " . $filename . ".bc" . $extargs);
+  	$output .= shell_exec("./emcc -O3 " . $filename . ".bc -o " . $filename . ".js");
 		$output .= minifyJS($filename . ".js");
 
 		$result = file_get_contents($filename . ".js");
@@ -132,9 +131,9 @@ function compileTypeScript($text) {
 	if (file_put_contents($filename . ".ts"))
 	{
 		$output .= shell_exec("tsc " . $filename . ".ts");
-		
+
 		$result = file_get_contents($filename . ".js");
-		
+
 		unlink($filename . ".ts");
 		unlink($filename . ".js");
 	}
@@ -142,7 +141,7 @@ function compileTypeScript($text) {
 		$output .= "An unexpected error occurred while compiling the code.";
 		$result = NULL;
 	}
-	
+
 	return new RequestReturn($output, $result);
 }
 
@@ -154,9 +153,9 @@ function compileCoffeescript($text) {
 
 	if (file_put_contents($filename . ".coffee")) {
 		$output .= shell_exec("coffee -o " . $tmpdir . " -c " . $filename);
-		
+
 		$result = file_get_contents($filename . ".js");
-		
+
 		unlink($filename . ".coffee");
 		unlink($filename . ".js");
 	}
@@ -164,7 +163,7 @@ function compileCoffeescript($text) {
 		$output .= "An unexpected error occurred while compiling the code.";
 		$result = NULL;
 	}
-	
+
 	return new RequestReturn($output, $result);
 }
 
@@ -176,9 +175,9 @@ function compilePython3($text) {
 
 	if (file_put_contents($filename . ".py")) {
 		$output .= shell_exec("pyjsbuild " . $filename . ".py -o " . $filename  . ".js");
-		
+
 		$result = file_get_contents($filename . ".js");
-		
+
 		unlink($filename . ".py");
 		unlink($filename . ".js");
 	}
@@ -186,10 +185,35 @@ function compilePython3($text) {
 		$output .= "An unexpected error occurred while compiling the code.";
 		$result = NULL;
 	}
-	
+
 	return new RequestReturn($output, $result);
 }
 
+function compileCOBOL($text, $dialect) {
+	$tmpdir = sys_get_temp_dir();
+	$output = "";
+	$result = "";
+	$filename = $tmpdir . generateRandomString();
+
+	if (file_put_contents($filename . ".cbl")) {
+		$output .= shell_exec("cobc -C -Wall " . $filename . ".cbl -o " . $filename . ".c");
+		$output .= shell_exec("emcc -O3 " . $filename . ".c -o " . $filename . ".bc");
+		$output .= shell_exec("emcc -O3 " . $filename . ".bc -o " . $filename . ".js");
+
+		$result = file_get_contents($filename . ".js");
+
+		unlink($filename . ".cbl");
+		unlink($filename . ".c");
+		unlink($filename . ".bc");
+		unlink($filename . ".js");
+	}
+	else {
+		$output .= "An unexpected error occurred while compiling the code.";
+		$result = NULL;
+	}
+
+	return new RequestReturn($output, $result);
+}
 //
 function compileUserFile($reqval)
 {
@@ -230,6 +254,8 @@ function compileUserFile($reqval)
 			return compileCoffeeScript($reqval->text);
 		case "TypeScript":
 			return compileTypeScript($reqval->text);
+		case "COBOL":
+			return compileCOBOL($reqval->text, "default");
 		default:
 			# An unknown language was passed
 			# this is an error
