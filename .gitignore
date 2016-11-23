@@ -4,3 +4,5 @@ emsdk_portable/
 
 #Ignore GWT install dir
 gwt/
+
+#Ignore npm debug log
