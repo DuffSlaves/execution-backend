@@ -37,6 +37,7 @@ wget "https://goo.gl/QWOlx0"
 mv QWOlx0 gwt.zip
 7z x gwt.zip -y
 rm gwt.zip
+echo java -cp "gwt-user.jar; gwt-dev-windows.jar" com.google.gwt.dev.GWTCompiler \$@
 
 # Install emscripten
 wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
@@ -70,10 +71,14 @@ mv gcc-4.8.5.tar.bz2 gcc.tar.bz2
 7z x gcc.tar
 rm gcc.tar.bz2
 rm gcc.tar
+cp /usr/lib32/crti.o /usr/lib/crti.o
+cp /usr/lib32/crtn.o /usr/lib/crtn.o
 chmod +rwxrwxrwx gcc-4.8.5 -R
 cd gcc-4.8.5
 ./configure
 make
+rm /usr/lib/crti.o
+rm /usr/lib/crtn.o
 cd ../
 
 #Install Dragonegg
@@ -88,4 +93,5 @@ cd dragonegg-3.6.2.src
 GCC=../gcc-4.6 LLVM_CONFIG=../llvm-3.6.2.src/bin/llvm-config make
 cd ../
 cd ../
+
 

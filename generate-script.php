@@ -45,8 +45,8 @@ function minifyJS($jsfile, $level = "ADVANCED_OPTIMIZATIONS") {
 # compile it to
 #  text: The actual code text
 #  version_string: A string which is passed as an argument to
-#                  javac and used to indicate which version to
-#                  compile the code as
+#                  javac and used to indicate which version of
+#                  java the source file is
 function compileJavaFile($text, $version_string) {
   $tmpdir = sys_get_temp_dir();
   $output = "";
