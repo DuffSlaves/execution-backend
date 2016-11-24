@@ -49,14 +49,43 @@ cd emsdk_portable
 . ./emsdk_env.sh
 cd ../
 
-#Install Dragonegg
-wget "https://launchpad.net/ubuntu/+archive/primary/+files/dragonegg_3.4.orig.tar.bz2"
-mv dragonegg_3.4.orig.tar.bz2 dragonegg.tar.bz2
-7z x dragonegg.tar.bz2
-7z x dragonegg.tar
-rm dragonegg.tar.bz2
-rm dragonegg.tar
-cd dragonegg-3.4
+# Get LLVM-3.4 (For Dragonegg)
+wget "http://llvm.org/releases/3.6.2/llvm-3.6.2.src.tar.xz"
+mv llvm-3.6.2.src.tar.xz llvm.tar.xz
+7z x llvm.tar.xz
+7z x llvm.tar
+rm llvm.tar.xz
+rm llvm.tar
+chmod +rwxrwxrwx llvm-3.6.2.src -R
+cd llvm-3.6.2.src
+./configure
 make
-make install
 cd ../
+
+# Get GCC 4.8 (For Dragonegg)
+apt-get install libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib
+wget "https://ftp.gnu.org/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.bz2"
+mv gcc-4.8.5.tar.bz2 gcc.tar.bz2
+7z x gcc.tar.bz2
+7z x gcc.tar
+rm gcc.tar.bz2
+rm gcc.tar
+chmod +rwxrwxrwx gcc-4.8.5 -R
+cd gcc-4.8.5
+./configure
+make
+cd ../
+
+#Install Dragonegg
+wget "http://llvm.org/releases/3.6.2/dragonegg-3.6.2.src.tar.xz"
+mv dragonegg-3.6.2.src.tar.xz dragonegg.tar.xz
+7z x dragonegg.tar.xz
+7z x dragonegg.tar
+rm dragonegg.tar.xz
+rm dragonegg.tar
+chmod +rwxrwxrwx dragonegg-3.6.2.src -R
+cd dragonegg-3.6.2.src
+GCC=../gcc-4.6 LLVM_CONFIG=../llvm-3.6.2.src/bin/llvm-config make
+cd ../
+cd ../
+

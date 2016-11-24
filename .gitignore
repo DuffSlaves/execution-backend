@@ -7,3 +7,7 @@ gwt/
 
 #Ignore npm debug log
 npm-debug.log
+
+# Ignore LLVM build directory
+llvm-3.6.2.src/
+dragonegg-3.6.2.src/
