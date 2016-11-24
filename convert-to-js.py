@@ -66,6 +66,11 @@ def compileJava(text, version_string):
         pass
     return RequestReturn(output, result)
 
+# Compile a given file with the given source
+# code and extra arguments using Clang
+#  text: The C++ or C source code
+#  extargs: Extra args for the compiler
+#  ext: The file extension that the generated file will have
 def compileWithClang(text, extargs = '', ext = '.cpp'):
     output = ''
     result = ''
@@ -74,8 +79,8 @@ def compileWithClang(text, extargs = '', ext = '.cpp'):
 
         writeFile(filename + ext, text)
 
-        output += subprocess.check_output('./emcc -O3 -Wall ' + filename + ext + ' -o ' + filename + '.bc ' + extargs)
-        output += subprocess.check_output('./emcc -O3 ' + filename + '.bc -o ' + filename + '.js')
+        output += subprocess.check_output('emcc -O3 -Wall ' + filename + ext + ' -o ' + filename + '.bc ' + extargs)
+        output += subprocess.check_output('emcc -O3 ' + filename + '.bc -o ' + filename + '.js')
         output += minifyJS(filename + '.js')
 
         result = readFile(filename + '.js')
