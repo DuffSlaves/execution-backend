@@ -1,5 +1,7 @@
 from __future__ import print_function
 from tempfile import mkdtemp
+from subprocess import Popen
+from subprocess import PIPE
 import subprocess
 import fnmatch
 import shutil
@@ -7,26 +9,32 @@ import json
 import sys
 import os
 
+def output(str):
+    sys.stdout.write(str)
+def error(str):
+    sys.stderr.write(str)
+
 class RequestValue:
    def __init__(self, lang, text):
        self.lang = lang
        self.text = text
-
-class RequestReturn:
-    def __init__(self, output, result):
-        self.output = output
-        self.result = result
-
+       
 def writeFile(filename, text):
-    with open(filename, "wb") as f:
+    with open(filename, "w") as f:
         f.write(text)
 def readFile(filename):
-    with open(filename, "rb") as f:
+    with open(filename, "r") as f:
         return f.read()
 
 def mkTempDir():
     return mkdtemp(prefix='convert_to_js_')
 
+def exec_command(command):
+    proc = Popen(command, stdout=PIPE, stderr=PIPE)
+    (out, err) = proc.communicate()
+    output(out)
+    error(err)
+    
 def minifyJS(jsfile, level = 'ADVANCED_OPTIMIZATIONS'):
     # NOTE: If the ADVANCED_OPTIMIZATIONS compilation level causes
 	#       problems then we should change it to SIMPLE_OPTIMIZATIONS
@@ -34,7 +42,7 @@ def minifyJS(jsfile, level = 'ADVANCED_OPTIMIZATIONS'):
 	#       only for code which is compiled down from user generated code
 	#       in other languages. User provided JS should be minified using
 	#       compilation level WHITESPACE_ONLY.
-    return subprocess.check_output("closure-compiler --compilation_level" + level + ' --js ' + jsfile)
+    exec_command("closure-compiler --compilation_level" + level + ' --js ' + jsfile)
 
 # Compile a given java file with the file text
 # and a string indicating which java version to
@@ -44,162 +52,129 @@ def minifyJS(jsfile, level = 'ADVANCED_OPTIMIZATIONS'):
 #                  javac and used to indicate which version of
 #                  java the source file is
 def compileJava(text, version_string):
-    output = ''
     result = ''
-    try:
-        tmpdir = mkTempDir()
-        filename = tmpdir + 'tmpfile'
 
-        writeFile(filename + '.java', text)
+    # Java compilation is not implemented yet
+    raise NotImplementedError("Java compilation has not been implemented yet");
 
-        output += subprocess.check_output('javac -source ' + version_string + ' ' + filename + '.java')
+    tmpdir = mkTempDir()
+    filename = tmpdir + 'tmpfile'
 
-        file = fnmatch.filter(os.listdir(tmpdir), '*.class')[0]
-        
-        result = readFile(file)
+    writeFile(filename + '.java', text)
 
-        shutil.rmtree(tmpdir, True)
+    exec_command('javac -source ' + version_string + ' ' + filename + '.java')
 
-        return RequestReturn(output, result)
-    except:
-        output += "An unexpected error occurred while compiling the code."
-        result = None
-        pass
-    return RequestReturn(output, result)
+    for file in fnmatch.filter(os.listdir(tmpdir), '*.class'):
+        continue # TODO: Make this do something
+    
+    result = readFile(file)
 
+    shutil.rmtree(tmpdir, True)
+
+    return result
 # Compile a given file with the given source
 # code and extra arguments using Clang
 #  text: The C++ or C source code
 #  extargs: Extra args for the compiler
 #  ext: The file extension that the generated file will have
 def compileWithClang(text, extargs = '', ext = '.cpp'):
-    output = ''
     result = ''
-    try:
-        tmpdir = mkTempDir()
-        filename = tmpdir + 'tmpfile'
 
-        writeFile(filename + ext, text)
-        filename = tmpdir + 'tmpfile'
+    tmpdir = mkTempDir()
+    filename = tmpdir + '\\tmpfile'
 
-        output += subprocess.check_output('emcc -O3 -Wall ' + filename + ext + ' -o ' + filename + '.bc ' + extargs)
-        output += subprocess.check_output('emcc -O3 ' + filename + '.bc -o ' + filename + '.js')
-        output += minifyJS(filename + '.js')
+    writeFile(filename + ext, text)
+    filename = tmpdir + 'tmpfile'
 
-        result = readFile(filename + '.js')
+    exec_command('emcc -O3 -Wall ' + filename + ext + ' -o ' + filename + '.bc ' + extargs)
+    exec_command('emcc -O3 ' + filename + '.bc -o ' + filename + '.js')
+    minifyJS(filename + '.js')
 
-        shutil.rmtree(tmpdir, True)
-    except:
-        output += "An unexpected error occurred while compiling the code."
-        result = None
-        pass
-    return RequestReturn(output, result)
+    result = readFile(filename + '.js')
 
+    shutil.rmtree(tmpdir, True)
+
+    return result
 def compileHaskell(text):
-    output = ''
-    result = ''
-    try:
-        tmpdir = mkTempDir()
-        filename = tmpdir + 'tmpfile'
+    result = None
 
-        writeFile(filename + '.hs', text)
+    tmpdir = mkTempDir()
+    filename = tmpdir + 'tmpfile'
 
-        output += subprocess.check_output('ghcjs ' + filename + '.hs -o ' + filename + '.js')
-        output += minifyJS(filename + '.js')
+    writeFile(filename + '.hs', text)
 
-        result = readFile(filename + '.js')
+    exec_command('ghcjs ' + filename + '.hs -o ' + filename + '.js')
+    minifyJS(filename + '.js')
 
-        shutil.rmtree(tmpdir, True)
-    except:
-        output += "An unexpected error occurred while compiling the code."
-        result = None
-        pass
-    return RequestReturn(output, result)
+    result = readFile(filename + '.js')
 
+    shutil.rmtree(tmpdir, True)
+
+    return result
 def compileTypeScript(text):
-    output = ''
-    result = ''
-    try:
-        tmpdir = mkTempDir()
-        filename = tmpdir + 'tmpfile'
+    result = None
 
-        writeFile(filename + '.ts', text)
+    tmpdir = mkTempDir()
+    filename = tmpdir + 'tmpfile'
 
-        output += subprocess.check_output('tsc ' + filename + '.ts')
-        
-        result = readFile(filename + '.js')
+    writeFile(filename + '.ts', text)
 
-        shutil.rmtree(tmpdir, True)
-    except:
-        output += "An unexpected error occurred while compiling the code."
-        result = None
-        pass
-    return RequestReturn(output, result)
+    exec_process('tsc ' + filename + '.ts')
+    
+    result = readFile(filename + '.js')
 
+    shutil.rmtree(tmpdir, True)
+
+    return result
 def compileCoffeeScript(text):
-    output = ''
-    result = ''
-    try:
-        tmpdir = mkTempDir()
-        filename = tmpdir + 'tmpfile'
+    result = None
 
-        writeFile(filename + '.coffee', text)
+    tmpdir = mkTempDir()
+    filename = tmpdir + 'tmpfile'
 
-        output += subprocess.check_output('coffee -o ' + tmpdir + ' -c ' + filename)
+    writeFile(filename + '.coffee', text)
 
-        result = readFile(filename + '.js')
+    exec_command('coffee -o ' + tmpdir + ' -c ' + filename)
 
-        shutil.rmtree(tmpdir, True)
-    except:
-        output += "An unexpected error occurred while compiling the code."
-        result = None
-        pass
-    return RequestReturn(output, result)
+    result = readFile(filename + '.js')
 
+    shutil.rmtree(tmpdir, True)
+
+    return result
 def compilePython3(text):
-    output = ''
-    result = ''
-    try:
-        tmpdir = mkTempDir()
-        filename = tmpdir + 'tmpfile'
+    result = None
 
-        writeFile(filename + '.js', text)
+    tmpdir = mkTempDir()
+    filename = tmpdir + 'tmpfile'
 
-        output += subprocess.check_output('pyjsbuild ' + fliename + '.py -o ' + filename + '.js')
+    writeFile(filename + '.js', text)
 
-        result = readFile(filename + '.js')
+    exec_command('pyjsbuild ' + fliename + '.py -o ' + filename + '.js')
 
-        shutil.rmtree(tmpdir, True)
-    except:
-        output += "An unexpected error occurred while compiling the code."
-        result = None
-        pass
+    result = readFile(filename + '.js')
+
+    shutil.rmtree(tmpdir, True)
+
     return RequestReturn(output, result)
-
 def compileCOBOL(text, dialect):
-    output = ''
-    result = ''
-    try:
-        tmpdir = mkTempDir()
-        filename = tmpdir + 'tmpfile'
+    result = None
+    tmpdir = mkTempDir()
+    filename = tmpdir + 'tmpfile'
 
-        writeFile(filename + '.cbl', text)
+    writeFile(filename + '.cbl', text)
 
-        output += subprocess.check_output('cobc -C -Wall ' + filename + '.cbl -o ' + filename + '.c')
-        output += subprocess.check_output('emcc -O3 ' + filename + '.c -o ' + filename + '.bc')
-        output += subprocess.check_output('emcc -O3 ' + filename + '.bc -o ' + filename + '.js')
-        
-        result = readFile(filename = '.js')
-        
-        shutil.rmtree(tmpdir, True)
-    except:
-         output += "An unexpected error occurred while compiling the code."
-         result = None
-         pass
-    return RequestReturn(output, result)
+    exec_command('cobc -C -Wall ' + filename + '.cbl -o ' + filename + '.c')
+    exec_command('emcc -O3 ' + filename + '.c -o ' + filename + '.bc')
+    exec_command('emcc -O3 ' + filename + '.bc -o ' + filename + '.js')
+    
+    result = readFile(filename = '.js')
+    
+    shutil.rmtree(tmpdir, True)
 
-def compileUserFile(reqval):
-     default = lambda text: return ReturnResult(None, None)
+    return result
+
+def compileUserFile(lang, code):
+     default = lambda text: ''
      return {
          'C++14':         lambda text: compileWithClang(text, '-std=c++14'),
          'C++11':         lambda text: compileWithClang(text, '-std=c++11'),
@@ -220,10 +195,15 @@ def compileUserFile(reqval):
          'CoffeeScript':  lambda text: compileCoffeeScript(text),
          'TypeScript':    lambda text: compileTypeScript(text),
          'COBOL':         lambda text: compileCOBOL(text),
-     }.get(reqval.lang, default)(reqval.text)
+     }.get(lang, default)(code)
 
 if __name__ == '__main__': # Script was executed from the command line
-    input = json.load(sys.stdin)
-    result = compileUserFile(RequestValue(input.lang, input.text))
-    print(json.dump(result))
-
+    if len(sys.argv) < 3:
+        print('usage: convert-to-js <input-file> <output-file>')
+    else:
+        text = readFile(sys.argv[1])
+        input = json.loads(text)
+        output = compileUserFile(input['lang'], input['text'])
+        writeFile(sys.argv[2], output)
+        sys.exit()
+        

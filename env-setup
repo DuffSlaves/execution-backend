@@ -11,7 +11,8 @@ apt-get install -y \
 	open-cobol \
 	libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib \
 	python3 python-pip \
-	maven
+	maven \
+	cmake
 
 # Install google-closure-compiler
 npm install --save google-closure-compiler
