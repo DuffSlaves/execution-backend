@@ -12,8 +12,8 @@ wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | apt-key add -
 
 # All apt-get requirements
 apt-get update
+apt-get -y install oracle-java8-set-default oracle-java8-installer
 apt-get -y install \
-	oracle-java8-set-default oracle-java8-installer \
 	nodejs npm git p7zip-full gcc nodejs-legacy \
 	ghc cabal-install \
 	open-cobol \
