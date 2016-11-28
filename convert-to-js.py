@@ -1,7 +1,11 @@
-from tempfile import gettempdir
-from random import randint
-import os
+from __future__ import print_function
+from tempfile import mkdtemp
 import subprocess
+import fnmatch
+import shutil
+import json
+import sys
+import os
 
 class RequestValue:
    def __init__(self, lang, text):
@@ -20,12 +24,8 @@ def readFile(filename):
     with open(filename, "rb") as f:
         return f.read()
 
-def generateRandomString(length = 50):
-    characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    result = ''
-    for i in xrange(length):
-        result += characters[randint(0, len(characters) - 1)]
-    return result
+def mkTempDir():
+    return mkdtemp(prefix='convert_to_js_')
 
 def minifyJS(jsfile, level = 'ADVANCED_OPTIMIZATIONS'):
     # NOTE: If the ADVANCED_OPTIMIZATIONS compilation level causes
@@ -47,17 +47,18 @@ def compileJava(text, version_string):
     output = ''
     result = ''
     try:
-        tmpdir = gettempdir()
-        filename = tmpdir + generateRandomString()
+        tmpdir = mkTempDir()
+        filename = tmpdir + 'tmpfile'
 
         writeFile(filename + '.java', text)
 
         output += subprocess.check_output('javac -source ' + version_string + ' ' + filename + '.java')
-        
-        result = readFile(filename + '.class')
 
-        os.remove(filename + '.java')
-        os.remove(filename + '.class')
+        file = fnmatch.filter(os.listdir(tmpdir), '*.class')[0]
+        
+        result = readFile(file)
+
+        shutil.rmtree(tmpdir, True)
 
         return RequestReturn(output, result)
     except:
@@ -75,9 +76,11 @@ def compileWithClang(text, extargs = '', ext = '.cpp'):
     output = ''
     result = ''
     try:
-        tmpdir = gettempdir()
+        tmpdir = mkTempDir()
+        filename = tmpdir + 'tmpfile'
 
         writeFile(filename + ext, text)
+        filename = tmpdir + 'tmpfile'
 
         output += subprocess.check_output('emcc -O3 -Wall ' + filename + ext + ' -o ' + filename + '.bc ' + extargs)
         output += subprocess.check_output('emcc -O3 ' + filename + '.bc -o ' + filename + '.js')
@@ -85,9 +88,7 @@ def compileWithClang(text, extargs = '', ext = '.cpp'):
 
         result = readFile(filename + '.js')
 
-        os.remove(filename + ext)
-        os.remove(filename + '.bc')
-        os.remove(filenaem + '.js')
+        shutil.rmtree(tmpdir, True)
     except:
         output += "An unexpected error occurred while compiling the code."
         result = None
@@ -98,8 +99,8 @@ def compileHaskell(text):
     output = ''
     result = ''
     try:
-        tmpdir = gettempdir()
-        filename = tmpdir + generateRandomString()
+        tmpdir = mkTempDir()
+        filename = tmpdir + 'tmpfile'
 
         writeFile(filename + '.hs', text)
 
@@ -108,8 +109,7 @@ def compileHaskell(text):
 
         result = readFile(filename + '.js')
 
-        os.remove(filename + '.hs')
-        os.remove(filename + '.js')
+        shutil.rmtree(tmpdir, True)
     except:
         output += "An unexpected error occurred while compiling the code."
         result = None
@@ -120,8 +120,8 @@ def compileTypeScript(text):
     output = ''
     result = ''
     try:
-        tmpdir = gettempdir()
-        filename = tmpdir + generateRandomString()
+        tmpdir = mkTempDir()
+        filename = tmpdir + 'tmpfile'
 
         writeFile(filename + '.ts', text)
 
@@ -129,8 +129,7 @@ def compileTypeScript(text):
         
         result = readFile(filename + '.js')
 
-        os.remove(filename + '.ts')
-        os.remove(filename + '.js')
+        shutil.rmtree(tmpdir, True)
     except:
         output += "An unexpected error occurred while compiling the code."
         result = None
@@ -141,8 +140,8 @@ def compileCoffeeScript(text):
     output = ''
     result = ''
     try:
-        tmpdir = gettempdir()
-        filename = tmpdir + generateRandomString()
+        tmpdir = mkTempDir()
+        filename = tmpdir + 'tmpfile'
 
         writeFile(filename + '.coffee', text)
 
@@ -150,8 +149,7 @@ def compileCoffeeScript(text):
 
         result = readFile(filename + '.js')
 
-        os.remove(filename + '.coffee')
-        os.remove(filename + '.js')
+        shutil.rmtree(tmpdir, True)
     except:
         output += "An unexpected error occurred while compiling the code."
         result = None
@@ -162,8 +160,8 @@ def compilePython3(text):
     output = ''
     result = ''
     try:
-        tmpdir = gettempdir()
-        filename = tmpdir + generateRandomString()
+        tmpdir = mkTempDir()
+        filename = tmpdir + 'tmpfile'
 
         writeFile(filename + '.js', text)
 
@@ -171,8 +169,7 @@ def compilePython3(text):
 
         result = readFile(filename + '.js')
 
-        os.remove(filename + '.py')
-        os.remove(filename + '.js')
+        shutil.rmtree(tmpdir, True)
     except:
         output += "An unexpected error occurred while compiling the code."
         result = None
@@ -183,6 +180,9 @@ def compileCOBOL(text, dialect):
     output = ''
     result = ''
     try:
+        tmpdir = mkTempDir()
+        filename = tmpdir + 'tmpfile'
+
         writeFile(filename + '.cbl', text)
 
         output += subprocess.check_output('cobc -C -Wall ' + filename + '.cbl -o ' + filename + '.c')
@@ -191,38 +191,39 @@ def compileCOBOL(text, dialect):
         
         result = readFile(filename = '.js')
         
-        os.remove(filename + '.cbl')
-        os.remove(filename + '.c')
-        os.remove(filename + '.bc')
-        os.remove(fliename + '.js')
-     except:
+        shutil.rmtree(tmpdir, True)
+    except:
          output += "An unexpected error occurred while compiling the code."
          result = None
          pass
-     return RequestReturn(output, result)
+    return RequestReturn(output, result)
 
- def compileUserFile(reqval):
+def compileUserFile(reqval):
      default = lambda text: return ReturnResult(None, None)
      return {
-         'C++14': lambda text: compileWithClang(text, '-std=c++14'),
-         'C++11': lambda text: compileWithClang(text, '-std=c++11'),
-         'C++98': lambda text: compileWithClang(text, ''),
-         'C++1z': lambda text: compileWithClang(text, '-std=c++1z'),
-         'C89'  : lambda text: compileWithClang(text, '-std=c89', '.c'),
-         'C99'  : lambda text: compileWithClang(text, '-std=c99', '.c'),
-         'C11'  : lambda text: compileWithClang(text, '-std=c11', '.c'),
-         'C94'  : lambda text: compileWithClang(text, '-std=c94', '.c'),
-         'Java 1.3': lambda text: compileJava(text, '1.3'),
-         'Java 1.4': lambda text: compileJava(text, '1.4'),
-         'Java 1.5': lambda text: compileJava(text, '1.5'),
-         'Java 1.6': lambda text: compileJava(text, '1.6'),
-         'Java 1.7': lambda text: compileJava(text, '1.7'),
-         'Objective-C++': lambda text: compileWithClang(text, '', '.mm')
-         'Objective-C'  : lambda text: compileWithClang(text, '', '.m')
-         'Haskell': lambda text: compileHaskell(text)
-         'CoffeeScript': lambda text: compileCoffeeScript(text)
-         'TypeScript': lambda text: compileTypeScript(text)
-         'COBOL': lambda text: compileCOBOL(text)
+         'C++14':         lambda text: compileWithClang(text, '-std=c++14'),
+         'C++11':         lambda text: compileWithClang(text, '-std=c++11'),
+         'C++98':         lambda text: compileWithClang(text, ''),
+         'C++1z':         lambda text: compileWithClang(text, '-std=c++1z'),
+         'C89'  :         lambda text: compileWithClang(text, '-std=c89', '.c'),
+         'C99'  :         lambda text: compileWithClang(text, '-std=c99', '.c'),
+         'C11'  :         lambda text: compileWithClang(text, '-std=c11', '.c'),
+         'C94'  :         lambda text: compileWithClang(text, '-std=c94', '.c'),
+         'Java 1.3':      lambda text: compileJava(text, '1.3'),
+         'Java 1.4':      lambda text: compileJava(text, '1.4'),
+         'Java 1.5':      lambda text: compileJava(text, '1.5'),
+         'Java 1.6':      lambda text: compileJava(text, '1.6'),
+         'Java 1.7':      lambda text: compileJava(text, '1.7'),
+         'Objective-C++': lambda text: compileWithClang(text, '', '.mm'),
+         'Objective-C'  : lambda text: compileWithClang(text, '', '.m'),
+         'Haskell':       lambda text: compileHaskell(text),
+         'CoffeeScript':  lambda text: compileCoffeeScript(text),
+         'TypeScript':    lambda text: compileTypeScript(text),
+         'COBOL':         lambda text: compileCOBOL(text),
      }.get(reqval.lang, default)(reqval.text)
 
+if __name__ == '__main__': # Script was executed from the command line
+    input = json.load(sys.stdin)
+    result = compileUserFile(RequestValue(input.lang, input.text))
+    print(json.dump(result))
 

@@ -1,22 +1,20 @@
-# Install git
-apt-get install -y nodejs npm git p7zip-full gcc nodejs-legacy
 
 # Install java8
 apt-add-repository -y ppa:webupd8team/java
 apt-get update
-apt-get install -y oracle-java8-set-default oracle-java8-installer
+apt-get install -y oracle-java8-set-default oracle-java8-installer 
 
-# Install GHC
-apt-get install -y ghc cabal-install
+# All apt-get requirements
+apt-get install -y \
+	nodejs npm git p7zip-full gcc nodejs-legacy \
+	ghc cabal-install \
+	open-cobol \
+	libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib \
+	python3 python-pip \
+	maven
 
 # Install google-closure-compiler
 npm install --save google-closure-compiler
-
-# Install ghcjs
-cabal update
-PATH=$PATH:~/.cabal/bin
-cabal install -j happy alex http://ghcjs.luite.com/master.tar.gz
-ghcjs-boot
 
 # Install Typescript compiler
 npm install -g typescript
@@ -25,24 +23,24 @@ npm install -g typescript
 npm install -g coffee-script
 
 # Install python and PyJS
-apt-get install -y python3 python-pip
 pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
 
 # Install GnuCOBOL
 ldconfig /usr/local/lib
-sudo apt-get install -y open-cobol
 
 # Install GWT 
 wget "https://goo.gl/QWOlx0"
 mv QWOlx0 gwt.zip
 7z x gwt.zip -y
 rm gwt.zip
-echo java -cp "gwt-user.jar; gwt-dev-windows.jar" com.google.gwt.dev.GWTCompiler \$@
+echo java -cp "gwt-user.jar; gwt-dev-windows.jar" com.google.gwt.dev.GWTCompiler \$@ > gwt
 
 # Install emscripten
 wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
-tar xzf emsdk-portable.tar.gz
+7z x emsdk-portable.tar.gz -y
+7z x emsdk-portable.tar -y
 rm emsdk-portable.tar.gz
+rm emsdk-portable.tar
 cd emsdk_portable
 ./emsdk update
 ./emsdk install latest
@@ -50,48 +48,62 @@ cd emsdk_portable
 . ./emsdk_env.sh
 cd ../
 
-# Get LLVM-3.4 (For Dragonegg)
+# Install Dragome
+git clone https://github.com/dragome/dragome-sdk
+cd dragome-sdk
+mvn package
+cd ../
+
+# Get LLVM-3.6 (For Dragonegg)
 wget "http://llvm.org/releases/3.6.2/llvm-3.6.2.src.tar.xz"
 mv llvm-3.6.2.src.tar.xz llvm.tar.xz
-7z x llvm.tar.xz
-7z x llvm.tar
+7z x llvm.tar.xz -y
+7z x llvm.tar -y
 rm llvm.tar.xz
 rm llvm.tar
 chmod +rwxrwxrwx llvm-3.6.2.src -R
 cd llvm-3.6.2.src
 ./configure
-make
+make -j
 cd ../
 
 # Get GCC 4.8 (For Dragonegg)
-apt-get install libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib
 wget "https://ftp.gnu.org/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.bz2"
 mv gcc-4.8.5.tar.bz2 gcc.tar.bz2
-7z x gcc.tar.bz2
-7z x gcc.tar
+7z x gcc.tar.bz2 -y
+7z x gcc.tar -y
+# Remove archives
 rm gcc.tar.bz2
 rm gcc.tar
 cp /usr/lib32/crti.o /usr/lib/crti.o
 cp /usr/lib32/crtn.o /usr/lib/crtn.o
-chmod +rwxrwxrwx gcc-4.8.5 -R
-cd gcc-4.8.5
-./configure
-make
+mkdir gcc-build
+cd gcc-build
+./../gcc-4.8.5/configure
+make -j
+make DESTDIR=../gcc install
 rm /usr/lib/crti.o
 rm /usr/lib/crtn.o
 cd ../
+rm -rf gcc-build
+rm -rc gcc-4.8.5
+chmod +rwxrwxrwx gcc -R
 
 #Install Dragonegg
 wget "http://llvm.org/releases/3.6.2/dragonegg-3.6.2.src.tar.xz"
 mv dragonegg-3.6.2.src.tar.xz dragonegg.tar.xz
-7z x dragonegg.tar.xz
-7z x dragonegg.tar
+7z x dragonegg.tar.xz -y
+7z x dragonegg.tar -y
 rm dragonegg.tar.xz
 rm dragonegg.tar
 chmod +rwxrwxrwx dragonegg-3.6.2.src -R
 cd dragonegg-3.6.2.src
-GCC=../gcc-4.6 LLVM_CONFIG=../llvm-3.6.2.src/bin/llvm-config make
-cd ../
+GCC=../gcc-4.6 LLVM_CONFIG=../llvm-3.6.2.src/bin/llvm-config make -j
 cd ../
 
+# Install ghcjs
+cabal update
+PATH=$PATH:~/.cabal/bin
+cabal install -j happy alex http://ghcjs.luite.com/master.tar.gz
+ghcjs-boot
 

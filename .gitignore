@@ -11,3 +11,10 @@ npm-debug.log
 # Ignore LLVM build directory
 llvm-3.6.2.src/
 dragonegg-3.6.2.src/
+
+# Ignore installed project directories
+teavm/
+gwt-2.8.0/
+node_modules/
+gcc-4.8.5/
+
