@@ -99,7 +99,7 @@ rm dragonegg.tar.xz
 rm dragonegg.tar
 chmod +rwxrwxrwx dragonegg-3.6.2.src -R
 cd dragonegg-3.6.2.src
-GCC=../gcc-4.6 LLVM_CONFIG=../llvm-3.6.2.src/bin/llvm-config make -j
+GCC=../gcc/bin/gcc LLVM_CONFIG=../llvm-3.6.2.src/bin/llvm-config make -j
 cd ../
 
 # Install ghcjs
