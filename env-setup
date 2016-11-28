@@ -1,9 +1,14 @@
 
 # Get repository for Java installer
 apt-add-repository -y ppa:webupd8team/java
-apt-get update
+
+# Mono repository keys
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
+
 
 # All apt-get requirements
+apt-get update
 apt-get -y install \
 	oracle-java8-set-default oracle-java8-installer \
 	nodejs npm git p7zip-full gcc nodejs-legacy \
@@ -12,7 +17,10 @@ apt-get -y install \
 	libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib \
 	python3 python-pip \
 	maven \
-	cmake
+	cmake \
+	llvm-3.5 clang-3.5 lldb-3.6 lldb-3.6-dev libunwind8 \
+    libunwind8-dev gettext libicu-dev liblttng-ust-dev libcurl4-openssl-dev uuid-dev \
+	cli-mono
 
 # Install google-closure-compiler
 npm install --save google-closure-compiler
@@ -28,6 +36,23 @@ pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
 
 # Install GnuCOBOL
 ldconfig /usr/local/lib
+
+# Install the .NET platform
+git clone https://github.com/dotnet/coreclr.git --depth 1
+git clone https://github.com/dotnet/corefx.git --depth 1
+./coreclr/build.sh
+./corefx/build.sh
+
+# Install msbuild
+git clone https://github.com/microsoft/msbuild.git --branch xplat --depth 1
+./msbuild/cibuild.sh
+
+# Install JSIL
+git clone https://github.com/sq/JSIL.git --depth 1
+cd JSIL
+git submodule update --init --recursive
+xbuild JSIL.sln
+cd ../
 
 # Install emscripten
 wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
