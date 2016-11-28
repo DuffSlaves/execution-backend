@@ -29,13 +29,6 @@ pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
 # Install GnuCOBOL
 ldconfig /usr/local/lib
 
-# Install GWT 
-wget "https://goo.gl/QWOlx0"
-mv QWOlx0 gwt.zip
-7z x gwt.zip -y
-rm gwt.zip
-echo java -cp "gwt-user.jar; gwt-dev-windows.jar" com.google.gwt.dev.GWTCompiler \$@ > gwt
-
 # Install emscripten
 wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
 7z x emsdk-portable.tar.gz -y
