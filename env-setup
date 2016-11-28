@@ -41,6 +41,7 @@ wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.
 7z x emsdk-portable.tar -y
 rm emsdk-portable.tar.gz
 rm emsdk-portable.tar
+chmod +rwxrwxrwx emsdk_portable -R
 cd emsdk_portable
 ./emsdk update
 ./emsdk install latest
@@ -80,7 +81,7 @@ cp /usr/lib32/crti.o /usr/lib/crti.o
 cp /usr/lib32/crtn.o /usr/lib/crtn.o
 mkdir gcc-build
 cd gcc-build
-./../gcc-4.8.5/configure
+./../gcc-4.8.5/configure --disable-bootstrap
 make -j
 make DESTDIR=../gcc install
 rm /usr/lib/crti.o
