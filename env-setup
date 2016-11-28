@@ -75,6 +75,7 @@ mv gcc-4.8.5.tar.bz2 gcc.tar.bz2
 # Remove archives
 rm gcc.tar.bz2
 rm gcc.tar
+# This is a hack to make gcc compile 
 cp /usr/lib32/crti.o /usr/lib/crti.o
 cp /usr/lib32/crtn.o /usr/lib/crtn.o
 mkdir gcc-build
