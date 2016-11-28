@@ -1,0 +1,1 @@
+(apt-get -y --print-uris $@ | egrep -o -e "http://[^\']+" | xargs -r -l3 -P5 wget -nv -P "/var/cache/apt/archives/") && apt-get -y $@

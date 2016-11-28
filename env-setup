@@ -1,11 +1,11 @@
 
-# Install java8
+# Get repository for Java installer
 apt-add-repository -y ppa:webupd8team/java
 apt-get update
-apt-get install -y oracle-java8-set-default oracle-java8-installer 
 
 # All apt-get requirements
-apt-get install -y \
+./apt-get-fast install \
+	oracle-java8-set-default oracle-java8-installer \
 	nodejs npm git p7zip-full gcc nodejs-legacy \
 	ghc cabal-install \
 	open-cobol \
