@@ -19,3 +19,5 @@ gwt-2.8.0/
 node_modules/
 gcc-4.8.5/
 
+# Ignore .status directory
+.status/

@@ -1,3 +1,4 @@
+mkdir .status
 
 # Get repository for Java installer
 apt-add-repository -y ppa:webupd8team/java
@@ -25,109 +26,129 @@ apt-get -y install \
     libunwind8-dev gettext libicu-dev liblttng-ust-dev libcurl4-openssl-dev uuid-dev \
 	mono-devel
 
-# Install google-closure-compiler
-npm install --save google-closure-compiler
+if [ ! -f ".status/npm"]; then
+	# Install google-closure-compiler
+	npm install --save google-closure-compiler
 
-# Install Typescript compiler
-npm install -g typescript
+	# Install Typescript compiler
+	npm install -g typescript
 
-# Install CoffeeScript compiler
-npm install -g coffee-script
+	# Install CoffeeScript compiler
+	npm install -g coffee-script
 
-# Install python and PyJS
-pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
+	echo "" > .status/npm
+fi
+
+if [! -f ".status/pyjs"]; then
+	# Install python and PyJS
+	pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
+fi
 
 # Install GnuCOBOL
 ldconfig /usr/local/lib
 
-# Install the .NET platform
-git clone https://github.com/dotnet/coreclr.git --depth 1
-git clone https://github.com/dotnet/corefx.git --depth 1
-./coreclr/build.sh
-./corefx/build.sh
+if [! -f ".status/JSIL"]; then
+	# Install the .NET platform
+	git clone https://github.com/dotnet/coreclr.git --depth 1
+	git clone https://github.com/dotnet/corefx.git --depth 1
+	./coreclr/build.sh
+	./corefx/build.sh
 
-# Install msbuild
-git clone https://github.com/microsoft/msbuild.git --branch xplat --depth 1
-./msbuild/cibuild.sh
+	# Install msbuild
+	git clone https://github.com/microsoft/msbuild.git --branch xplat --depth 1
+	./msbuild/cibuild.sh
 
-# Install JSIL
-git clone https://github.com/sq/JSIL.git --depth 1
-cd JSIL
-git submodule update --init --recursive
-xbuild JSIL.sln
-cd ../
+	# Install JSIL
+	git clone https://github.com/sq/JSIL.git --depth 1
+	cd JSIL
+	git submodule update --init --recursive
+	msbuild JSIL.sln
+	cd ../
+fi
 
-# Install emscripten
-wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
-7z x emsdk-portable.tar.gz -y
-7z x emsdk-portable.tar -y
-rm emsdk-portable.tar.gz
-rm emsdk-portable.tar
-chmod +rwxrwxrwx emsdk_portable -R
-cd emsdk_portable
-./emsdk update
-./emsdk install latest
-./emsdk activate latest
-. ./emsdk_env.sh
-cd ../
+if [! -f ".status/emscripten"]; then
+	# Install emscripten
+	wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
+	7z x emsdk-portable.tar.gz -y
+	7z x emsdk-portable.tar -y
+	rm emsdk-portable.tar.gz
+	rm emsdk-portable.tar
+	chmod +rwxrwxrwx emsdk_portable -R
+	cd emsdk_portable
+	./emsdk update
+	./emsdk install latest
+	./emsdk activate latest
+	. ./emsdk_env.sh
+	cd ../
+fi
 
-# Install Dragome
-git clone https://github.com/dragome/dragome-sdk
-cd dragome-sdk
-mvn package
-cd ../
+if [! -f ".status/dragome"]; then
+	# Install Dragome
+	git clone https://github.com/dragome/dragome-sdk
+	cd dragome-sdk
+	mvn package
+	cd ../
+fi
 
-# Get LLVM-3.6 (For Dragonegg)
-wget "http://llvm.org/releases/3.6.2/llvm-3.6.2.src.tar.xz"
-mv llvm-3.6.2.src.tar.xz llvm.tar.xz
-7z x llvm.tar.xz -y
-7z x llvm.tar -y
-rm llvm.tar.xz
-rm llvm.tar
-chmod +rwxrwxrwx llvm-3.6.2.src -R
-cd llvm-3.6.2.src
-./configure
-make -j
-cd ../
+if [! -f ".status/llvm-3.6"]; then
+	# Get LLVM-3.6 (For Dragonegg)
+	wget "http://llvm.org/releases/3.6.2/llvm-3.6.2.src.tar.xz"
+	mv llvm-3.6.2.src.tar.xz llvm.tar.xz
+	7z x llvm.tar.xz -y
+	7z x llvm.tar -y
+	rm llvm.tar.xz
+	rm llvm.tar
+	chmod +rwxrwxrwx llvm-3.6.2.src -R
+	cd llvm-3.6.2.src
+	./configure
+	make -j
+	cd ../
+fi
 
-# Get GCC 4.8 (For Dragonegg)
-wget "https://ftp.gnu.org/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.bz2"
-mv gcc-4.8.5.tar.bz2 gcc.tar.bz2
-7z x gcc.tar.bz2 -y
-7z x gcc.tar -y
-# Remove archives
-rm gcc.tar.bz2
-rm gcc.tar
-# This is a hack to make gcc compile 
-cp /usr/lib32/crti.o /usr/lib/crti.o
-cp /usr/lib32/crtn.o /usr/lib/crtn.o
-mkdir gcc-build
-cd gcc-build
-./../gcc-4.8.5/configure --disable-bootstrap
-make -j
-make DESTDIR=../gcc install
-rm /usr/lib/crti.o
-rm /usr/lib/crtn.o
-cd ../
-rm -rf gcc-build
-rm -rc gcc-4.8.5
-chmod +rwxrwxrwx gcc -R
+if [! -f ".status/gcc=4.8"]; then
+	# Get GCC 4.8 (For Dragonegg)
+	wget "https://ftp.gnu.org/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.bz2"
+	mv gcc-4.8.5.tar.bz2 gcc.tar.bz2
+	7z x gcc.tar.bz2 -y
+	7z x gcc.tar -y
+	# Remove archives
+	rm gcc.tar.bz2
+	rm gcc.tar
+	# This is a hack to make gcc compile 
+	cp /usr/lib32/crti.o /usr/lib/crti.o
+	cp /usr/lib32/crtn.o /usr/lib/crtn.o
+	mkdir gcc-build
+	cd gcc-build
+	./../gcc-4.8.5/configure --disable-bootstrap
+	make -j
+	make DESTDIR=../gcc install
+	rm /usr/lib/crti.o
+	rm /usr/lib/crtn.o
+	cd ../
+	rm -rf gcc-build
+	rm -rc gcc-4.8.5
+	chmod +rwxrwxrwx gcc -R
+fi
 
-#Install Dragonegg
-wget "http://llvm.org/releases/3.6.2/dragonegg-3.6.2.src.tar.xz"
-mv dragonegg-3.6.2.src.tar.xz dragonegg.tar.xz
-7z x dragonegg.tar.xz -y
-7z x dragonegg.tar -y
-rm dragonegg.tar.xz
-rm dragonegg.tar
-chmod +rwxrwxrwx dragonegg-3.6.2.src -R
-cd dragonegg-3.6.2.src
-GCC=../gcc/bin/gcc LLVM_CONFIG=../llvm-3.6.2.src/bin/llvm-config make -j
-cd ../
+if [! -f ".status/dragonegg"]; then
+	#Install Dragonegg
+	wget "http://llvm.org/releases/3.6.2/dragonegg-3.6.2.src.tar.xz"
+	mv dragonegg-3.6.2.src.tar.xz dragonegg.tar.xz
+	7z x dragonegg.tar.xz -y
+	7z x dragonegg.tar -y
+	rm dragonegg.tar.xz
+	rm dragonegg.tar
+	chmod +rwxrwxrwx dragonegg-3.6.2.src -R
+	cd dragonegg-3.6.2.src
+	GCC=../gcc/bin/gcc LLVM_CONFIG=../llvm-3.6.2.src/bin/llvm-config make -j
+	cd ../
+fi
 
-# Install ghcjs
-cabal update
-PATH=$PATH:~/.cabal/bin
-cabal install -j happy alex http://ghcjs.luite.com/master.tar.gz
-ghcjs-boot
+if [! -f ".status/ghcjs"]; then
+	# Install ghcjs
+	cabal update
+	PATH=$PATH:~/.cabal/bin
+	cabal install -j happy alex http://ghcjs.luite.com/master.tar.gz
+	ghcjs-boot
+fi
 
