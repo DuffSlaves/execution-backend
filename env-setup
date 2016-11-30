@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mkdir .status
 
 # Get repository for Java installer
