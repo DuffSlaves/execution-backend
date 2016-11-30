@@ -18,6 +18,9 @@ teavm/
 gwt-2.8.0/
 node_modules/
 gcc-4.8.5/
+coreclr/
+corefx/
+msbuild/
 
 # Ignore .status directory
 .status/
