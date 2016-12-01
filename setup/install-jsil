@@ -1,20 +1,16 @@
 #!/bin/bash
 
 if [! -f ".status/JSIL"]; then
-	# Install the .NET platform
-	git clone https://github.com/dotnet/coreclr.git --depth 1
-	git clone https://github.com/dotnet/corefx.git --depth 1
-	./coreclr/build.sh
-	./corefx/build.sh
-
-	# Install msbuild
-	git clone https://github.com/microsoft/msbuild.git --branch xplat --depth 1
-	./msbuild/cibuild.sh
+	# Get MSBuild Binaries
+	git clone https://github.com/Microsoft/msbuild.git --depth 1 --branch xplat
+	cd msbuild
+	./init-tools.sh # unix
+	cd ../
 
 	# Install JSIL
 	git clone https://github.com/sq/JSIL.git --depth 1
 	cd JSIL
 	git submodule update --init --recursive
-	msbuild JSIL.sln
+	./msbuild/Tools/dotnetcli/dotnet ./Tools/MSBuild.exe JSIL.sln
 	cd ../
 fi
