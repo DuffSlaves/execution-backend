@@ -1,6 +1,6 @@
 
 if [ ! -f ".status/JSIL" ]; then
-	apt-get install referenceassemblies-pcl nunit
+	apt-get install -y referenceassemblies-pcl nunit
 
 	# Install JSIL
 	git clone https://github.com/sq/JSIL.git --depth 1
