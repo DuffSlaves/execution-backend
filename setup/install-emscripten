@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [! -f ".status/emscripten"]; then
+if [ ! -f ".status/emscripten" ]; then
 	# Install emscripten
 	wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
 	7z x emsdk-portable.tar.gz -y

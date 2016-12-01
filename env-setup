@@ -1,6 +1,8 @@
 #!/bin/bash
 
-mkdir .status
+if [ ! -d ".status" ]; then
+	mkdir .status
+fi
 
 # Get repository for Java installer
 apt-add-repository -y ppa:webupd8team/java
@@ -10,8 +12,8 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BF
 echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
 
 # CoreCLR required additional repositories
-echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.6 main" | tee /etc/apt/sources.list.d/llvm.list
-wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | apt-key add -
+sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
+apt-get adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
 
 # All apt-get requirements
 apt-get update
@@ -25,10 +27,12 @@ apt-get -y install \
 	maven \
 	cmake \
 	llvm-3.5 clang-3.5 lldb-3.6 lldb-3.6-dev libunwind8 \
-    libunwind8-dev gettext libicu-dev liblttng-ust-dev libcurl4-openssl-dev uuid-dev \
-	mono-devel
+	libunwind8-dev gettext libicu-dev liblttng-ust-dev libcurl4-openssl-dev uuid-dev \
+	mono-devel \
+	libkrb5-dev \
+	dotnet-dev-1.0.0-preview2.1-003177
 
-if [ ! -f ".status/npm"]; then
+if [  ! -f ".status/npm" ]; then
 	# Install google-closure-compiler
 	npm install --save google-closure-compiler
 
@@ -40,8 +44,9 @@ if [ ! -f ".status/npm"]; then
 
 	echo "" > .status/npm
 fi
+echo ""
 
-if [! -f ".status/pyjs"]; then
+if [ ! -f ".status/pyjs" ]; then
 	# Install python and PyJS
 	pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
 fi
@@ -52,7 +57,7 @@ ldconfig /usr/local/lib
 ./setup/install-jsil
 ./setup/install-emscripten
 
-if [! -f ".status/dragome"]; then
+if [! -f ".status/dragome" ]; then
 	# Install Dragome
 	git clone https://github.com/dragome/dragome-sdk
 	cd dragome-sdk
