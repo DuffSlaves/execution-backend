@@ -26,7 +26,7 @@ if [ ! -f ".status/apt-get" ]; then
 		python3 python-pip \
 		maven \
 		cmake \
-		mono-devel \
+		mono-devel
 	echo "" > .status/apt-get
 fi
 
