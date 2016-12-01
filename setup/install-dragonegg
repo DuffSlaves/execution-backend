@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [! -f "../.status/llvm-3.6"]; then
+if [ ! -f ".status/llvm-3.6" ]; then
 	# Get LLVM-3.6 (For Dragonegg)
 	wget "http://llvm.org/releases/3.6.2/llvm-3.6.2.src.tar.xz"
 	mv llvm-3.6.2.src.tar.xz llvm.tar.xz
@@ -15,7 +15,7 @@ if [! -f "../.status/llvm-3.6"]; then
 	cd ../
 fi
 
-if [! -f "../.status/gcc=4.8"]; then
+if [ ! -f ".status/gcc=4.8" ]; then
 	# Get GCC 4.8 (For Dragonegg)
 	wget "https://ftp.gnu.org/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.bz2"
 	mv gcc-4.8.5.tar.bz2 gcc.tar.bz2
@@ -40,7 +40,7 @@ if [! -f "../.status/gcc=4.8"]; then
 	chmod +rwxrwxrwx gcc -R
 fi
 
-if [! -f "../.status/dragonegg"]; then
+if [ ! -f ".status/dragonegg" ]; then
 	#Install Dragonegg
 	wget "http://llvm.org/releases/3.6.2/dragonegg-3.6.2.src.tar.xz"
 	mv dragonegg-3.6.2.src.tar.xz dragonegg.tar.xz
