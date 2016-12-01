@@ -26,10 +26,7 @@ if [ ! -f ".status/apt-get" ]; then
 		python3 python-pip \
 		maven \
 		cmake \
-		llvm-3.5 clang-3.5 lldb-3.6 lldb-3.6-dev libunwind8 \
-		libunwind8-dev gettext libicu-dev liblttng-ust-dev libcurl4-openssl-dev uuid-dev \
 		mono-devel \
-		libkrb5-dev
 	echo "" > .status/apt-get
 fi
 
