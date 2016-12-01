@@ -1,6 +1,5 @@
-#!/bin/bash
 
-if [! -f ".status/JSIL"]; then
+if [ ! -f ".status/JSIL" ]; then
 	# Get MSBuild Binaries
 	git clone https://github.com/Microsoft/msbuild.git --depth 1 --branch xplat
 	cd msbuild
@@ -13,4 +12,6 @@ if [! -f ".status/JSIL"]; then
 	git submodule update --init --recursive
 	./msbuild/Tools/dotnetcli/dotnet ./Tools/MSBuild.exe JSIL.sln
 	cd ../
+
+	echo "" > .status/JSIL
 fi

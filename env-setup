@@ -1,35 +1,37 @@
-#!/bin/bash
 
 if [ ! -d ".status" ]; then
 	mkdir .status
 fi
 
-# Get repository for Java installer
-apt-add-repository -y ppa:webupd8team/java
-
-# Mono repository keys
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
-
-# CoreCLR required additional repositories
-sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-apt-get adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
-
-# All apt-get requirements
-apt-get update
-apt-get -y install oracle-java8-set-default oracle-java8-installer
-apt-get -y install \
-	nodejs npm git p7zip-full gcc nodejs-legacy \
-	ghc cabal-install \
-	open-cobol \
-	libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib \
-	python3 python-pip \
-	maven \
-	cmake \
-	llvm-3.5 clang-3.5 lldb-3.6 lldb-3.6-dev libunwind8 \
-	libunwind8-dev gettext libicu-dev liblttng-ust-dev libcurl4-openssl-dev uuid-dev \
-	mono-devel \
-	libkrb5-dev
+if [ ! -f ".status/apt-get" ]; then
+	# Get repository for Java installer
+	apt-add-repository -y ppa:webupd8team/java
+	
+	# Mono repository keys
+	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+	echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
+	
+	# CoreCLR required additional repositories
+	sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
+	apt-get adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
+	
+	# All apt-get requirements
+	apt-get update
+	apt-get -y install oracle-java8-set-default oracle-java8-installer
+	apt-get -y install \
+		nodejs npm git p7zip-full gcc nodejs-legacy \
+		ghc cabal-install \
+		open-cobol \
+		libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib \
+		python3 python-pip \
+		maven \
+		cmake \
+		llvm-3.5 clang-3.5 lldb-3.6 lldb-3.6-dev libunwind8 \
+		libunwind8-dev gettext libicu-dev liblttng-ust-dev libcurl4-openssl-dev uuid-dev \
+		mono-devel \
+		libkrb5-dev
+	echo "" > .status/apt-get
+fi
 
 if [  ! -f ".status/npm" ]; then
 	# Install google-closure-compiler
@@ -48,6 +50,8 @@ echo ""
 if [ ! -f ".status/pyjs" ]; then
 	# Install python and PyJS
 	pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
+
+	echo "" > .status/pyjs
 fi
 
 # Install GnuCOBOL
@@ -56,12 +60,14 @@ ldconfig /usr/local/lib
 ./setup/install-jsil
 ./setup/install-emscripten
 
-if [! -f ".status/dragome" ]; then
+if [ ! -f ".status/dragome" ]; then
 	# Install Dragome
 	git clone https://github.com/dragome/dragome-sdk
 	cd dragome-sdk
 	mvn package
 	cd ../
+
+	echo "" > .status/dragome
 fi
 
 ./setup/install-dragonegg

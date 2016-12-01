@@ -1,4 +1,3 @@
-#!/bin/bash
 
 if [ ! -f ".status/emscripten" ]; then
 	# Install emscripten
@@ -14,4 +13,6 @@ if [ ! -f ".status/emscripten" ]; then
 	./emsdk activate latest
 	. ./emsdk_env.sh
 	cd ../
+
+	echo "" > .status/emscripten
 fi
