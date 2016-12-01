@@ -1,16 +1,12 @@
 
 if [ ! -f ".status/JSIL" ]; then
-	# Get MSBuild Binaries
-	git clone https://github.com/Microsoft/msbuild.git --depth 1 --branch xplat
-	cd msbuild
-	./init-tools.sh # unix
-	cd ../
+	apt-get install referenceassemblies-pcl nunit
 
 	# Install JSIL
 	git clone https://github.com/sq/JSIL.git --depth 1
 	cd JSIL
 	git submodule update --init --recursive
-	./msbuild/Tools/dotnetcli/dotnet ./Tools/MSBuild.exe JSIL.sln
+	xbuild /p:Platform=NoXNA JSIL.sln
 	cd ../
 
 	echo "" > .status/JSIL
