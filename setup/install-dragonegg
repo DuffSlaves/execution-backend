@@ -3,8 +3,8 @@ if [ ! -f ".status/llvm" ]; then
 	# Get LLVM-3.6 (For Dragonegg)
 	wget "http://llvm.org/releases/3.6.2/llvm-3.6.2.src.tar.xz"
 	mv llvm-3.6.2.src.tar.xz llvm.tar.xz
-	7z x llvm.tar.xz -y
-	7z x llvm.tar -y
+	7z x llvm.tar.xz -y > /dev/null
+	7z x llvm.tar -y > /dev/null
 	rm llvm.tar.xz
 	rm llvm.tar
 	chmod +rwxrwxrwx llvm-3.6.2.src -R
@@ -20,8 +20,8 @@ if [ ! -f ".status/gcc" ]; then
 	# Get GCC 4.8 (For Dragonegg)
 	wget "https://ftp.gnu.org/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.bz2"
 	mv gcc-4.8.5.tar.bz2 gcc.tar.bz2
-	7z x gcc.tar.bz2 -y
-	7z x gcc.tar -y
+	7z x gcc.tar.bz2 -y > /dev/null
+	7z x gcc.tar -y > /dev/null
 	# Remove archives
 	rm gcc.tar.bz2
 	rm gcc.tar
@@ -47,8 +47,8 @@ if [ ! -f ".status/dragonegg" ]; then
 	#Install Dragonegg
 	wget "http://llvm.org/releases/3.6.2/dragonegg-3.6.2.src.tar.xz"
 	mv dragonegg-3.6.2.src.tar.xz dragonegg.tar.xz
-	7z x dragonegg.tar.xz -y
-	7z x dragonegg.tar -y
+	7z x dragonegg.tar.xz -y > /dev/null
+	7z x dragonegg.tar -y > /dev/null
 	rm dragonegg.tar.xz
 	rm dragonegg.tar
 	chmod +rwxrwxrwx dragonegg-3.6.2.src -R
