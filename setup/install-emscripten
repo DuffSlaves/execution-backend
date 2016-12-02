@@ -8,12 +8,8 @@ if [ ! -f ".status/emscripten" ]; then
 	rm emsdk-portable.tar
 	chmod +rwxrwxrwx emsdk_portable -R
 	cd emsdk_portable
-	./emsdk update
-	if [ -z ${TRAVIS_CI+"set"} ]; then
-		./emsdk install latest -j2
-	else
-		./emsdk install latest
-	fi
+	./emsdk updat
+	./emsdk install latest -
 	./emsdk activate latest
 	. ./emsdk_env.sh
 	cd ../
