@@ -9,7 +9,7 @@ if [ ! -f ".status/emscripten" ]; then
 	chmod +rwxrwxrwx emsdk_portable -R
 	cd emsdk_portable
 	./emsdk update
-	if [ -z "$IS_TRAVIS_CI" ]; then
+	if [ -z ${TRAVIS_CI+"set"} ]; then
 		./emsdk install latest -j2
 	else
 		./emsdk install latest
