@@ -1,7 +1,6 @@
 language: C++
 
 install: 
-    - "sudo apt-get install gcc-4.8"
     - "sudo ./env-setup"
 
 notifications:
