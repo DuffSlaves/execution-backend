@@ -3,62 +3,16 @@ if [ ! -d ".status" ]; then
 	mkdir .status 
 fi
 
-if [ ! -f ".status/apt-get" ]; then	
-	# Mono repository keys
-	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-	echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
-	
-	# All apt-get requirements
-	apt-get -qq update
-	apt-get -q -y install nodejs npm git p7zip-full gcc 
-	apt-get -q -y install ghc cabal-install
-	apt-get -q -y install open-cobol libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib 
-	apt-get -q -y install python3 python-pip
-	apt-get -q -y install maven cmake 
-	apt-get -q -y install mono-devel
-	apt-get -q -y install default-jdk default-jre
-	echo "" > .status/apt-get
-fi
-
-if [  ! -f ".status/npm" ]; then
-	# Disable animated output from npm
-	npm set progress=false
-
-	# Install google-closure-compiler
-	npm install --save google-closure-compiler
-
-	# Install Typescript compiler
-	npm install -g typescript
-
-	# Install CoffeeScript compiler
-	npm install -g coffee-script
-
-	echo "" > .status/npm
-fi
-
-if [ ! -f ".status/pyjs" ]; then
-	# Install python and PyJS
-	pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
-
-	echo "" > .status/pyjs
-fi
+./setup/install-dependencies
+./setup/install-npm
+./setup/install-pyjs
 
 # Install GnuCOBOL
 ldconfig /usr/local/lib
 
 ./setup/install-jsil
 ./setup/install-emscripten
-
-if [ ! -f ".status/dragome" ]; then
-	# Install Dragome
-	git clone https://github.com/dragome/dragome-sdk
-	cd dragome-sdk
-	mvn package
-	cd ../
-
-	echo "" > .status/dragome
-fi
-
+./setup/install-dragome
 ./setup/install-dragonegg
 ./setup/install-ghcjs
 

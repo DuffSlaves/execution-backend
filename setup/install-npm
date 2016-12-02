@@ -1,0 +1,16 @@
+
+if [  ! -f ".status/npm" ]; then
+	# Disable animated output from npm
+	npm set progress=false
+
+	# Install google-closure-compiler
+	npm install --save google-closure-compiler
+
+	# Install Typescript compiler
+	npm install -g typescript
+
+	# Install CoffeeScript compiler
+	npm install -g coffee-script
+
+	echo "" > .status/npm
+fi

@@ -1,12 +1,12 @@
 
 if [ ! -f ".status/JSIL" ]; then
-	apt-get install -y referenceassemblies-pcl
+	apt-get install -y referenceassemblies-pcl nunit
 
 	# Install JSIL
 	git clone https://github.com/sq/JSIL.git --depth 1
 	cd JSIL
 	git submodule update --init --recursive
-	xbuild /p:Platform=NoXNA JSIL.sln
+	xbuild /p:Platform=NoXNA,Configuration=Release JSIL.sln
 	cd ../
 
 	echo "" > .status/JSIL

@@ -1,0 +1,10 @@
+
+if [ ! -f ".status/dragome" ]; then
+	# Install Dragome
+	git clone https://github.com/dragome/dragome-sdk
+	cd dragome-sdk
+	mvn package
+	cd ../
+
+	echo "" > .status/dragome
+fi

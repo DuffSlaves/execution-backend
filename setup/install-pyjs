@@ -1,0 +1,7 @@
+
+if [ ! -f ".status/pyjs" ]; then
+	# Install python and PyJS
+	pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
+
+	echo "" > .status/pyjs
+fi
