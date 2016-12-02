@@ -6,7 +6,7 @@ if [ ! -f ".status/JSIL" ]; then
 	git clone https://github.com/sq/JSIL.git --depth 1
 	cd JSIL
 	git submodule update --init --recursive
-	xbuild /p:Platform=NoXNA,Configuration=Release JSIL.sln
+	xbuild /p:Platform=NoXNA JSIL.sln
 	cd ../
 
 	echo "" > .status/JSIL
