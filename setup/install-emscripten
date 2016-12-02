@@ -8,7 +8,7 @@ if [ ! -f ".status/emscripten" ]; then
 	rm emsdk-portable.tar
 	chmod +rwxrwxrwx emsdk_portable -R
 	cd emsdk_portable
-	./emsdk updat
+	./emsdk update
 	./emsdk install latest -j2
 	./emsdk activate latest
 	. ./emsdk_env.sh
