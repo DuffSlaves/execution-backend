@@ -1,2 +1,5 @@
-before_script:
-	- sudo ./env-setup
+language: python
+python: "2.7"
+
+install:
+    - sudo ./env-setup
