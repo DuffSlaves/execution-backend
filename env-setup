@@ -1,6 +1,6 @@
 
 if [ ! -d ".status" ]; then
-	mkdir .status
+	mkdir .status 
 fi
 
 if [ ! -f ".status/apt-get" ]; then
