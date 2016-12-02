@@ -3,6 +3,6 @@ if [ ! -f ".status/ghcjs" ]; then
 	# Install ghcjs
 	cabal update
 	PATH=$PATH:~/.cabal/bin
-	cabal install -j happy alex http://ghcjs.luite.com/master.tar.gz
+	cabal install happy alex http://ghcjs.luite.com/master.tar.gz
 	ghcjs-boot
 fi
