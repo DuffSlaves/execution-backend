@@ -1,7 +1,9 @@
-language: python
+language: C++
 python: "2.7"
 
-install: "sudo ./env-setup"
+install: 
+    - "sudo apt-get upgrade"
+    - "sudo ./env-setup"
 
 notifications:
   email: false
