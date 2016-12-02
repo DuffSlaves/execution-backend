@@ -11,6 +11,9 @@ install:
   - "sudo ./setup/install-dragome"
   - "sudo ./setup/install-ghcjs"
   - "sudo ./env-setup" 
+  
+script:
+  - "sudo ./tests.py"
 
 notifications:
   email: false
