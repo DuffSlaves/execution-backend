@@ -1,5 +1,7 @@
 
 if [ ! -f ".status/ghcjs" ]; then
+	apt-get -qq -y install ghc cabal-install
+	
 	# Install ghcjs
 	cabal update
 	PATH=$PATH:~/.cabal/bin

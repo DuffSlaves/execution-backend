@@ -1,4 +1,4 @@
-language: C++
+language: Haskell
 
 install: 
   - "nproc --all"

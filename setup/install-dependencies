@@ -7,7 +7,6 @@ if [ ! -f ".status/apt-get" ]; then
 	# All apt-get requirements
 	apt-get -qq update
 	apt-get -qq -y install nodejs npm git p7zip-full gcc 
-	apt-get -qq -y install ghc cabal-install
 	apt-get -qq -y install open-cobol libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib 
 	apt-get -qq -y install python3 python-pip
 	apt-get -qq -y install maven cmake 
