@@ -5,6 +5,6 @@ if [ ! -f ".status/ghcjs" ]; then
 	# Install ghcjs
 	cabal update
 	PATH=$PATH:~/.cabal/bin
-	cabal install base http://ghcjs.luite.com/master.tar.gz --reinstall
+	cabal install http://ghcjs.luite.com/master.tar.gz --upgrade-dependencies
 	ghcjs-boot
 fi
