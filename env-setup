@@ -11,8 +11,8 @@ fi
 ldconfig /usr/local/lib
 
 ./setup/install-jsil
-./setup/install-emscripten
 ./setup/install-dragome
 ./setup/install-dragonegg
 ./setup/install-ghcjs
+./setup/install-emscripten
 
