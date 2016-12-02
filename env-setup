@@ -41,7 +41,7 @@ fi
 
 if [ ! -f ".status/pyjs" ]; then
 	# Install python and PyJS
-	pip install git+ssh://github.com/pyjs/pyjs.git#egg=pyjs
+	pip install git+https://github.com/pyjs/pyjs.git#egg=pyjs
 
 	echo "" > .status/pyjs
 fi
@@ -54,7 +54,7 @@ ldconfig /usr/local/lib
 
 if [ ! -f ".status/dragome" ]; then
 	# Install Dragome
-	git clone ssh://github.com/dragome/dragome-sdk
+	git clone https://github.com/dragome/dragome-sdk
 	cd dragome-sdk
 	mvn package
 	cd ../
