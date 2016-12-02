@@ -31,6 +31,9 @@ if [ ! -f ".status/apt-get" ]; then
 fi
 
 if [  ! -f ".status/npm" ]; then
+	# Disable animated output from npm
+	npm set progress=false
+
 	# Install google-closure-compiler
 	npm install --save google-closure-compiler
 
