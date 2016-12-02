@@ -9,7 +9,7 @@ if [ ! -f ".status/apt-get" ]; then
 	echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
 	
 	# All apt-get requirements
-	apt-get -q update
+	apt-get -qq update
 	apt-get -q -y install nodejs npm git p7zip-full gcc 
 	apt-get -q -y install ghc cabal-install
 	apt-get -q -y install open-cobol libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib 
