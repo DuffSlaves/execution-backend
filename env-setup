@@ -5,7 +5,7 @@ fi
 
 if [ ! -f ".status/apt-get" ]; then
 	# Get repository for Java installer
-	apt-add-repository -q -y ppa:webupd8team/java
+	apt-add-repository -y ppa:webupd8team/java
 	
 	# Mono repository keys
 	apt-key -q adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
