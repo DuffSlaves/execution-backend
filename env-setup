@@ -10,16 +10,13 @@ if [ ! -f ".status/apt-get" ]; then
 	
 	# All apt-get requirements
 	apt-get -q update
-	apt-get -q -y install \
-		nodejs npm git p7zip-full gcc \
-		ghc cabal-install \
-		open-cobol \
-		libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib \
-		python3 python-pip \
-		maven \
-		cmake \
-		mono-devel \
-		default-jdk default-jre
+	apt-get -q -y install nodejs npm git p7zip-full gcc 
+	apt-get -q -y install ghc cabal-install
+	apt-get -q -y install open-cobol libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib 
+	apt-get -q -y install python3 python-pip
+	apt-get -q -y install maven cmake 
+	apt-get -q -y install mono-devel
+	apt-get -q -y install default-jdk default-jre
 	echo "" > .status/apt-get
 fi
 
