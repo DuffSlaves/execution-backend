@@ -4,4 +4,7 @@ install:
     - "sudo ./env-setup"
 
 notifications:
-  email: false
+    email: false
+  
+os: linux
+  
