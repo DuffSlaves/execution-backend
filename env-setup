@@ -4,9 +4,6 @@ if [ ! -d ".status" ]; then
 fi
 
 if [ ! -f ".status/apt-get" ]; then
-	echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
-	echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
-
 	# Get repository for Java installer
 	apt-add-repository -y ppa:webupd8team/java
 	
@@ -18,11 +15,8 @@ if [ ! -f ".status/apt-get" ]; then
 	sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
 	apt-get adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
 	
-	echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
-	
 	# All apt-get requirements
 	apt-get update
-	apt-get -y install oracle-java8-set-default oracle-java8-installer
 	apt-get -y install \
 		nodejs npm git p7zip-full gcc nodejs-legacy \
 		ghc cabal-install \
@@ -31,7 +25,8 @@ if [ ! -f ".status/apt-get" ]; then
 		python3 python-pip \
 		maven \
 		cmake \
-		mono-devel
+		mono-devel \
+		default-jdk default-jre
 	echo "" > .status/apt-get
 fi
 
