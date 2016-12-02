@@ -8,9 +8,9 @@ install:
   - "sudo ./setup/install-npm"
   - "sudo ./setup/install-pyjs"
   - "sudo ./setup/install-jsil"
-  - "sudo ./setup/install-emscripten"
   - "sudo ./setup/install-dragome"
   - "sudo ./setup/install-ghcjs"
+  - "sudo ./setup/install-emscripten"
   - "sudo ./env-setup" 
   
 script:
