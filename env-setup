@@ -17,7 +17,7 @@ if [ ! -f ".status/apt-get" ]; then
 	
 	# All apt-get requirements
 	apt-get update
-	apt-get -y install \
+	apt-get -q -y install \
 		nodejs npm git p7zip-full gcc nodejs-legacy \
 		ghc cabal-install \
 		open-cobol \
