@@ -1,4 +1,6 @@
-language: C++
+language: Haskell
+
+ghc: "7.10"
 
 install: 
   - "nproc --all"
