@@ -5,8 +5,8 @@ ghc: "7.10"
 addons:
   apt:
     packages:
-      - haskell-platform
-      - cabal-install
+      - "haskell-platform"
+      - "cabal-install"
 	  
 install: 
   - "nproc --all"
