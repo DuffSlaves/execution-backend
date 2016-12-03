@@ -1,7 +1,6 @@
 language: C++
 
 install: 
-  - "nproc --all"
   - "sudo chmod +rwxrwxrwx $PWD -R"
   - "mkdir .status"
   - "sudo ./setup/install-dependencies"

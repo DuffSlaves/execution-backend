@@ -1,10 +1,15 @@
 
 if [ ! -f ".status/emscripten" ]; then
 	# Install emscripten
-	git clone https://github.com/duffslaves/emscripten-build.git --depth 1
-	mv emscripten-build emsdk_portable
+	wget "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz"
+	7z x emsdk-portable.tar.gz -y
+	7z x emsdk-portable.tar -y
+	rm emsdk-portable.tar.gz
+	rm emsdk-portable.tar
 	chmod +rwxrwxrwx emsdk_portable -R
 	cd emsdk_portable
+	./emsdk update
+	./emsdk install latest
 	./emsdk activate latest
 	. ./emsdk_env.sh
 	cd ../
