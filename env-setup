@@ -18,3 +18,13 @@ ldconfig /usr/local/lib
 ./setup/install-dragonegg
 ./setup/install-ghcjs
 
+if [ ! -f ".status/find-main" ]; then
+	git clone https://github.com/duffslaves/main-finder.git
+	
+	cd main-finder
+	mvn package
+	cd ../
+	
+	echo > .status/find-main
+fi
+
