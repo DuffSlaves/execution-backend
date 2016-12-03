@@ -11,7 +11,7 @@ install:
   - "sudo ./setup/install-dragome"
   - "sudo ./setup/install-emscripten"
   - "sudo ./setup/install-dragonegg"
-  - "sudo ./setup/install-ghcjs"
+  - "echo > .status/ghcjs"
   - "sudo ./env-setup" 
   
 script:
