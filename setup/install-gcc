@@ -8,13 +8,13 @@ if [ ! -f ".status/gcc" ]; then
 	# Remove archives
 	rm gcc.tar.bz2
 	rm gcc.tar
-	chmod +rwxrwxrwx gcc -R
 	# This is a hack to make gcc compile 
 	cp /usr/lib32/crti.o /usr/lib/crti.o
 	cp /usr/lib32/crtn.o /usr/lib/crtn.o
 	mkdir gcc-build
+	chmod 755 gcc-build -R
 	cd gcc-build
-	chmod +rwxrwxrwx ../gcc-4.8.5/configure
+	chmod 755 ../gcc-4.8.5/configure
 	./../gcc-4.8.5/configure --disable-bootstrap
 	make -j
 	make DESTDIR=../gcc install
