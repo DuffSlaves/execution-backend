@@ -12,6 +12,8 @@ ldconfig /usr/local/lib
 
 ./setup/install-jsil
 ./setup/install-dragome
+./setup/install-gcc
+./setup/install-llvm
 ./setup/install-dragonegg
 ./setup/install-ghcjs
 ./setup/install-emscripten

@@ -1,0 +1,17 @@
+
+if [ ! -f ".status/llvm" ]; then
+	# Get LLVM-3.6 (For Dragonegg)
+	wget "http://llvm.org/releases/3.6.2/llvm-3.6.2.src.tar.xz"
+	mv llvm-3.6.2.src.tar.xz llvm.tar.xz
+	7z x llvm.tar.xz -y > /dev/null
+	7z x llvm.tar -y > /dev/null
+	rm llvm.tar.xz
+	rm llvm.tar
+	chmod +rwxrwxrwx llvm-3.6.2.src -R
+	cd llvm-3.6.2.src
+	./configure
+	CC=llvm make -j
+	cd ../
+
+	echo "" > .status/llvm-3.6
+fi

@@ -1,0 +1,28 @@
+
+if [ ! -f ".status/gcc" ]; then
+	# Get GCC 4.8 (For Dragonegg)
+	wget "https://ftp.gnu.org/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.bz2"
+	mv gcc-4.8.5.tar.bz2 gcc.tar.bz2
+	7z x gcc.tar.bz2 -y > /dev/null
+	7z x gcc.tar -y > /dev/null
+	# Remove archives
+	rm gcc.tar.bz2
+	rm gcc.tar
+	chmod +rwxrwxrwx gcc -R
+	# This is a hack to make gcc compile 
+	cp /usr/lib32/crti.o /usr/lib/crti.o
+	cp /usr/lib32/crtn.o /usr/lib/crtn.o
+	mkdir gcc-build
+	cd gcc-build
+	chmod +rwxrwxrwx ../gcc-4.8.5/configure
+	./../gcc-4.8.5/configure --disable-bootstrap
+	make -j
+	make DESTDIR=../gcc install
+	rm /usr/lib/crti.o
+	rm /usr/lib/crtn.o
+	cd ../
+	rm -rf gcc-build
+	rm -rc gcc-4.8.5
+
+	echo "" > .status/gcc
+fi
