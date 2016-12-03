@@ -7,7 +7,7 @@ addons:
     packages:
       - "haskell-platform"
       - "cabal-install"
-	  
+  
 install: 
   - "nproc --all"
   - "sudo chmod +rwxrwxrwx $PWD -R"
