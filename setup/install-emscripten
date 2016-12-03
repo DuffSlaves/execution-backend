@@ -1,7 +1,7 @@
 
 if [ ! -f ".status/emscripten" ]; then
 	# Install emscripten
-	git clone https://github.com/duffslaves/emscripten-build.git
+	git clone https://github.com/duffslaves/emscripten-build.git --depth 1
 	mv emscripten-build emsdk_portable
 	chmod +rwxrwxrwx emsdk_portable -R
 	cd emsdk_portable
