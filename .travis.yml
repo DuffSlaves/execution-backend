@@ -10,6 +10,7 @@ install:
   - "sudo ./setup/install-jsil"
   - "sudo ./setup/install-dragome"
   - "sudo ./setup/install-emscripten"
+  - "sudo ./setup/install-dragonegg"
   - "sudo ./setup/install-ghcjs"
   - "sudo ./env-setup" 
   
