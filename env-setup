@@ -28,3 +28,7 @@ if [ ! -f ".status/find-main" ]; then
 	echo > .status/find-main
 fi
 
+if [ ! -f ".status/opal" ]; then
+	gem install opal
+fi
+
