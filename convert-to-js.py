@@ -186,6 +186,6 @@ if __name__ == '__main__': # Script was executed from the command line
         print('usage: convert-to-js <input-file> <output-file>')
     else:
         input = json.load(open(sys.argv[1]))
-        output = compileUserFile(input.lang, input.text)
+        output = compileUserFile(input['lang'], input['text'])
         writeFile(sys.argv[2], output)
         
