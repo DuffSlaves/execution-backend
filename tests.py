@@ -20,8 +20,8 @@ hello_world_tests = [ # All of these should end up printing 'Hello, World!' when
     test('C++1z Hello World', 'C++1z', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
     test('C11 Hello World', 'C11', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
     test('C99 Hello World', 'C99', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
-    test('C89 Hello World', 'C89' '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
-    test('C94 Hello World', 'C94' '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
+    test('C89 Hello World', 'C89', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
+    test('C94 Hello World', 'C94', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
     test('COBOL Hello World', 'COBOL', 
          """
 IDENTIFICATION DIVISION.
