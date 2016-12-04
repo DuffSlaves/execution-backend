@@ -30,10 +30,8 @@ def mkTempDir():
     return mkdtemp(prefix='convert_to_js_')
 
 def exec_command(command):
-    proc = Popen(command, stdout=PIPE, stderr=PIPE)
-    (out, err) = proc.communicate()
-    output(out)
-    error(err)
+    proc = subprocess.check_call(command)
+
     
 def minifyJS(jsfile, level = 'ADVANCED_OPTIMIZATIONS'):
     # NOTE: If the ADVANCED_OPTIMIZATIONS compilation level causes

@@ -1,6 +1,5 @@
 from __future__ import print_function
 from colorama import init, Fore
-from subprocess import Popen, check_output
 import subprocess
 import json
 import os
@@ -51,7 +50,7 @@ def run_test(testval, expected):
 
         print (Fore.CYAN + "[Running test '" + testval.name + "']")
 
-        subprocess.run(['./convert-to-js.py', 'testfile.in', 'testfile.js'], shell=True, check=True)
+        subprocess.check_call(['./convert-to-js.py', 'testfile.in', 'testfile.js'], shell=True, check=True)
 
         os.unlink('testfile.in')
 
@@ -59,6 +58,7 @@ def run_test(testval, expected):
         
         os.unlink('testfile.js')
 
+        print(output)
         if output != expected:
             raise TestFailedException();
 
