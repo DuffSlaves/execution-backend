@@ -30,10 +30,14 @@ fi
 
 if [ ! -f ".status/chicken" ]; then
 	apt-get install -y chicken
+	
+	echo > .status/chicken
 fi
 
 if [ ! -f ".status/opal" ]; then
 	gem install opal
+	
+	echo > .status/opal
 fi
 
 # Add our commands to shell environment

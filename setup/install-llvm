@@ -10,7 +10,7 @@ if [ ! -f ".status/llvm" ]; then
 	chmod +rwxrwxrwx llvm-3.6.2.src -R
 	cd llvm-3.6.2.src
 	./configure
-	CC=clang make -j
+	CC=clang make $(nproc --all)
 	cd ../
 
 	echo "" > .status/llvm
