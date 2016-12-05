@@ -58,12 +58,25 @@ def compileJava(text, version_string):
         
         writeFile(filename + '.java', text)
 
-        exec_command('javac -source ' + version_string + ' ' + filename + '.java')
-
-        for file in fnmatch.filter(os.listdir(tmpdir), '*.class'):
-            continue # TODO: Make this do something
+        exec_command(['javac', '-source', version_string, filename + '.java'])
         
-        return readFile(file)
+        main_name = ''
+        for file in fnmatch.filter(os.listdir(tmpdir), '*.class'):
+            main_name = subprocess.check_output(['find-main', file])
+            break # TODO: Make this do something
+        
+        # TODO: Magic goes here
+
+        output = readFile(file)
+        output += """
+try {
+    javaMethods.get('""" + main_name + """([java/lang/String;)V;').invoke([]);
+}
+catch (err) {
+    console.log(err);
+}
+"""
+        return output;
     finally:
         shutil.rmtree(tmpdir, True)
 # Compile a given file with the given source

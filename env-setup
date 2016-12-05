@@ -40,6 +40,14 @@ if [ ! -f ".status/opal" ]; then
 	echo > .status/opal
 fi
 
+if [ ! -f '.status/dragome' ]; then
+	git clone https://github.com/konsoletyper/teavm.git --depth 1
+	
+	cd teavm
+	mvn package
+	cd ../
+fi 
+
 # Add our commands to shell environment
 # This will require a restart to take effect
 echo export PATH=\$PATH:$PWD/commands > /etc/profile.d/moodle-code-window.sh

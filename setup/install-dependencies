@@ -12,6 +12,7 @@ if [ ! -f ".status/apt-get" ]; then
 		maven cmake \
 		mono-devel \
 		default-jdk default-jre \
-		ruby-full
+		ruby-full \
+		closure-compiler
 	echo "" > .status/apt-get
 fi
