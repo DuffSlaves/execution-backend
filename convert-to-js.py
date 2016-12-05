@@ -35,12 +35,16 @@ def exec_command(command, shell=False):
     
 def minifyJS(jsfile, level = 'ADVANCED_OPTIMIZATIONS'):
     # NOTE: If the ADVANCED_OPTIMIZATIONS compilation level causes
-	#       problems then we should change it to SIMPLE_OPTIMIZATIONS
-	# NOTE: This should not be used for user provided JS code. This is
-	#       only for code which is compiled down from user generated code
-	#       in other languages. User provided JS should be minified using
-	#       compilation level WHITESPACE_ONLY.
-    exec_command("closure-compiler --compilation_level" + level + ' --js ' + jsfile)
+    #       problems then we should change it to SIMPLE_OPTIMIZATIONS
+    # NOTE: This should not be used for user provided JS code. This is
+    #       only for code which is compiled down from user generated code
+    #       in other languages. User provided JS should be minified using
+    #       compilation level WHITESPACE_ONLY.
+    try:
+        print(jsfile)
+        exec_command(['closure-compiler', '--compilation_level', level, ' --js ', jsfile, '--js_output_file', jsfile, '--third_party'])
+    except:
+        pass
 
 # Compile a given java file with the file text
 # and a string indicating which java version to
@@ -54,7 +58,7 @@ def compileJava(text, version_string):
 
     tmpdir = mkTempDir()
     try:
-        filename = tmpdir + 'tmpfile'
+        filename = tmpdir + '/tmpfile'
         
         writeFile(filename + '.java', text)
 
@@ -74,10 +78,9 @@ def compileJava(text, version_string):
 def compileWithClang(text, extargs = '', ext = '.cpp'):
     tmpdir = mkTempDir()
     try:
-        filename = tmpdir + 'tmpfile'
+        filename = tmpdir + '/tmpfile'
 
         writeFile(filename + ext, text)
-        filename = tmpdir + 'tmpfile'
 
         exec_command('emcc -O3 -Wall ' + filename + ext + ' -o ' + filename + '.bc ' + extargs)
         exec_command('emcc -O3 ' + filename + '.bc -o ' + filename + '.js')
@@ -89,7 +92,7 @@ def compileWithClang(text, extargs = '', ext = '.cpp'):
 def compileHaskell(text):
     tmpdir = mkTempDir()
     try:
-        filename = tmpdir + 'tmpfile'
+        filename = tmpdir + '/tmpfile'
         
         writeFile(filename + '.hs', text)
         
@@ -102,7 +105,7 @@ def compileHaskell(text):
 def compileTypeScript(text):
     tmpdir = mkTempDir()
     try:
-        filename = tmpdir + 'tmpfile'
+        filename = tmpdir + '/tmpfile'
 
         writeFile(filename + '.ts', text)
 
@@ -114,7 +117,7 @@ def compileTypeScript(text):
 def compileCoffeeScript(text):
     tmpdir = mkTempDir()
     try:
-        filename = tmpdir + 'tmpfile'
+        filename = tmpdir + '/tmpfile'
 
         writeFile(filename + '.coffee', text)
 
@@ -126,7 +129,7 @@ def compileCoffeeScript(text):
 def compilePython3(text):
     tmpdir = mkTempDir()
     try:
-        filename = tmpdir + 'tmpfile'
+        filename = tmpdir + '/tmpfile'
 
         writeFile(filename + '.py', text)
 
@@ -138,7 +141,7 @@ def compilePython3(text):
 def compileCOBOL(text, dialect):
     tmpdir = mkTempDir()
     try:
-        filename = tmpdir + 'tmpfile'
+        filename = tmpdir + '/tmpfile'
 
         writeFile(filename + '.cbl', text)
 
@@ -152,7 +155,7 @@ def compileCOBOL(text, dialect):
 def compileScheme(text):
     tmpdir = mkTempDir()
     try:
-        filename = tmpdir + 'file'
+        filename = tmpdir + '/file'
 
         writeFile(filename + '.scm', text)
 
@@ -166,42 +169,45 @@ def compileScheme(text):
 def compileRuby(text):
     tmpdir = mkTempDir()
     try:
-        filename = tmpdir + 'file'
+        filename = tmpdir + '/file'
 
         writeFile(filename + '.rb', text)
-
-        exec_command('opal -c ' + filename + '.rb > ' + filename + '.js', True)
+        
+        with open(filename + '.js', "w") as f:
+            subprocess.call(['opal', '-c', filename + '.rb', '--file', filename + '.js'], stdout=f)
+        #minifyJS(filename + '.js')
 
         return readFile(filename + '.js')
     finally:
-        shutil.rmtree(tmpdir, True)
+        print('Errored')
+        #shutil.rmtree(tmpdir, True)
 
 def compileUserFile(lang, code):
-     default = lambda text: ''
-     return {
-         'C++14':         lambda text: compileWithClang(text, '-std=c++14'),
-         'C++11':         lambda text: compileWithClang(text, '-std=c++11'),
-         'C++98':         lambda text: compileWithClang(text, ''),
-         'C++1z':         lambda text: compileWithClang(text, '-std=c++1z'),
-         'C89'  :         lambda text: compileWithClang(text, '-std=c89', '.c'),
-         'C99'  :         lambda text: compileWithClang(text, '-std=c99', '.c'),
-         'C11'  :         lambda text: compileWithClang(text, '-std=c11', '.c'),
-         'C94'  :         lambda text: compileWithClang(text, '-std=c94', '.c'),
-         'Java 1.3':      lambda text: compileJava(text, '1.3'),
-         'Java 1.4':      lambda text: compileJava(text, '1.4'),
-         'Java 1.5':      lambda text: compileJava(text, '1.5'),
-         'Java 1.6':      lambda text: compileJava(text, '1.6'),
-         'Java 1.7':      lambda text: compileJava(text, '1.7'),
-         'Java 1.8':      lambda text: compileJava(text, '1.8'),
-         'Objective-C++': lambda text: compileWithClang(text, '', '.mm'),
-         'Objective-C'  : lambda text: compileWithClang(text, '', '.m'),
-         'Haskell':       lambda text: compileHaskell(text),
-         'CoffeeScript':  lambda text: compileCoffeeScript(text),
-         'TypeScript':    lambda text: compileTypeScript(text),
-         'COBOL':         lambda text: compileCOBOL(text),
-         'Scheme':        lambda text: compileScheme(text),
-         'Ruby':          lambda text: compileRuby(text),
-     }.get(lang, default)(code)
+    default = lambda text: ''
+    return {
+        'C++14':         lambda text: compileWithClang(text, '-std=c++14'),
+        'C++11':         lambda text: compileWithClang(text, '-std=c++11'),
+        'C++98':         lambda text: compileWithClang(text, ''),
+        'C++1z':         lambda text: compileWithClang(text, '-std=c++1z'),
+        'C89'  :         lambda text: compileWithClang(text, '-std=c89', '.c'),
+        'C99'  :         lambda text: compileWithClang(text, '-std=c99', '.c'),
+        'C11'  :         lambda text: compileWithClang(text, '-std=c11', '.c'),
+        'C94'  :         lambda text: compileWithClang(text, '-std=c94', '.c'),
+        'Java 1.3':      lambda text: compileJava(text, '1.3'),
+        'Java 1.4':      lambda text: compileJava(text, '1.4'),
+        'Java 1.5':      lambda text: compileJava(text, '1.5'),
+        'Java 1.6':      lambda text: compileJava(text, '1.6'),
+        'Java 1.7':      lambda text: compileJava(text, '1.7'),
+        'Java 1.8':      lambda text: compileJava(text, '1.8'),
+        'Objective-C++': lambda text: compileWithClang(text, '', '.mm'),
+        'Objective-C'  : lambda text: compileWithClang(text, '', '.m'),
+        'Haskell':       lambda text: compileHaskell(text),
+        'CoffeeScript':  lambda text: compileCoffeeScript(text),
+        'TypeScript':    lambda text: compileTypeScript(text),
+        'COBOL':         lambda text: compileCOBOL(text),
+        'Scheme':        lambda text: compileScheme(text),
+        'Ruby':          lambda text: compileRuby(text),
+    }.get(lang, default)(code)
 
 if __name__ == '__main__': # Script was executed from the command line
     if len(sys.argv) < 3:
@@ -209,5 +215,7 @@ if __name__ == '__main__': # Script was executed from the command line
     else:
         input = json.load(open(sys.argv[1]))
         output = compileUserFile(input['lang'], input['text'])
+        print(sys.argv)
+        print(output)
         writeFile(sys.argv[2], output)
         
