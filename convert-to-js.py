@@ -186,8 +186,7 @@ def compileRuby(text):
 
         writeFile(filename + '.rb', text)
         
-        with open(os.devnull, "w") as f:
-            subprocess.call(['opal', '-c', filename + '.rb', '--file', filename + '.js'], stdout=f)
+        exec_command(['opal-exec', '-c', filename + '.rb', '--file', filename + '.js'])
         #minifyJS(filename + '.js')
 
         return readFile(filename + '.js')
