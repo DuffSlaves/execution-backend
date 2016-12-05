@@ -20,6 +20,7 @@ node_modules/
 gcc-4.8.5/
 dragome-sdk/
 JSIL/
+main-finder/
 
 # Ignore .status directory
 .status/
