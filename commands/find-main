@@ -4,4 +4,4 @@
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 
-java -jar $SCRIPT/../main-finder/target/find-main-0.0.1.jar "$@"
+java -jar $SCRIPTPATH/../main-finder/target/find-main-0.0.1.jar "$@"
