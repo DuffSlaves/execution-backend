@@ -43,5 +43,5 @@ fi
 # Add our commands to shell environment
 # This will require a restart to take effect
 echo export PATH=\$PATH:$PWD/commands > /etc/profile.d/moodle-code-window.sh
-chmod a+x /etc/profile.d/moodle-code-window
+chmod a+x /etc/profile.d/moodle-code-window.sh
 
