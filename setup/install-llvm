@@ -13,5 +13,5 @@ if [ ! -f ".status/llvm" ]; then
 	CC=clang make -j
 	cd ../
 
-	echo "" > .status/llvm-3.6
+	echo "" > .status/llvm
 fi
