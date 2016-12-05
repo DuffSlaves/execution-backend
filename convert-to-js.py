@@ -29,8 +29,8 @@ def readFile(filename):
 def mkTempDir():
     return mkdtemp(prefix='convert_to_js_')
 
-def exec_command(command):
-    proc = subprocess.check_call(command)
+def exec_command(command, shell=False):
+    proc = subprocess.check_call(command, shell=shell)
 
     
 def minifyJS(jsfile, level = 'ADVANCED_OPTIMIZATIONS'):
@@ -158,6 +158,19 @@ def compileScheme(text):
 
         exec_command('csc -t ' + filename + '.scm -optimize-level 3 -output-file ' + filename + '.c')
         exec_command('emcc ' + filename + '.c -o ' + filename + '.bc')
+        exec_command('emcc ' + filename + '.bc -o ' + filename + '.js')
+
+        return readFile(filename + '.js')
+    finally:
+        shutil.rmtree(tmpdir, True)
+def compileRuby(text):
+    tmpdir = mkTempDir()
+    try:
+        filename = tmpdir + 'file'
+
+        writeFile(filename + '.rb', text)
+
+        exec_command('opal -c ' + filename + '.rb > ' + filename + '.js', True)
 
         return readFile(filename + '.js')
     finally:
@@ -187,6 +200,7 @@ def compileUserFile(lang, code):
          'TypeScript':    lambda text: compileTypeScript(text),
          'COBOL':         lambda text: compileCOBOL(text),
          'Scheme':        lambda text: compileScheme(text),
+         'Ruby':          lambda text: compileRuby(text),
      }.get(lang, default)(code)
 
 if __name__ == '__main__': # Script was executed from the command line

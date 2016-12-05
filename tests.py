@@ -38,6 +38,7 @@ PROCEDURE DIVISION.
     test('Java 1.8 Hello World', 'Java 1.8', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
     test('Haskell', 'Haskell', 'main = putStrLn "Hello, World!"'),
     test('Scheme', 'Scheme', '(print "Hello, World!")'),
+    test('Ruby', 'Ruby', 'puts "Hello, World!"'),
 ]
 
 class TestFailedException:
