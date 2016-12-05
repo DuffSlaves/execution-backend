@@ -28,7 +28,16 @@ if [ ! -f ".status/find-main" ]; then
 	echo > .status/find-main
 fi
 
+if [ ! -f ".status/chicken" ]; then
+	apt-get install -y chicken
+fi
+
 if [ ! -f ".status/opal" ]; then
 	gem install opal
 fi
+
+# Add our commands to shell environment
+# This will require a restart to take effect
+echo export PATH=\$PATH:$PWD/commands > /etc/profile.d/moodle-code-window.sh
+chmod a+x /etc/profile.d/moodle-code-window
 

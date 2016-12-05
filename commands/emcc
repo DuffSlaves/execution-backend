@@ -1,0 +1,9 @@
+#!bin/bash
+
+# Put emscripten on our command line
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+
+. './$SCRIPTPATH/../emsdk_portable/emsdk_env.sh'
+
+emcc "$@"

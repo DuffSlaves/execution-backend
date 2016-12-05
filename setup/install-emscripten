@@ -11,7 +11,7 @@ if [ ! -f ".status/emscripten" ]; then
 	./emsdk update
 	./emsdk install latest
 	./emsdk activate latest
-	. ./emsdk_env.sh
+	./emsdk_env.sh
 	cd ../
 
 	echo "" > .status/emscripten

@@ -66,7 +66,6 @@ def compileJava(text, version_string):
         return readFile(file)
     finally:
         shutil.rmtree(tmpdir, True)
-
 # Compile a given file with the given source
 # code and extra arguments using Clang
 #  text: The C++ or C source code
@@ -87,7 +86,6 @@ def compileWithClang(text, extargs = '', ext = '.cpp'):
         return readFile(filename + '.js')
     finally:
         shutil.rmtree(tmpdir, True)
-
 def compileHaskell(text):
     tmpdir = mkTempDir()
     try:
@@ -101,7 +99,6 @@ def compileHaskell(text):
         return readFile(filename + '.js')
     finally:
         shutil.rmtree(tmpdir, True)
-
 def compileTypeScript(text):
     tmpdir = mkTempDir()
     try:
@@ -114,7 +111,6 @@ def compileTypeScript(text):
         return readFile(filename + '.js')
     finally:
         shutil.rmtree(tmpdir, True)
-
 def compileCoffeeScript(text):
     tmpdir = mkTempDir()
     try:
@@ -127,20 +123,18 @@ def compileCoffeeScript(text):
         return readFile(filename + '.js')
     finally:
         shutil.rmtree(tmpdir, True)
-
 def compilePython3(text):
     tmpdir = mkTempDir()
     try:
         filename = tmpdir + 'tmpfile'
 
-        writeFile(filename + '.js', text)
+        writeFile(filename + '.py', text)
 
-        exec_command('pyjsbuild ' + fliename + '.py -o ' + filename + '.js')
+        exec_command('pyjsbuild ' + filename + '.py -o ' + filename + '.js')
 
         return readFile(filename + '.js')
     finally:
         shutil.rmtree(tmpdir, True)
-
 def compileCOBOL(text, dialect):
     tmpdir = mkTempDir()
     try:
@@ -153,6 +147,19 @@ def compileCOBOL(text, dialect):
         exec_command('emcc -O3 ' + filename + '.bc -o ' + filename + '.js')
         
         return readFile(filename = '.js')
+    finally:
+        shutil.rmtree(tmpdir, True)
+def compileScheme(text):
+    tmpdir = mkTempDir()
+    try:
+        filename = tmpdir + 'file'
+
+        writeFile(filename + '.scm', text)
+
+        exec_command('csc -t ' + filename + '.scm -optimize-level 3 -output-file ' + filename + '.c')
+        exec_command('emcc ' + filename + '.c -o ' + filename + '.bc')
+
+        return readFile(filename + '.js')
     finally:
         shutil.rmtree(tmpdir, True)
 
@@ -179,6 +186,7 @@ def compileUserFile(lang, code):
          'CoffeeScript':  lambda text: compileCoffeeScript(text),
          'TypeScript':    lambda text: compileTypeScript(text),
          'COBOL':         lambda text: compileCOBOL(text),
+         'Scheme':        lambda text: compileScheme(text),
      }.get(lang, default)(code)
 
 if __name__ == '__main__': # Script was executed from the command line

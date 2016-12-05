@@ -1,10 +1,10 @@
 
 if [ ! -f ".status/ghcjs" ]; then
-	apt-get -qq -y install haskell-platform
+	apt-get -y install haskell-platform
 	# Install ghcjs
 	cabal update
 	PATH=$PATH:~/.cabal/bin
-	ghc --version
+	ln -s /usr/bin/nodejs /usr/bin/node
 	cabal install http://ghcjs.luite.com/master.tar.gz
 	ghcjs-boot
 fi
