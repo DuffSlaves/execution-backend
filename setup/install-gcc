@@ -16,7 +16,7 @@ if [ ! -f ".status/gcc" ]; then
 	cd gcc-build
 	chmod 755 ../gcc-4.8.5/configure
 	./../gcc-4.8.5/configure --disable-bootstrap
-	make -j
+	make -j$(nproc --all)
 	make DESTDIR=../gcc install
 	rm /usr/lib/crti.o
 	rm /usr/lib/crtn.o

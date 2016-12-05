@@ -9,7 +9,7 @@ if [ ! -f ".status/dragonegg" ]; then
 	rm dragonegg.tar
 	chmod +rwxrwxrwx dragonegg-3.6.2.src -R
 	cd dragonegg-3.6.2.src
-	GCC=../gcc/bin/gcc LLVM_CONFIG=../llvm-3.6.2.src/bin/llvm-config make -j
+	GCC=../gcc/bin/gcc LLVM_CONFIG=../llvm-3.6.2.src/bin/llvm-config make -j$(nproc --all)
 	cd ../
 
 	echo "" > .status/dragonegg

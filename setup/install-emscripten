@@ -9,7 +9,7 @@ if [ ! -f ".status/emscripten" ]; then
 	chmod +rwxrwxrwx emsdk_portable -R
 	cd emsdk_portable
 	./emsdk update
-	./emsdk install latest
+	./emsdk install latest -j$(nproc --all)
 	./emsdk activate latest
 	./emsdk_env.sh
 	cd ../
