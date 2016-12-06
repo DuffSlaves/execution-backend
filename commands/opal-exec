@@ -1,3 +1,13 @@
+#!/bin/sh
 
-opal -c $1 > $2
+DEST=$1
+
+echo $@
+
+if [ ! -d $(dirname ${1}) ]; then
+    mkdir $(dirname ${1})
+fi
+
+opal -c ${1} > ${2}
+
 

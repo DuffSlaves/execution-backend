@@ -1,7 +1,5 @@
 from __future__ import print_function
 from tempfile import mkdtemp
-from subprocess import Popen
-from subprocess import PIPE
 import subprocess
 import fnmatch
 import shutil
@@ -9,28 +7,19 @@ import json
 import sys
 import os
 
-def output(str):
-    sys.stdout.write(str)
-def error(str):
-    sys.stderr.write(str)
-
-class RequestValue:
-   def __init__(self, lang, text):
-       self.lang = lang
-       self.text = text
-       
 def writeFile(filename, text):
-    with open(filename, "wb") as f:
-        f.write(text)
+    with open(filename, "wb") as fvar:
+        fvar.write(text)
 def readFile(filename):
-    with open(filename, "rb") as f:
-        return f.read()
+    with open(filename, "rb") as fvar:
+        return fvar.read()
 
 def mkTempDir():
     return mkdtemp(prefix='convert_to_js_')
 
 def exec_command(command, shell=False):
-    proc = subprocess.check_call(command, shell=shell)
+    """Runs a command with the given arguments."""
+    subprocess.check_call(command, shell=shell)
 
     
 def minifyJS(jsfile, level = 'ADVANCED_OPTIMIZATIONS'):
@@ -40,11 +29,8 @@ def minifyJS(jsfile, level = 'ADVANCED_OPTIMIZATIONS'):
     #       only for code which is compiled down from user generated code
     #       in other languages. User provided JS should be minified using
     #       compilation level WHITESPACE_ONLY.
-    try:
-        print(jsfile)
-        exec_command(['closure-compiler', '--compilation_level', level, ' --js ', jsfile, '--js_output_file', jsfile, '--third_party'])
-    except:
-        pass
+    exec_command(['closure-compiler', '--compilation_level', level, ' --js ',
+                  jsfile, '--js_output_file', jsfile, '--third_party'])
 
 # Compile a given java file with the file text
 # and a string indicating which java version to
@@ -59,20 +45,20 @@ def compileJava(text, version_string):
     tmpdir = mkTempDir()
     try:
         filename = tmpdir + '/tmpfile'
-        
+
         writeFile(filename + '.java', text)
 
         exec_command(['javac', '-source', version_string, filename + '.java'])
-        
+
         main_name = ''
-        for file in fnmatch.filter(os.listdir(tmpdir), '*.class'):
-            main_name = subprocess.check_output(['find-main', file])
+        for rfile in fnmatch.filter(os.listdir(tmpdir), '*.class'):
+            main_name = subprocess.check_output(['find-main', rfile])
             break # TODO: Make this do something
-        
+
         # TODO: Magic goes here
 
-        output = readFile(file)
-        output += """
+        outtext = readFile(file)
+        outtext += """
 try {
     javaMethods.get('""" + main_name + """([java/lang/String;)V;').invoke([]);
 }
@@ -80,15 +66,16 @@ catch (err) {
     console.log(err);
 }
 """
-        return output;
+        return outtext
     finally:
         shutil.rmtree(tmpdir, True)
-# Compile a given file with the given source
-# code and extra arguments using Clang
-#  text: The C++ or C source code
-#  extargs: Extra args for the compiler
-#  ext: The file extension that the generated file will have
-def compileWithClang(text, extargs = '', ext = '.cpp'):
+def compileWithClang(text, extargs='', ext='.cpp'):
+    """Compile a given file with the given source
+    code and extra arguments using Clang
+     text: The C++ or C source code
+     extargs: Extra args for the compiler
+     ext: The file extension that the generated file will have
+    """
     tmpdir = mkTempDir()
     try:
         filename = tmpdir + '/tmpfile'
@@ -106,12 +93,12 @@ def compileHaskell(text):
     tmpdir = mkTempDir()
     try:
         filename = tmpdir + '/tmpfile'
-        
+
         writeFile(filename + '.hs', text)
-        
+
         exec_command('ghcjs ' + filename + '.hs -o ' + filename + '.js')
         minifyJS(filename + '.js')
-        
+
         return readFile(filename + '.js')
     finally:
         shutil.rmtree(tmpdir, True)
@@ -122,8 +109,8 @@ def compileTypeScript(text):
 
         writeFile(filename + '.ts', text)
 
-        exec_process('tsc ' + filename + '.ts')
-        
+        exec_command('tsc ' + filename + '.ts')
+
         return readFile(filename + '.js')
     finally:
         shutil.rmtree(tmpdir, True)
@@ -161,18 +148,19 @@ def compileCOBOL(text, dialect):
         exec_command('cobc -C -Wall ' + filename + '.cbl -o ' + filename + '.c')
         exec_command('emcc -O3 ' + filename + '.c -o ' + filename + '.bc')
         exec_command('emcc -O3 ' + filename + '.bc -o ' + filename + '.js')
-        
-        return readFile(filename = '.js')
+
+        return readFile(filename + '.js')
     finally:
         shutil.rmtree(tmpdir, True)
 def compileScheme(text):
+    """Compiles scheme code using the Chicken Scheme compiler and emscripten."""
     tmpdir = mkTempDir()
     try:
         filename = tmpdir + '/file'
 
         writeFile(filename + '.scm', text)
 
-        exec_command('csc -t ' + filename + '.scm -optimize-level 3 -output-file ' + filename + '.c')
+        exec_command('csc -t ' + filename + '.scm -optimize-level 3 -output-file ' + filename+'.c')
         exec_command('emcc ' + filename + '.c -o ' + filename + '.bc')
         exec_command('emcc ' + filename + '.bc -o ' + filename + '.js')
 
@@ -180,19 +168,21 @@ def compileScheme(text):
     finally:
         shutil.rmtree(tmpdir, True)
 def compileRuby(text):
+    """Compiles a Ruby file using the Opal Compiler"""
     tmpdir = mkTempDir()
     try:
         filename = tmpdir + '/file'
 
         writeFile(filename + '.rb', text)
-        
-        exec_command(['opal-exec', '-c', filename + '.rb', '--file', filename + '.js'])
+
+        if os.system('opal-exec ' + filename + '.rb ' + filename + '.js') != 0:
+            raise subprocess.CalledProcessError("opal-exec returned non-zero exit status",
+                                                'opal-exec ' + filename + '.rb ' + filename + '.js')
         #minifyJS(filename + '.js')
 
         return readFile(filename + '.js')
     finally:
-        print('Errored')
-        #shutil.rmtree(tmpdir, True)
+        shutil.rmtree(tmpdir, True)
 
 def compileUserFile(lang, code):
     default = lambda text: ''
@@ -227,7 +217,5 @@ if __name__ == '__main__': # Script was executed from the command line
     else:
         input = json.load(open(sys.argv[1]))
         output = compileUserFile(input['lang'], input['text'])
-        print(sys.argv)
-        print(output)
         writeFile(sys.argv[2], output)
         

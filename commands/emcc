@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Put emscripten on our command line
 SCRIPT=$(readlink -f "$0")
