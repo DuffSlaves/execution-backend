@@ -1,27 +1,30 @@
+#!/usr/bin/python
+
 from __future__ import print_function
-from colorama import init, Fore
 import subprocess
 import json
 import os
+import sys
+from colorama import init, Fore
 
 init(autoreset=True)
 
-class test:
+class Test:
     def __init__(self, name, lang, code):
-        self.json = json.dumps({ 'text': code, 'lang': lang })
+        self.json = json.dumps({'text': code, 'lang': lang})
         self.name = name
 
-hello_world_tests = [ # All of these should end up printing 'Hello, World!' when run
-    test('C++14 Hello World', 'C++14', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
-    test('C++11 Hello World', 'C++11', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
-    test('C++03 Hello World', 'C++03', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
-    test('C++98 Hello World', 'C++98', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
-    test('C++1z Hello World', 'C++1z', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
-    test('C11 Hello World', 'C11', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
-    test('C99 Hello World', 'C99', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
-    test('C89 Hello World', 'C89', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
-    test('C94 Hello World', 'C94', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
-    test('COBOL Hello World', 'COBOL', 
+HELLO_WORLD_TESTS = [ # All of these should end up printing 'Hello, World!' when run
+    Test('C++14 Hello World', 'C++14', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
+    Test('C++11 Hello World', 'C++11', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
+    Test('C++03 Hello World', 'C++03', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
+    Test('C++98 Hello World', 'C++98', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
+    Test('C++1z Hello World', 'C++1z', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
+    Test('C11 Hello World', 'C11', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
+    Test('C99 Hello World', 'C99', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
+    Test('C89 Hello World', 'C89', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
+    Test('C94 Hello World', 'C94', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
+    Test('COBOL Hello World', 'COBOL', 
          """
 IDENTIFICATION DIVISION.
 PROGRAM-ID. HELLOWORLD.
@@ -30,19 +33,21 @@ PROCEDURE DIVISION.
     DISPLAY 'Hello, World!'.
     STOP RUN.
          """),
-    test('Java 1.3 Hello World', 'Java 1.3', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
-    test('Java 1.4 Hello World', 'Java 1.4', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
-    test('Java 1.5 Hello World', 'Java 1.5', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
-    test('Java 1.6 Hello World', 'Java 1.6', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
-    test('Java 1.7 Hello World', 'Java 1.7', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
-    test('Java 1.8 Hello World', 'Java 1.8', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
-    test('Haskell', 'Haskell', 'main = putStrLn "Hello, World!"'),
-    test('Scheme', 'Scheme', '(print "Hello, World!")'),
-    test('Ruby', 'Ruby', 'puts "Hello, World!"'),
+    Test('Java 1.3 Hello World', 'Java 1.3', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
+    Test('Java 1.4 Hello World', 'Java 1.4', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
+    Test('Java 1.5 Hello World', 'Java 1.5', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
+    Test('Java 1.6 Hello World', 'Java 1.6', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
+    Test('Java 1.7 Hello World', 'Java 1.7', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
+    Test('Java 1.8 Hello World', 'Java 1.8', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
+    Test('Haskell', 'Haskell', 'main = putStrLn "Hello, World!"'),
+    Test('Scheme', 'Scheme', '(print "Hello, World!")'),
+    Test('Ruby', 'Ruby', 'puts "Hello, World!"'),
 ]
 
-class TestFailedException:
-    def __init__(self):
+class TestFailedException(Exception):
+    """An exception thrown to indicate that a test failed."""
+    def __init__(self, err=''):
+        super(TestFailedException, self).__init__(err)
         return
 
 def run_test(testval, expected):
@@ -52,34 +57,41 @@ def run_test(testval, expected):
 
         print (Fore.CYAN + "[Running test '" + testval.name + "']")
 
-        subprocess.check_call(['./convert-to-js.py', 'testfile.in', 'testfile.js'], shell=True, check=True)
+        subprocess.check_call('./convert-to-js.py testfile.in testfile.js',
+                              shell=True)
 
         os.unlink('testfile.in')
 
-        output = check_output('node testfile.js')
-        
+        output = subprocess.check_output('nodejs testfile.js', shell=True)
+
         os.unlink('testfile.js')
 
-        print(output)
         if output != expected:
-            raise TestFailedException();
+            print(output)
+            raise TestFailedException("Test output did not match expected output")
 
         print (Fore.GREEN + "[Test Succeeded]")
         return True
-    except:
-        print (Fore.RED + "[Test Failed]")
-        pass
+    except subprocess.CalledProcessError as err:
+        print (Fore.LIGHTRED_EX + err.cmd)
+    except Exception as exc:
+        print (Fore.RED + exc.message)
+
+    print (Fore.RED + "[Test Failed]")
     return False
 
-if __name__ == '__main__':
+def main():
     result = True
 
     print (Fore.CYAN + "[Running Tests]")
 
-    for tst in hello_world_tests:
-        val = run_test(tst, "Hello, World")
+    for tst in HELLO_WORLD_TESTS:
+        val = run_test(tst, "Hello, World!\n")
         result = result and val
 
     if not result:
         print (Fore.RED + "[Tests Failed]")
-        raise TestFailedException()
+        sys.exit(1)
+
+if __name__ == '__main__':
+    main()

@@ -25,4 +25,7 @@ main-finder/
 # Ignore .status directory
 .status/
 
+# Ignore vscode dirs
+.vscode/
+
 

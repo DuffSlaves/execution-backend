@@ -1,4 +1,4 @@
-""" This is not a python module. Hence the name. """
+#!/usr/bin/python
 
 from __future__ import print_function
 from tempfile import mkdtemp
@@ -10,11 +10,17 @@ import sys
 import os
 
 def writeFile(filename, text):
-    with open(filename, "wb") as fvar:
-        fvar.write(text)
+    if filename != '--':
+        with open(filename, "wb") as fvar:
+            fvar.write(text)
+    else:
+        return sys.stdout.write(text)
 def readFile(filename):
-    with open(filename, "rb") as fvar:
-        return fvar.read()
+    if filename != '--':
+        with open(filename, "rb") as fvar:
+            return fvar.read()
+    else:
+        return sys.stdin.read()
 
 def mkTempDir():
     return mkdtemp(prefix='convert_to_js_')
@@ -32,8 +38,12 @@ def minifyJS(jsfile, level='WHITESPACE_ONLY'):
     #       in other languages. User provided JS should be minified using
     #       compilation level WHITESPACE_ONLY.
 
-    exec_command(['closure-compiler', '--compilation_level', level, '--js',
-                  jsfile, '--js_output_file', jsfile, '--third_party'])
+    output = ''
+    with open(os.devnull) as devnull:
+        output = subprocess.check_output(['closure-compiler', '--compilation_level', level,
+                                          '--js', jsfile, '--third_party'], stderr=devnull)
+    with open(jsfile, 'w') as dst:
+        dst.write(output)
 
 # Compile a given java file with the file text
 # and a string indicating which java version to
@@ -85,9 +95,10 @@ def compileWithClang(text, extargs='', ext='.cpp'):
 
         writeFile(filename + ext, text)
 
-        exec_command('emcc -O3 -Wall ' + filename + ext + ' -o ' + filename + '.bc ' + extargs)
-        exec_command('emcc -O3 ' + filename + '.bc -o ' + filename + '.js')
-        minifyJS(filename + '.js')
+        exec_command(['emcc', '-O3', '-Wall', filename + ext, '-o', filename + '.bc']
+                     + extargs.split(' '))
+        exec_command(['emcc', '-O3', filename + '.bc', '-o', filename + '.js',
+                      '--memory-init-file', '0'])
 
         return readFile(filename + '.js')
     finally:
@@ -194,10 +205,10 @@ def compileUserFile(lang, code):
         'C++11':         lambda text: compileWithClang(text, '-std=c++11'),
         'C++98':         lambda text: compileWithClang(text, ''),
         'C++1z':         lambda text: compileWithClang(text, '-std=c++1z'),
+        'C++03':         lambda text: compileWithClang(text, '-stc=c++03'),
         'C89'  :         lambda text: compileWithClang(text, '-std=c89', '.c'),
         'C99'  :         lambda text: compileWithClang(text, '-std=c99', '.c'),
         'C11'  :         lambda text: compileWithClang(text, '-std=c11', '.c'),
-        'C94'  :         lambda text: compileWithClang(text, '-std=c94', '.c'),
         'Java 1.3':      lambda text: compileJava(text, '1.3'),
         'Java 1.4':      lambda text: compileJava(text, '1.4'),
         'Java 1.5':      lambda text: compileJava(text, '1.5'),
@@ -222,6 +233,7 @@ def main():
         intext = json.load(open(sys.argv[1]))
         outtext = compileUserFile(intext['lang'], intext['text'])
         writeFile(sys.argv[2], outtext)
+        sys.exit(0)
 
 if __name__ == '__main__': # Script was executed from the command line
     main()
