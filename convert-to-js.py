@@ -1,3 +1,5 @@
+""" This is not a python module. Hence the name. """
+
 from __future__ import print_function
 from tempfile import mkdtemp
 import subprocess
@@ -17,19 +19,20 @@ def readFile(filename):
 def mkTempDir():
     return mkdtemp(prefix='convert_to_js_')
 
-def exec_command(command, shell=False):
+def exec_command(command, shell=False, stdout=None, stderr=None):
     """Runs a command with the given arguments."""
-    subprocess.check_call(command, shell=shell)
+    subprocess.check_call(command, shell=shell, stdout=stdout, stderr=stderr)
 
-    
-def minifyJS(jsfile, level = 'ADVANCED_OPTIMIZATIONS'):
+
+def minifyJS(jsfile, level='WHITESPACE_ONLY'):
     # NOTE: If the ADVANCED_OPTIMIZATIONS compilation level causes
     #       problems then we should change it to SIMPLE_OPTIMIZATIONS
     # NOTE: This should not be used for user provided JS code. This is
     #       only for code which is compiled down from user generated code
     #       in other languages. User provided JS should be minified using
     #       compilation level WHITESPACE_ONLY.
-    exec_command(['closure-compiler', '--compilation_level', level, ' --js ',
+
+    exec_command(['closure-compiler', '--compilation_level', level, '--js',
                   jsfile, '--js_output_file', jsfile, '--third_party'])
 
 # Compile a given java file with the file text
@@ -138,7 +141,7 @@ def compilePython3(text):
         return readFile(filename + '.js')
     finally:
         shutil.rmtree(tmpdir, True)
-def compileCOBOL(text, dialect):
+def compileCOBOL(text):
     tmpdir = mkTempDir()
     try:
         filename = tmpdir + '/tmpfile'
@@ -178,7 +181,7 @@ def compileRuby(text):
         if os.system('opal-exec ' + filename + '.rb ' + filename + '.js') != 0:
             raise subprocess.CalledProcessError("opal-exec returned non-zero exit status",
                                                 'opal-exec ' + filename + '.rb ' + filename + '.js')
-        #minifyJS(filename + '.js')
+        minifyJS(filename + '.js', 'SIMPLE_OPTIMIZATIONS')
 
         return readFile(filename + '.js')
     finally:
@@ -203,19 +206,23 @@ def compileUserFile(lang, code):
         'Java 1.8':      lambda text: compileJava(text, '1.8'),
         'Objective-C++': lambda text: compileWithClang(text, '', '.mm'),
         'Objective-C'  : lambda text: compileWithClang(text, '', '.m'),
-        'Haskell':       lambda text: compileHaskell(text),
-        'CoffeeScript':  lambda text: compileCoffeeScript(text),
-        'TypeScript':    lambda text: compileTypeScript(text),
-        'COBOL':         lambda text: compileCOBOL(text),
-        'Scheme':        lambda text: compileScheme(text),
-        'Ruby':          lambda text: compileRuby(text),
+        'Haskell':       compileHaskell,
+        'CoffeeScript':  compileCoffeeScript,
+        'TypeScript':    compileTypeScript,
+        'COBOL':         compileCOBOL,
+        'Scheme':        compileScheme,
+        'Ruby':          compileRuby,
     }.get(lang, default)(code)
 
-if __name__ == '__main__': # Script was executed from the command line
+def main():
+    """main"""
     if len(sys.argv) < 3:
         print('usage: convert-to-js <input-file> <output-file>')
     else:
-        input = json.load(open(sys.argv[1]))
-        output = compileUserFile(input['lang'], input['text'])
-        writeFile(sys.argv[2], output)
-        
+        intext = json.load(open(sys.argv[1]))
+        outtext = compileUserFile(intext['lang'], intext['text'])
+        writeFile(sys.argv[2], outtext)
+
+if __name__ == '__main__': # Script was executed from the command line
+    main()
+
