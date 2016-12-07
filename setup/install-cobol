@@ -1,0 +1,42 @@
+
+. ./emsdk_portable/emsdk_env.sh
+
+if [ ! -f '.status/gmp' ]; then
+    wget -O gmp.tar.xz https://gmplib.org/download/gmp/gmp-6.1.1.tar.xz
+
+    7z -y x gmp.tar.xz
+    7z -y x gmp.tar
+
+    rm gmp.tar.xz
+    rm gmp.tar
+
+    cd gmp-6.1.1
+
+    chmod 755 . -R
+
+    emconfigure ./configure
+    emmake make
+
+    cd ../
+fi 
+
+if [ ! -f '.status/gnucobol' ]; then
+	wget -O gnucobol.tar.gz http://downloads.sourceforge.net/project/open-cobol/gnu-cobol/2.0/gnu-cobol-2.0_rc-2.tar.gz
+
+	7z -y x gnucobol.tar.gz
+	7z -y x gnucobol.tar
+
+	rm gnucobol.tar.gz
+	rm gnucobol.tar
+	
+	cd gnu-cobol-2.0
+
+    chmod 755 . -R
+
+    emconfigure ./configure
+    emmake make
+
+	cd ../
+
+	#echo > .status/gnucobol
+fi

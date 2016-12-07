@@ -25,7 +25,7 @@ def readFile(filename):
 def mkTempDir():
     return mkdtemp(prefix='convert_to_js_')
 
-def exec_command(command, shell=False, stdout=None, stderr=None):
+def exec_command(command, shell=True, stdout=None, stderr=None):
     """Runs a command with the given arguments."""
     subprocess.check_call(command, shell=shell, stdout=stdout, stderr=stderr)
 
@@ -96,9 +96,9 @@ def compileWithClang(text, extargs='', ext='.cpp'):
         writeFile(filename + ext, text)
 
         exec_command(['emcc', '-O3', '-Wall', filename + ext, '-o', filename + '.bc']
-                     + extargs.split(' '))
+                     + extargs.split(' '), shell=False)
         exec_command(['emcc', '-O3', filename + '.bc', '-o', filename + '.js',
-                      '--memory-init-file', '0'])
+                      '--memory-init-file', '0'], shell=False)
 
         return readFile(filename + '.js')
     finally:

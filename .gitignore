@@ -21,10 +21,11 @@ gcc-4.8.5/
 dragome-sdk/
 JSIL/
 main-finder/
+gnu-cobol-2.0/
+gmp-6.1.1/
 
 # Ignore .status directory
 .status/
-.vscode/
 
 # Ignore vscode dirs
 .vscode/
