@@ -205,7 +205,6 @@ def compileUserFile(lang, code):
         'C++11':         lambda text: compileWithClang(text, '-std=c++11'),
         'C++98':         lambda text: compileWithClang(text, ''),
         'C++1z':         lambda text: compileWithClang(text, '-std=c++1z'),
-        'C++03':         lambda text: compileWithClang(text, '-stc=c++03'),
         'C89'  :         lambda text: compileWithClang(text, '-std=c89', '.c'),
         'C99'  :         lambda text: compileWithClang(text, '-std=c99', '.c'),
         'C11'  :         lambda text: compileWithClang(text, '-std=c11', '.c'),

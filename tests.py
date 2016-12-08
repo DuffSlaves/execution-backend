@@ -17,7 +17,6 @@ class Test:
 HELLO_WORLD_TESTS = [ # All of these should end up printing 'Hello, World!' when run
     Test('C++14 Hello World', 'C++14', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
     Test('C++11 Hello World', 'C++11', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
-    Test('C++03 Hello World', 'C++03', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
     Test('C++98 Hello World', 'C++98', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
     Test('C++1z Hello World', 'C++1z', '#include <iostream>\nint main(int argc, char** argv) { std::cout << "Hello, World!" << std::endl; }'),
     Test('C11 Hello World', 'C11', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
