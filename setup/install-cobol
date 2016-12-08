@@ -1,5 +1,5 @@
 
-. ./emsdk_portable/emsdk_env.sh
+. ./emsdk_portable/emsdk_env.sh > /dev/null
 
 if [ ! -f '.status/gmp' ]; then
     wget -O gmp.tar.xz https://gmplib.org/download/gmp/gmp-6.1.1.tar.xz
@@ -10,14 +10,32 @@ if [ ! -f '.status/gmp' ]; then
     rm gmp.tar.xz
     rm gmp.tar
 
-    cd gmp-6.1.1
+    if [ ! -d 'gmp-js' ]; then
+        mkdir gmp-js
+    fi
+
+    chmod 755 gmp-6.1.1 -R
+
+    cd gmp-js
+
+    emconfigure ./../gmp-6.1.1/configure --disable-assembly CC_FOR_BUILD=gcc
+    emmake make -j$(nproc --all)
 
     chmod 755 . -R
 
-    emconfigure ./configure
-    emmake make
-
     cd ../
+
+    if [ ! -d 'gmp' ]; then
+        mkdir gmp
+    fi
+
+    cd gmp
+        ./../gmp-6.1.1/configure 
+        make -j$(nproc --all)
+    cd ../
+
+    rm -rf gmp-6.1.1
+
 fi 
 
 if [ ! -f '.status/gnucobol' ]; then
@@ -33,8 +51,8 @@ if [ ! -f '.status/gnucobol' ]; then
 
     chmod 755 . -R
 
-    emconfigure ./configure
-    emmake make
+    emconfigure ./configure 'CPPFLAGS=-I./../gmp'
+    emmake make libcob -j$(nproc --all)
 
 	cd ../
 

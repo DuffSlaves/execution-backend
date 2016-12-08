@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Get the location of this script
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+MAINPATH=$(find-main "$1")
+
+mkdir build
+
+cd build
+mvn -DarchetypeCatalog=local \
+  -DarchetypeGroupId=org.teavm \
+  -DarchetypeArtifactId=teavm-maven-webapp \
+  -DarchetypeVersion=0.4.3 archetype:generate -B \
+  -DgroupId=com.user -DartifactId=$(find-main $1) -Dversion=1.0 -Dpackage= \
+  -Dpackaging=war
+
+cd ../
+
+mv $1 build/src
+
+cd build
+
+mvn package
+
+cd ../
+

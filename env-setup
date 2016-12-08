@@ -11,7 +11,6 @@ fi
 ldconfig /usr/local/lib
 
 ./setup/install-jsil
-./setup/install-dragome
 ./setup/install-emscripten
 ./setup/install-gcc
 ./setup/install-llvm
@@ -40,17 +39,8 @@ if [ ! -f ".status/opal" ]; then
 	echo > .status/opal
 fi
 
-if [ ! -f '.status/teavm' ]; then
-	git clone https://github.com/konsoletyper/teavm.git --depth 1
-	
-	cd teavm
-	mvn package
-	cd ../
-
-	echo > .status/teavm
-fi 
-
-./setup/install-cobol
+# We don't build cobol yet
+#./setup/install-cobol
 
 # Add our commands to shell environment
 # This will require a restart to take effect

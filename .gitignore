@@ -23,6 +23,8 @@ JSIL/
 main-finder/
 gnu-cobol-2.0/
 gmp-6.1.1/
+gmp/
+gmp-js/
 
 # Ignore .status directory
 .status/
