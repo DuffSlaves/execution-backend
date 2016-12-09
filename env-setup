@@ -5,7 +5,7 @@ fi
 
 ./setup/install-dependencies
 ./setup/install-npm
-./setup/install-pyjs
+#./setup/install-pyjs
 
 # Install GnuCOBOL
 ldconfig /usr/local/lib
@@ -13,8 +13,8 @@ ldconfig /usr/local/lib
 ./setup/install-jsil
 ./setup/install-emscripten
 ./setup/install-gcc
-./setup/install-llvm
-./setup/install-dragonegg
+#./setup/install-llvm
+#./setup/install-dragonegg
 ./setup/install-ghcjs
 
 if [ ! -f ".status/find-main" ]; then
@@ -27,11 +27,11 @@ if [ ! -f ".status/find-main" ]; then
 	echo > .status/find-main
 fi
 
-if [ ! -f ".status/chicken" ]; then
-	apt-get install -y chicken
-	
-	echo > .status/chicken
-fi
+#f [ ! -f ".status/chicken" ]; then
+#	apt-get install -y chicken
+#	
+#	echo > .status/chicken
+#i
 
 if [ ! -f ".status/opal" ]; then
 	gem install opal
