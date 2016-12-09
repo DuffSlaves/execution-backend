@@ -235,5 +235,8 @@ def main():
         sys.exit(0)
 
 if __name__ == '__main__': # Script was executed from the command line
-    main()
+    try:
+        main()
+    except subprocess.CalledProcessError as err:
+        sys.exit(1)
 

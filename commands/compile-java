@@ -3,25 +3,42 @@
 # Get the location of this script
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
-MAINPATH=$(find-main "$1")
+
+if [ -d 'build' ]; then
+  rm -rf build
+fi
 
 mkdir build
 
+javac $1 -source $2
+
+cp $SCRIPTPATH/cmdfiles/teavm-base.xml build/pom.xml
+
+for file in *.class; do
+  PACKAGE=$(find-main pp $file)
+  CLASS=$(find-main c $file)
+
+  # Replace values in templated pom.xml that we copied in
+  sed -i -e "s/@@1@@/$CLASS/g" build/pom.xml
+  sed -i -e "s,@@2@@,$PWD,g" build/pom.xml
+  sed -i -e "s/@@3@@/$2/g" build/pom.xml
+
+  # Place the actual source file in the source folder
+  mkdir build/$PACKAGE -p
+  mv $1 build/$PACKAGE/$(basename $1)
+
+  # Delete our now useless class file
+  rm $file
+done
+
 cd build
-mvn -DarchetypeCatalog=local \
-  -DarchetypeGroupId=org.teavm \
-  -DarchetypeArtifactId=teavm-maven-webapp \
-  -DarchetypeVersion=0.4.3 archetype:generate -B \
-  -DgroupId=com.user -DartifactId=$(find-main $1) -Dversion=1.0 -Dpackage= \
-  -Dpackaging=war
 
-cd ../
-
-mv $1 build/src
-
-cd build
-
+# Invoke maven to generate a package
 mvn package
 
 cd ../
 
+mv build/$PACKAGE/$(basename $1) $(basename $1) 
+
+# Move our result to the starting directory
+mv build/target/javascript/result.js $3
