@@ -188,7 +188,7 @@ def compileUserFile(lang, code):
     return {
         'C++14':         lambda text: compileWithClang(text, '-std=c++14'),
         'C++11':         lambda text: compileWithClang(text, '-std=c++11'),
-        'C++98':         lambda text: compileWithClang(text, ''),
+        'C++98':         lambda text: compileWithClang(text, '-std=c++98'),
         'C++1z':         lambda text: compileWithClang(text, '-std=c++1z'),
         'C89'  :         lambda text: compileWithClang(text, '-std=c89', '.c'),
         'C99'  :         lambda text: compileWithClang(text, '-std=c99', '.c'),
