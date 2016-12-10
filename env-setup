@@ -28,7 +28,7 @@ if [ ! -f ".status/find-main" ]; then
 fi
 
 if [ ! -f ".status/chicken" ]; then
-	apt-get install -y chicken
+	apt-get install -y chicken-bin
 	
 	echo > .status/chicken
 fi
