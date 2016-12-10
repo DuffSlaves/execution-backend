@@ -12,6 +12,8 @@ if [ ! -f ".status/emscripten" ]; then
 	./emsdk install latest -j$(nproc --all)
 	./emsdk activate latest
 	./emsdk_env.sh
+	
+	chmod 755 . -R
 	cd ../
 
 	echo "" > .status/emscripten
