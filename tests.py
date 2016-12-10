@@ -22,7 +22,6 @@ HELLO_WORLD_TESTS = [ # All of these should end up printing 'Hello, World!' when
     Test('C11 Hello World', 'C11', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
     Test('C99 Hello World', 'C99', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
     Test('C89 Hello World', 'C89', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
-    Test('C94 Hello World', 'C94', '#include <stdio.h>\nint main(int argc, char** argv) { printf("Hello, World!"); }'),
     Test('COBOL Hello World', 'COBOL', 
          """
 IDENTIFICATION DIVISION.
@@ -32,10 +31,6 @@ PROCEDURE DIVISION.
     DISPLAY 'Hello, World!'.
     STOP RUN.
          """),
-    Test('Java 1.3 Hello World', 'Java 1.3', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
-    Test('Java 1.4 Hello World', 'Java 1.4', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
-    Test('Java 1.5 Hello World', 'Java 1.5', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
-    Test('Java 1.6 Hello World', 'Java 1.6', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
     Test('Java 1.7 Hello World', 'Java 1.7', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
     Test('Java 1.8 Hello World', 'Java 1.8', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
     Test('Haskell', 'Haskell', 'main = putStrLn "Hello, World!"'),

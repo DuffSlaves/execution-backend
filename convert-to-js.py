@@ -52,15 +52,15 @@ def minifyJS(jsfile, level='WHITESPACE_ONLY'):
 #  version_string: A string which is passed as an argument to
 #                  javac and used to indicate which version of
 #                  java the source file is
-def compileJava(text, version_string):
+def compileJava(text, version_string='1.8'):
     tmpdir = mkTempDir()
     try:
         filename = tmpdir + '/tmpfile'
 
         writeFile(filename + '.java', text)
 
-		
-        exec_command(['compile-java', filename + '.java', version_string, filename + '.js'])
+        exec_command('compile-java ' + filename + '.java ' + version_string + ' ' + tmpdir)
+        exec_command(['mv', tmpdir + '/result.js', filename + '.js'])
 
         main_name = ''
         for rfile in fnmatch.filter(os.listdir(tmpdir), '*.class'):
@@ -69,7 +69,7 @@ def compileJava(text, version_string):
 
         # TODO: Magic goes here
 
-        outtext = readFile(file)
+        outtext = readFile(filename + '.js')
         outtext += """
 try {
     javaMethods.get('""" + main_name + """([java/lang/String;)V;').invoke([]);
@@ -207,10 +207,6 @@ def compileUserFile(lang, code):
         'C89'  :         lambda text: compileWithClang(text, '-std=c89', '.c'),
         'C99'  :         lambda text: compileWithClang(text, '-std=c99', '.c'),
         'C11'  :         lambda text: compileWithClang(text, '-std=c11', '.c'),
-        'Java 1.3':      lambda text: compileJava(text, '1.3'),
-        'Java 1.4':      lambda text: compileJava(text, '1.4'),
-        'Java 1.5':      lambda text: compileJava(text, '1.5'),
-        'Java 1.6':      lambda text: compileJava(text, '1.6'),
         'Java 1.7':      lambda text: compileJava(text, '1.7'),
         'Java 1.8':      lambda text: compileJava(text, '1.8'),
         'Objective-C++': lambda text: compileWithClang(text, '', '.mm'),
