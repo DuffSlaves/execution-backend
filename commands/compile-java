@@ -8,38 +8,39 @@ if [ -d "$3/build" ]; then
   rm -rf $3/build
 fi
 
-echo $@
+cd $3
 
-mkdir $3/build
+mkdir build
 
 javac $1 -source $2 -d "$3"
 
-cp $SCRIPTPATH/cmdfiles/teavm-base.xml $3/build/pom.xml
+cp $SCRIPTPATH/cmdfiles/teavm-base.xml build/pom.xml
 
-for file in $3/*.class; do
-  echo $file
+for file in *.class; do
   PACKAGE=$(find-main pp $file)
   CLASS=$(find-main c $file)
 
   # Replace values in templated pom.xml that we copied in
-  sed -i -e "s/@@1@@/$CLASS/g" $3/build/pom.xml
-  sed -i -e "s,@@2@@,$PWD,g" $3/build/pom.xml
-  sed -i -e "s/@@3@@/$2/g" $3/build/pom.xml
+  sed -i -e "s/@@1@@/$CLASS/g" build/pom.xml
+  sed -i -e "s,@@2@@,$PWD,g" build/pom.xml
+  sed -i -e "s/@@3@@/$2/g" build/pom.xml
 
   # Place the actual source file in the source folder
-  mkdir $3/build/$PACKAGE -p
-  mv $1 $3/build/$PACKAGE/$(basename $1)
+  mkdir build/$PACKAGE -p
+  mv $1 build/$PACKAGE/$(basename $1)
 
   # Delete our now useless class file
   rm $file
 done
 
-cd $3/build
+cd build
+
+mkdir src/main/resources -p
 
 # Invoke maven to generate a package
-mvn package
+mvn package 
 
-mv $3/build/$PACKAGE/$(basename $1) $(basename $1) 
+cd ../
 
 # Move our result to the starting directory
-mv $3/build/target/javascript/result.js $3/result.js
+mv build/target/javascript/result.js result.js

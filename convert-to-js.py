@@ -60,27 +60,13 @@ def compileJava(text, version_string='1.8'):
         writeFile(filename + '.java', text)
 
         exec_command('compile-java ' + filename + '.java ' + version_string + ' ' + tmpdir)
-        exec_command(['mv', tmpdir + '/result.js', filename + '.js'])
-
-        main_name = ''
-        for rfile in fnmatch.filter(os.listdir(tmpdir), '*.class'):
-            main_name = subprocess.check_output(['find-main', rfile])
-            break # TODO: Make this do something
-
-        # TODO: Magic goes here
+        exec_command('mv -f ' + tmpdir + '/result.js ' + filename + '.js')
 
         outtext = readFile(filename + '.js')
-        outtext += """
-try {
-    javaMethods.get('""" + main_name + """([java/lang/String;)V;').invoke([]);
-}
-catch (err) {
-    console.log(err);
-}
-"""
         return outtext
     finally:
-        shutil.rmtree(tmpdir, True)
+        pass
+        #shutil.rmtree(tmpdir, True)
 def compileWithClang(text, extargs='', ext='.cpp'):
     """Compile a given file with the given source
     code and extra arguments using Clang
@@ -207,8 +193,7 @@ def compileUserFile(lang, code):
         'C89'  :         lambda text: compileWithClang(text, '-std=c89', '.c'),
         'C99'  :         lambda text: compileWithClang(text, '-std=c99', '.c'),
         'C11'  :         lambda text: compileWithClang(text, '-std=c11', '.c'),
-        'Java 1.7':      lambda text: compileJava(text, '1.7'),
-        'Java 1.8':      lambda text: compileJava(text, '1.8'),
+        'Java':          lambda text: compileJava(text),
         'Objective-C++': lambda text: compileWithClang(text, '', '.mm'),
         'Objective-C'  : lambda text: compileWithClang(text, '', '.m'),
         'Haskell':       compileHaskell,

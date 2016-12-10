@@ -31,8 +31,7 @@ PROCEDURE DIVISION.
     DISPLAY 'Hello, World!'.
     STOP RUN.
          """),
-    Test('Java 1.7 Hello World', 'Java 1.7', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
-    Test('Java 1.8 Hello World', 'Java 1.8', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
+    Test('Java Hello World', 'Java', 'class HelloWorld{ public static void main(String[]args){ System.out.println("Hello, World!"); } }'),
     Test('Haskell', 'Haskell', 'main = putStrLn "Hello, World!"'),
     Test('Scheme', 'Scheme', '(print "Hello, World!")'),
     Test('Ruby', 'Ruby', 'puts "Hello, World!"'),
