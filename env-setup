@@ -24,7 +24,7 @@ if [ ! -f ".status/find-main" ]; then
 	mvn package
 	cd ../
 	
-	echo > .status/find-main
+	#echo > .status/find-main
 fi
 
 #f [ ! -f ".status/chicken" ]; then
