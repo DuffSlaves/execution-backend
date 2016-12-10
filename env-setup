@@ -42,6 +42,10 @@ fi
 # We don't build cobol yet
 #./setup/install-cobol
 
+if [ ! '.status/colorama' ]; then
+	pip install colorama
+fi
+
 # Add our commands to shell environment
 # This will require a restart to take effect
 echo export PATH=\$PATH:$PWD/commands:~/.cabal/bin > /etc/profile.d/moodle-code-window.sh

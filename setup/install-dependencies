@@ -7,12 +7,13 @@ if [ ! -f ".status/apt-get" ]; then
 	# All apt-get requirements
 	apt-get -qq update
 	apt-get -q -y install nodejs npm git p7zip-full gcc m4 \
+		libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib \
 		python3 python-pip \
 		maven cmake \
 		mono-devel \
 		default-jdk default-jre \
 		ruby-full \
 		closure-compiler
-	#apt-get -q -y install open-cobol libgmp3-dev libmpfr-dev mpc libmpc-dev g++-multilib
+	#apt-get -q -y install open-cobol 
 	echo "" > .status/apt-get
 fi
