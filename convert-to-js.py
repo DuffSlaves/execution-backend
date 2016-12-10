@@ -53,15 +53,14 @@ def minifyJS(jsfile, level='WHITESPACE_ONLY'):
 #                  javac and used to indicate which version of
 #                  java the source file is
 def compileJava(text, version_string):
-    raise NotImplementedError("Compiling Java is not supported at this time.")
-
     tmpdir = mkTempDir()
     try:
         filename = tmpdir + '/tmpfile'
 
         writeFile(filename + '.java', text)
 
-        exec_command(['javac', '-source', version_string, filename + '.java'])
+		
+        exec_command(['compile-java', filename + '.java', version_string, filename + '.js'])
 
         main_name = ''
         for rfile in fnmatch.filter(os.listdir(tmpdir), '*.class'):
