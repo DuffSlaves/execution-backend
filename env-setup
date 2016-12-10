@@ -1,3 +1,4 @@
+#!/bin/sh
 
 if [ ! -d ".status" ]; then
 	mkdir .status 
@@ -29,6 +30,28 @@ fi
 
 if [ ! -f ".status/chicken" ]; then
 	apt-get install -y chicken-bin
+
+	wget 
+
+	7z x chicken.tar.gz
+	7z x chicken.tar
+	rm chicken.tar.gz
+	rm chicken.tar
+
+	mkdir command/chicken-files
+	mv chicken/runtime.c        command/chicken-files/runtime.c
+	mv chicken/library.c        command/chicken-files/library.c
+	mv chicken/eval.c           command/chicken-files/eval.c
+	mv chicken/extras.c         command/chicken-files/extras.c
+	mv chicken/modules.c        command/chicken-files/modules.c
+	mv chicken/build-version.c  command/chicken-files/build-version.c
+	mv chicken/chicken.h        command/chicken-files/chicken.h
+	mv chicken/chicken-config.h command/chicken-files/chicken-config.h
+	mv chicken/buildtag.h       command/chicken-files/buildtag.h
+
+	rm -rf chicken
+
+	chmod 333 command/chicken-files -R
 	
 	echo > .status/chicken
 fi

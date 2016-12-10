@@ -65,8 +65,7 @@ def compileJava(text, version_string='1.8'):
         outtext = readFile(filename + '.js')
         return outtext
     finally:
-        pass
-        #shutil.rmtree(tmpdir, True)
+        shutil.rmtree(tmpdir, True)
 def compileWithClang(text, extargs='', ext='.cpp'):
     """Compile a given file with the given source
     code and extra arguments using Clang
@@ -159,9 +158,7 @@ def compileScheme(text):
 
         writeFile(filename + '.scm', text)
 
-        exec_command('csc -t ' + filename + '.scm -optimize-level 3 -output-file ' + filename+'.c')
-        exec_command('emcc ' + filename + '.c -o ' + filename + '.bc')
-        exec_command('emcc ' + filename + '.bc -o ' + filename + '.js')
+        exec_command('compile-scheme ' + filename + '.scm ' + filename + '.js')
 
         return readFile(filename + '.js')
     finally:

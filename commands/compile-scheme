@@ -1,0 +1,32 @@
+#!/bin/sh
+
+SCRIPTPATH=$(dirname "$(readlink -f "$0")")
+BUILDDIR=$(dirname "$1")
+
+# $1 is input file
+# $2 is output file
+
+FILENAME=$(basename "$1" .scm)
+
+cd $BUILDDIR
+
+csc -t "$FILENAME.scm" -optimize-level 3 -output-file "$FILENAME.c"
+
+cp "$SCRIPTPATH/chicken-files/*" "$BUILDDIR"
+
+FILES=' '
+for file in *.c; do
+    BASE=$(basename "$file" .c)
+    emcc -O3 "$file" -o "$BASE.bc"
+    FILES="$FILES":" $BASE.bc"
+done
+
+# NOTE: The unquoted FILE argument is intentional
+#       we want all the file names to be passed as
+#       separate arguments
+emcc -O3 $FILES -o "$2"
+
+# NOTE: Unquoted FILE argument is intentional (see above)
+rm $FILES
+rm runtime.c library.c eval.c extras.c modules.c build-version.c
+rm chicken.h chicken-config.h buildtag.h
