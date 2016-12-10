@@ -27,11 +27,11 @@ if [ ! -f ".status/find-main" ]; then
 	#echo > .status/find-main
 fi
 
-#f [ ! -f ".status/chicken" ]; then
-#	apt-get install -y chicken
-#	
-#	echo > .status/chicken
-#i
+if [ ! -f ".status/chicken" ]; then
+	apt-get install -y chicken
+	
+	echo > .status/chicken
+fi
 
 if [ ! -f ".status/opal" ]; then
 	gem install opal
