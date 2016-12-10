@@ -42,7 +42,7 @@ fi
 # We don't build cobol yet
 #./setup/install-cobol
 
-if [ ! '.status/colorama' ]; then
+if [ ! -f '.status/colorama' ]; then
 	pip install colorama
 fi
 
