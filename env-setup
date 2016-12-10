@@ -31,29 +31,40 @@ fi
 if [ ! -f ".status/chicken" ]; then
 	apt-get install -y chicken-bin
 
-	wget 
+	wget https://code.call-cc.org/releases/4.11.0/chicken-4.11.0.tar.gz -O chicken.tar.gz
 
-	7z x chicken.tar.gz
-	7z x chicken.tar
+	7z x chicken.tar.gz > /dev/null
+	7z x chicken.tar > /dev/null
 	rm chicken.tar.gz
 	rm chicken.tar
 
-	mkdir command/chicken-files
-	mv chicken/runtime.c        command/chicken-files/runtime.c
-	mv chicken/library.c        command/chicken-files/library.c
-	mv chicken/eval.c           command/chicken-files/eval.c
-	mv chicken/extras.c         command/chicken-files/extras.c
-	mv chicken/modules.c        command/chicken-files/modules.c
-	mv chicken/build-version.c  command/chicken-files/build-version.c
-	mv chicken/chicken.h        command/chicken-files/chicken.h
-	mv chicken/chicken-config.h command/chicken-files/chicken-config.h
-	mv chicken/buildtag.h       command/chicken-files/buildtag.h
+	mv chicken-4.11.0 chicken
+
+	cd chicken
+	make PLATFORM=linux -j$(nproc --all) > /dev/null 2> /dev/null
+	cd ../
+
+	if [ ! -d 'commands/chicken-files' ]; then
+		mkdir commands/chicken-files
+	else
+		rm -rf commands/chicken-files/*
+	fi
+
+	mv chicken/runtime.c        commands/chicken-files/runtime.c
+	mv chicken/library.c        commands/chicken-files/library.c
+	mv chicken/eval.c           commands/chicken-files/eval.c
+	mv chicken/extras.c         commands/chicken-files/extras.c
+	mv chicken/modules.c        commands/chicken-files/modules.c
+	mv chicken/build-version.c  commands/chicken-files/build-version.c
+	mv chicken/chicken.h        commands/chicken-files/chicken.h
+	mv chicken/chicken-config.h commands/chicken-files/chicken-config.h
+	mv chicken/buildtag.h       commands/chicken-files/buildtag.h
 
 	rm -rf chicken
 
-	chmod 333 command/chicken-files -R
+	chmod 777 commands/chicken-files -R
 	
-	echo > .status/chicken
+	#echo > .status/chicken
 fi
 
 if [ ! -f ".status/opal" ]; then

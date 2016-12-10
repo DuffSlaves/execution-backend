@@ -12,7 +12,7 @@ cd $BUILDDIR
 
 csc -t "$FILENAME.scm" -optimize-level 3 -output-file "$FILENAME.c"
 
-cp "$SCRIPTPATH/chicken-files/*" "$BUILDDIR"
+cp "$SCRIPTPATH"/chicken-files/* "$BUILDDIR"
 
 FILES=' '
 for file in *.c; do
