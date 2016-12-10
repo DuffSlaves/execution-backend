@@ -44,6 +44,8 @@ fi
 
 if [ ! -f '.status/colorama' ]; then
 	pip install colorama
+	
+	echo > .status/colorama
 fi
 
 # Add our commands to shell environment
