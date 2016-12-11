@@ -64,7 +64,7 @@ if [ ! -f ".status/chicken" ]; then
 
 	chmod 777 commands/chicken-files -R
 	
-	#echo > .status/chicken
+	echo > .status/chicken
 fi
 
 if [ ! -f ".status/opal" ]; then

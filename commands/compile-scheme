@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 SCRIPTPATH=$(dirname "$(readlink -f "$0")")
 BUILDDIR=$(dirname "$1")
@@ -8,25 +8,16 @@ BUILDDIR=$(dirname "$1")
 
 FILENAME=$(basename "$1" .scm)
 
+# Load emscripten onto the path
+. ${SCRIPTPATH}/../emsdk_portable/emsdk_env.sh > /dev/null
+
 cd $BUILDDIR
 
-csc -t "$FILENAME.scm" -optimize-level 3 -output-file "$FILENAME.c"
+csc "$FILENAME.scm" -optimize-level 3 \
+    -cc emcc -C -O3 -c
+mv "$FILENAME.o" "$FILENAME.bc"
 
-cp "$SCRIPTPATH"/chicken-files/* "$BUILDDIR"
+ls
 
-FILES=' '
-for file in *.c; do
-    BASE=$(basename "$file" .c)
-    emcc -O3 "$file" -o "$BASE.bc"
-    FILES="$FILES":" $BASE.bc"
-done
+emcc "$FILENAME.bc" -O3 -o "$FILENAME.js"
 
-# NOTE: The unquoted FILE argument is intentional
-#       we want all the file names to be passed as
-#       separate arguments
-emcc -O3 $FILES -o "$2"
-
-# NOTE: Unquoted FILE argument is intentional (see above)
-rm $FILES
-rm runtime.c library.c eval.c extras.c modules.c build-version.c
-rm chicken.h chicken-config.h buildtag.h
