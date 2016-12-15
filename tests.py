@@ -66,7 +66,7 @@ def run_test(testval, expected):
         print (Fore.GREEN + "[Test Succeeded]")
         return True
     except subprocess.CalledProcessError as err:
-        print (Fore.LIGHTRED_EX + err.cmd)
+        print (Fore.RED + err.cmd)
     except Exception as exc:
         print (Fore.RED + exc.message)
 
