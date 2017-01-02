@@ -18,14 +18,18 @@ ldconfig /usr/local/lib
 ./setup/install-dragonegg
 ./setup/install-ghcjs
 
+if [ ! -f ".status/amber" ]; then
+	npm install -g amber-cli
+	
+	echo > .status/amber
+fi
+
 if [ ! -f ".status/find-main" ]; then
 	git clone https://github.com/duffslaves/main-finder.git
 	
 	cd main-finder
 	mvn package
 	cd ../
-	
-	#echo > .status/find-main
 fi
 
 if [ ! -f ".status/chicken" ]; then
