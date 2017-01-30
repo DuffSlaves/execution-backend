@@ -9,6 +9,8 @@ import json
 import sys
 import os
 
+env = '/home/potato/dev/execution-backend/commands/'
+
 def writeFile(filename, text):
     if filename != '--':
         with open(filename, "wb") as fvar:
@@ -59,7 +61,7 @@ def compileJava(text, version_string='1.8'):
 
         writeFile(filename + '.java', text)
 
-        exec_command('compile-java ' + filename + '.java ' + version_string + ' ' + tmpdir)
+        exec_command(env + 'compile-java ' + filename + '.java ' + version_string + ' ' + tmpdir)
         exec_command('mv -f ' + tmpdir + '/result.js ' + filename + '.js')
 
         outtext = readFile(filename + '.js')
@@ -79,9 +81,9 @@ def compileWithClang(text, extargs='', ext='.cpp'):
 
         writeFile(filename + ext, text)
 
-        exec_command(['emcc', '-O3', '-Wall', filename + ext, '-o', filename + '.bc']
+        exec_command([env + 'emcc', '-O3', '-Wall', filename + ext, '-o', filename + '.bc']
                      + extargs.split(' '), shell=False)
-        exec_command(['emcc', '-O3', filename + '.bc', '-o', filename + '.js',
+        exec_command([env + 'emcc', '-O3', filename + '.bc', '-o', filename + '.js',
                       '--memory-init-file', '0'], shell=False)
 
         return readFile(filename + '.js')
@@ -183,23 +185,24 @@ def compileRuby(text):
 def compileUserFile(lang, code):
     default = lambda text: ''
     return {
-        'C++14':         lambda text: compileWithClang(text, '-std=c++14'),
-        'C++11':         lambda text: compileWithClang(text, '-std=c++11'),
-        'C++98':         lambda text: compileWithClang(text, '-std=c++98'),
-        'C++1z':         lambda text: compileWithClang(text, '-std=c++1z'),
-        'C89'  :         lambda text: compileWithClang(text, '-std=c89', '.c'),
-        'C99'  :         lambda text: compileWithClang(text, '-std=c99', '.c'),
-        'C11'  :         lambda text: compileWithClang(text, '-std=c11', '.c'),
-        'Java':          lambda text: compileJava(text),
-        'Objective-C++': lambda text: compileWithClang(text, '', '.mm'),
-        'Objective-C'  : lambda text: compileWithClang(text, '', '.m'),
-        'Haskell':       compileHaskell,
-        'CoffeeScript':  compileCoffeeScript,
-        'TypeScript':    compileTypeScript,
-        'COBOL':         compileCOBOL,
-        'Scheme':        compileScheme,
-        'Ruby':          compileRuby,
-    }.get(lang, default)(code)
+        'c++14':         lambda text: compileWithClang(text, '-std=c++14'),
+        'c++11':         lambda text: compileWithClang(text, '-std=c++11'),
+        'c++98':         lambda text: compileWithClang(text, '-std=c++98'),
+        'c++1z':         lambda text: compileWithClang(text, '-std=c++1z'),
+        'c++':           lambda text: compileWithClang(text, '-std=c++14'),
+        'c89'  :         lambda text: compileWithClang(text, '-std=c89', '.c'),
+        'c99'  :         lambda text: compileWithClang(text, '-std=c99', '.c'),
+        'c11'  :         lambda text: compileWithClang(text, '-std=c11', '.c'),
+        'java':          lambda text: compileJava(text),
+        'objective-c++': lambda text: compileWithClang(text, '', '.mm'),
+        'objective-c'  : lambda text: compileWithClang(text, '', '.m'),
+        'haskell':       compileHaskell,
+        'coffeeScript':  compileCoffeeScript,
+        'typeScript':    compileTypeScript,
+        'cobol':         compileCOBOL,
+        'scheme':        compileScheme,
+        'ruby':          compileRuby,
+    }.get(lang.lower(), default)(code)
 
 def main():
     """main"""
@@ -209,7 +212,6 @@ def main():
         intext = json.load(open(sys.argv[1]))
         outtext = compileUserFile(intext['lang'], intext['text'])
         writeFile(sys.argv[2], outtext)
-        sys.exit(0)
 
 if __name__ == '__main__': # Script was executed from the command line
     try:

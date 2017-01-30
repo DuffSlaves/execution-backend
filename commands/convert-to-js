@@ -1,0 +1,6 @@
+
+# Get the location of this script
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+
+"$SCRIPTPATH/../convert-to-js.py" $@

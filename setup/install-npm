@@ -12,5 +12,8 @@ if [  ! -f ".status/npm" ]; then
 	# Install CoffeeScript compiler
 	npm install -g coffee-script
 
+	# Install grunt command line interface
+	npm install -g grunt-cli
+
 	echo "" > .status/npm
 fi
