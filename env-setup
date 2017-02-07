@@ -88,6 +88,7 @@ fi
 
 # Add our commands to shell environment
 # This will require a restart to take effect
-echo -e export PATH=\$PATH:$PWD/commands:~/.cabal/bin\nexport BACKEND_INSTALL_DIR=$PWD > /etc/profile.d/moodle-code-window.sh
+echo -e export \n"PATH=\$PATH:$PWD/commands:~/.cabal/bin"\n"export BACKEND_INSTALL_DIR=$PWD"\n >> /etc/environment
+echo -e . /etc/environment >> /etc/apache2/envvars
 chmod a+x /etc/profile.d/moodle-code-window.sh
 
