@@ -86,6 +86,9 @@ if [ ! -f '.status/colorama' ]; then
 	echo > .status/colorama
 fi
 
+# Copy Emscripten environment to /var/www
+mv ~/.emscripten /var/www/.emscripten
+
 # Add our commands to shell environment
 # This will require a restart to take effect
 echo -e export \n"PATH=\$PATH:$PWD/commands:~/.cabal/bin"\n"export BACKEND_INSTALL_DIR=$PWD"\n >> /etc/environment
